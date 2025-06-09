@@ -28,6 +28,26 @@ src: url('/fonts/RubikOne-Regular.woff') format('woff');
 
 
 @theme{
-    --font-product-sans: "product-sans", sans-serif;
-    --font-rubik-one: 'Rubik One', sans-serif;
+    --font-primary: "product-sans", sans-serif;
+    --font-seconday: 'Rubik One', sans-serif;
+    --color-primarybg: #E6E4D5 ;
+}
+
+:root{
+
+
+
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height:100vh;
+    width: 100vw;
+
+
+}
+
+body {
+    @apply font-primary
 }

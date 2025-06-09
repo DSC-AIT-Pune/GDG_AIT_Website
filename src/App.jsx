@@ -1,8 +1,11 @@
 import React from 'react'
+import Home from './sections/Home'
+import Lcard from './components/cards/Lcard'
+import Footer from './sections/Footer'
 
 function App() {
   return (
-    <div className='font-rubik-one text-8xl'>GDSC</div>
+  <Footer/>
   )
 }
 

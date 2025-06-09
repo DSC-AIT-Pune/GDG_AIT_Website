@@ -1,1 +1,33 @@
+@font-face {
+    font-family: "product-sans";
+    src: url(/fonts/Product-Sans-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "product-sans";
+    src: url(/fonts/Product-Sans-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "product-sans";
+    src: url(/fonts/Product-Sans-Italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+font-family: 'Rubik One';
+font-style: normal;
+font-weight: normal;
+src: url('/fonts/RubikOne-Regular.woff') format('woff');
+}
+
+
 @import "tailwindcss";
+
+
+@theme{
+    --font-product-sans: "product-sans", sans-serif;
+    --font-rubik-one: 'Rubik One', sans-serif;
+}

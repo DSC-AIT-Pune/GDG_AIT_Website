@@ -2,7 +2,7 @@ import React from 'react'
 
 function App() {
   return (
-    <div >App</div>
+    <div className='font-rubik-one text-8xl'>GDSC</div>
   )
 }
 

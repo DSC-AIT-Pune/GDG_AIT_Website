@@ -10,30 +10,30 @@ import email from "../assets/Footer/email.svg"
 
 function Footer() {
   return (
-    <div className='bg-primarybg w-[95vw] h-auto flex flex-row gap-2 justify-between px-[13px] align-top pt-[1.1675rem] pb-[0.375rem] rounded-xl'>
-        <div className='basis-1/3 flex flex-col gap-2 mt-[4px]'>
+    <div className='bg-primarybg w-[95vw] h-auto flex flex-col md:flex-row gap-y-8 justify-between px-[13px] align-top pt-[1.1675rem] pb-[0.375rem] rounded-xl'>
+        <div className='basis-1/3 flex flex-col justify-center gap-y-4 mt-[4px] '>
             {/* icon part */}
-            <div className='flex flex-row gap-2 justify-start align-top'>
-                <img className="w-[1.1875rem] h-auto" src={logo} alt="Gdsc" />
+            <div className='flex flex-row gap-2 md:justify-start justify-center align-top'>
+                <img className="w-[1.8875rem] md:w-[4.0825rem] h-auto" src={logo} alt="Gdsc" />
                 <div className='flex flex-col '>
                     <div>
-                        <p className='text-[0.3125rem]'>Google Developer Student Clubs</p>
+                        <p className='text-[0.8125rem] md:text-[1.1494rem]'>Google Developer Student Clubs</p>
                     </div>
                     <div>
-                        <p className='text-[0.30rem] '>Army Institute of Technology, Pune</p>
+                        <p className='text-[0.90rem] md:text-[1.3494rem]'>Army Institute of Technology, Pune</p>
                     </div>
                 </div>
             </div>
             {/* text part */}
-            <div>
-                <p className='text-[0.4052rem] w-full'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <div className='w-full flex justify-center'>
+                <p className='text-[0.7052rem] text-center w-2/3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
             </div>
             {/* icon part */}
-            <div className='flex flex-row gap-3 mt-[1.5rem]'>
-                <img className='h-[7.032px] w-auto' src={insta} alt="instagram" />
-                <img className='h-[7.032px] w-auto' src={twitter} alt="twitter" />
-                <img className='h-[7.032px] w-auto' src={fb} alt="facebook" />
-                <img className='h-[7.032px] w-auto' src={linkedin} alt="linkedin" />
+            <div className='flex flex-row gap-3 justify-center md:justify-start mt-[0.9rem]'>
+                <img className='h-[0.9395rem] w-auto' src={insta} alt="instagram" />
+                <img className='h-[0.9395rem] w-auto' src={twitter} alt="twitter" />
+                <img className='h-[0.9395rem] w-auto' src={fb} alt="facebook" />
+                <img className='h-[0.9395rem] w-auto' src={linkedin} alt="linkedin" />
             </div>
         </div>
         <div className='basis-2/3 flex justify-around flex-row gap-2 text-[0.3763rem]'>

@@ -23,7 +23,7 @@ function Events() {
 
   return (
     <div className='flex flex-col gap-y-14 py-6 rounded-xl justify-center w-[95vw] items-center bg-primarybg'>
-        <div className='flex flex-col gap-y-3.5 w-full'  >
+        <div className='flex flex-col  .5 w-full'  >
             <div >
                 <p className='text-[#0F9D58] text-[clamp(1.75rem,8vw,6rem)] font-seconday text-center'>OUR EVENTS</p>
             </div>

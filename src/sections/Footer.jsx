@@ -10,10 +10,10 @@ import email from "../assets/Footer/email.svg"
 
 function Footer() {
   return (
-    <div className='bg-primarybg w-[95vw] h-auto flex flex-col md:flex-row gap-y-8 justify-between px-3.5 md:pl-9 md:pb-7 align-top pt-[1.1675rem] pb-6 rounded-xl '>
+    <div className='bg-primarybg w-[95vw] h-auto flex flex-col lg:flex-row gap-y-8 justify-between px-3.5 md:pl-9 md:pb-7 align-top pt-[1.1675rem] pb-6 rounded-xl '>
         <div className='basis-1/3 flex flex-col justify-center gap-y-4 mt-[4px] '>
             {/* icon part */}
-            <div className='flex flex-row gap-2 md:justify-start justify-center align-top'>
+            <div className='flex flex-row gap-2 lg:justify-start justify-center align-top'>
                 <img className="w-10 md:w-[4.25rem] h-auto" src={logo} alt="Gdsc" />
                 <div className='flex flex-col '>
                     <div>
@@ -25,18 +25,18 @@ function Footer() {
                 </div>
             </div>
             {/* text part */}
-            <div className='w-full flex justify-center md:justify-start'>
-                <p className='text-xs text-center md:text-start md:text-xl w-2/3 md:max-w-4/5 md:min-w-3/4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <div className='w-full flex justify-center lg:justify-start'>
+                <p className='text-xs text-center lg:text-start md:text-xl w-2/3 lg:max-w-4/5 lg:min-w-3/4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
             </div>
             {/* icon part */}
-            <div className='flex flex-row gap-6 md:gap-9 justify-center md:justify-start mt-4 '>
+            <div className='flex flex-row gap-6 md:gap-9 justify-center lg:justify-start mt-4 '>
                 <img className='h-6 md:h-8 w-auto' src={insta} alt="instagram" />
                 <img className='h-6 md:h-8 w-auto' src={twitter} alt="twitter" />
                 <img className='h-6 md:h-8 w-auto' src={fb} alt="facebook" />
                 <img className='h-6 md:h-8 w-auto' src={linkedin} alt="linkedin" />
             </div>
         </div>
-        <div className='basis-2/3 flex justify-around md:items-center flex-row gap-2 text-[0.3763rem]'>
+        <div className='basis-2/3 flex justify-around lg:items-center flex-row gap-2 text-[0.3763rem]'>
             {/* explore */}
             <div className='flex flex-col gap-3'>
                 <div>

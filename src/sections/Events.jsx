@@ -31,7 +31,7 @@ function Events() {
                 <p className='text-[clamp(0.15rem,3vw,1rem)] w-3/5 text-center  '>Lorem ipsum dolor sit amet consectetur nobis odit. Lorem ipsum dolor sit amet.</p>
             </div>
         </div>
-        <div className="flex flex-wrap justify-evenly gap-y-9  px-4 mx-auto">
+        <div className="flex flex-wrap justify-evenly gap-y-9  md:px-4 mx-auto">
         {events.map((event, index) => (
             <div key={index} className="flex justify-center">
             <EventCard eventlogo={event.icon} eventimage={event.imgsrc} />

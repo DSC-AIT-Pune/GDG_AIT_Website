@@ -35,7 +35,7 @@ src: url('/fonts/RubikOne-Regular.woff') format('woff');
 
 :root{
 
-
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;

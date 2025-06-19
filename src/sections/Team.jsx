@@ -1,4 +1,3 @@
-// Team.js
 import React, { useState, useEffect } from 'react';
 import TeamBar from '../components/TeamBar';
 import IntroCard from '../components/cards/IntroCard';
@@ -8,11 +7,6 @@ const categories = ['Faculty Member', 'Mentors', 'Leads', 'Core Members'];
 
 const allTeamMembers = {
   'Faculty Member': [
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg1', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg4', position: 'GDSC LEAD', instagram: '@insta_id' },
     { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
   ],
   Mentors: [
@@ -49,11 +43,9 @@ function Team() {
   useEffect(() => {
     const updateVisibleCount = () => {
       if (window.innerWidth < 768) {
-        setVisibleCount(4);
-      } else if (window.innerWidth < 1024) {
-        setVisibleCount(2);
+        setVisibleCount(6); // 2 cols x 3 rows
       } else {
-        setVisibleCount(3);
+        setVisibleCount(3); // 1 row x 3 cols
       }
     };
     updateVisibleCount();
@@ -76,18 +68,7 @@ function Team() {
       <TeamBar selected={selectedCategory} setSelectedCategory={setSelectedCategory} />
 
       <div className='relative w-full max-w-[90vw]'>
-        <div className='hidden md:flex justify-center gap-10 flex-wrap'>
-          {teamToDisplay.map((member, index) => (
-            <IntroCard
-              key={index}
-              position={member.position}
-              message={member.message}
-              instagram={member.instagram}
-            />
-          ))}
-        </div>
-
-        <div className='grid md:hidden grid-cols-2 gap-4 place-items-center'>
+        <div className='grid grid-cols-2 md:flex md:justify-center gap-6 md:gap-10'>
           {teamToDisplay.map((member, index) => (
             <IntroCard
               key={index}

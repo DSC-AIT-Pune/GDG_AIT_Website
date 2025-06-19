@@ -8,12 +8,14 @@ import About from './sections/About'
 function App() {
   return (
     <>
+      <div className='flex flex-col gap-8 mb-4'>
+        <Home/>
+        <About/>
+        <Events/>
+        <Team/>
+        <Footer/>
+      </div>
 
-      <Home/>
-      <About/>
-      <Team/>
-      <Events/>
-      <Footer/>
     </>
   )
 }

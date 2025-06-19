@@ -2,55 +2,55 @@ import React from 'react';
 import ImageSrc from '../../assets/Team/18143e5b4f128b3c9c3a11604cdeaa42.jpeg';
 import GdscLogo from '../../assets/Footer/gdsclogo.png';
 
-const TeamCard = ({ instagram="insta@123" , position="GDSC Lead", message="I'm arshia thakur garg" }) => {
+const IntroCard = ({
+  instagram = "@insta_id",
+  position = "GDSC LEAD",
+  message = "I’m Arshia Thakur garg",
+}) => {
   return (
-    <div className="transform scale-[0.58] sm:scale-[0.75] md:scale-[0.85] lg:scale-100 w-fit h-fit  origin-top-left">
-      <div className="relative">
+    <div className="transform scale-70 md:scale-[0.80] lg:scale-[1] flex flex-col items-start w-fit mx-auto">
+      {/* Image Card */}
+      <div className="border border-black bg-white w-[250px]">
+        {/* Browser header */}
+        <div className="bg-[#E5E5E5] border-b border-black flex items-center px-3 py-1">
+          <div className="flex items-center space-x-1">
+            <span className="w-3 h-3 rounded-full bg-red-500" />
+            <span className="w-3 h-3 rounded-full bg-yellow-500" />
+            <span className="w-3 h-3 rounded-full bg-green-500" />
+            <span className="w-3 h-3 rounded-full bg-blue-500" />
+          </div>
+          <span className="ml-4 text-sm text-black font-medium truncate">{instagram}</span>
+        </div>
+        {/* Image */}
+        <div className="aspect-square w-full">
+          <img src={ImageSrc} alt="Team" className="object-cover w-full h-full aspect-square" />
+        </div>
+      </div>
 
-
-        <div className='border absolute border-black h-[20rem] w-[20rem]'>
-          <div>
-            <div className='border-b border-black bg-[#E5E5E5] h-[2rem] w-full flex items-center gap-[20px] px-2'>
-              <div className='flex space-x-1'>
-                <div className='w-3 h-3 rounded-full bg-red-500'></div>
-                <div className='w-3 h-3 rounded-full bg-yellow-500'></div>
-                <div className='w-3 h-3 rounded-full bg-green-500'></div>
-                <div className='w-3 h-3 rounded-full bg-blue-500'></div>
-              </div>
-              <div>{instagram}</div>
-            </div>
-            <div className="h-[17.8rem] w-full">
-              <img src={ImageSrc} alt="Team" className="h-full w-full object-cover" />
+      {/* Info Card */}
+      <div className="-mt-8 ml-20 w-[250px] border border-black bg-white shadow-md">
+        {/* Yellow Header */}
+        <div className="bg-[#FABD03] border-b border-black text-center py-2 font-bold text-sm">
+          {position}
+        </div>
+        {/* Message */}
+        <div className="px-4 py-3 text-left">
+          <p className="text-xl font-bold leading-snug mb-3">
+            Hi!!! <br />
+            {message}
+          </p>
+          {/* GDSC Footer */}
+          <div className="flex justify-end items-center gap-2">
+            <img src={GdscLogo} alt="GDSC Logo" className="h-6" />
+            <div className="text-right text-[10px] leading-tight">
+              <div>Google Developer Student Clubs</div>
+              <div>Army Institute of Technology, Pune</div>
             </div>
           </div>
         </div>
-
-
-        <div className='border relative left-[10rem] flex flex-col top-[17rem] border-black h-[10rem] w-[20rem] items-center'>
-          <div className='bg-[#FABD03] border-b border-black h-[2rem] w-full flex items-center justify-center'>
-            {position}
-          </div>
-          <div className='bg-white w-full h-[10rem] flex flex-col justify-center items-center'>
-            <div className='text-left font-bold text-2xl mb-[10px]'>
-              Hi!!!
-              <br />
-              {message}
-            </div>
-            <div className='flex justify-end items-center w-[100%] pr-[10px] gap-[5px]'>
-              <div>
-                <img src={GdscLogo} alt="GDSC Logo" className="h-[30px] w-[20%]" />
-              </div>
-              <div className='text-right'>
-                <h4 className='text-[10px]'>Google Developer Student Clubs</h4>
-                <h5 className='text-[8px]'>Army Institute of Technology, Pune</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   );
 };
 
-export default TeamCard;
+export default IntroCard;

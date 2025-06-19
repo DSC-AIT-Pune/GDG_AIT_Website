@@ -3,7 +3,6 @@ import about from "../assets/About/about.png";
 import pattern from "../assets/About/pattern.png"
 import rightBlock from '../assets/About/right-block.svg';
 import leftBlock from '../assets/About/left-block.svg';
-import '@fontsource/rubik-one';
 
 const AboutUs = () => {
   return (
@@ -24,7 +23,7 @@ const AboutUs = () => {
         {/* ABOUT US */}
         <h1
           className="
-            font-['Rubik_One',sans-serif]
+            font-seconday
             text-[2.2rem]
             xs:text-[2.8rem]
             sm:text-[3.5rem]

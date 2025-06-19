@@ -9,30 +9,9 @@ const allTeamMembers = {
   'Faculty Member': [
     { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
   ],
-  Mentors: [
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-  ],
-  Leads: [
-    { message: 'Hi!!! I’m Arshia Thakur garg1', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg4', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-  ],
-  'Core Members': [
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
-  ],
+  Mentors: Array(6).fill({ message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' }),
+  Leads: Array(6).fill({ message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' }),
+  'Core Members': Array(6).fill({ message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' }),
 };
 
 function Team() {
@@ -43,9 +22,9 @@ function Team() {
   useEffect(() => {
     const updateVisibleCount = () => {
       if (window.innerWidth < 768) {
-        setVisibleCount(6); // 2 cols x 3 rows
+        setVisibleCount(3); // 1 col × 3 rows
       } else {
-        setVisibleCount(3); // 1 row x 3 cols
+        setVisibleCount(3); // 1 row × 3 cols
       }
     };
     updateVisibleCount();
@@ -62,13 +41,15 @@ function Team() {
   const teamToDisplay = filteredTeam.slice(scrollIndex * visibleCount, (scrollIndex + 1) * visibleCount);
 
   return (
-    <div className='flex flex-col justify-center gap-y-14 py-6 rounded-xl w-[95vw] bg-primarybg items-center'>
+    <div className='flex flex-col justify-center gap-y-14 py-6 rounded-xl w-full max-w-[95vw] bg-primarybg items-center mx-auto px-4'>
       <h2 className='text-center font-seconday text-[clamp(1.75rem,8vw,6rem)] text-[#E94436]'>MEET OUR TEAM</h2>
 
       <TeamBar selected={selectedCategory} setSelectedCategory={setSelectedCategory} />
 
-      <div className='relative w-full max-w-[90vw]'>
-        <div className='grid grid-cols-2 md:flex md:justify-center gap-6 md:gap-10'>
+      <div className='relative w-full'>
+        <div
+          className='grid grid-cols-1 md:flex md:flex-wrap md:justify-center gap-6 md:gap-10'
+        >
           {teamToDisplay.map((member, index) => (
             <IntroCard
               key={index}
@@ -103,3 +84,4 @@ function Team() {
 }
 
 export default Team;
+

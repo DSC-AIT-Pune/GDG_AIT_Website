@@ -8,7 +8,7 @@ const IntroCard = ({
   message = "I’m Arshia Thakur garg",
 }) => {
   return (
-    <div className="transform scale-70 md:scale-[0.80] lg:scale-[1] flex flex-col items-start w-fit mx-auto">
+    <div className="transform scale-85 md:scale-[0.80] lg:scale-[1] flex flex-col items-start w-fit mx-auto">
       {/* Image Card */}
       <div className="border border-black bg-white w-[250px]">
         {/* Browser header */}

@@ -12,12 +12,7 @@ function Events() {
         {icon: eventlogo, name:"", imgsrc: eventimage},
         {icon: eventlogo, name:"", imgsrc: eventimage},
         {icon: eventlogo, name:"", imgsrc: eventimage},
-        {icon: eventlogo, name:"", imgsrc: eventimage},
-        {icon: eventlogo, name:"", imgsrc: eventimage},
-        {icon: eventlogo, name:"", imgsrc: eventimage},
-        {icon: eventlogo, name:"", imgsrc: eventimage},
-        {icon: eventlogo, name:"", imgsrc: eventimage},
-        {icon: eventlogo, name:"", imgsrc: eventimage},
+
 
     ]
 

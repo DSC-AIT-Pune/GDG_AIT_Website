@@ -1,0 +1,94 @@
+.container {
+    position: relative; /* Relative positioning for the container */
+    width: 100%;
+  }
+  
+  svg {
+    position: relative; /* Keeps the SVG in normal document flow */
+    z-index: 1; /* Make sure the SVG stays behind */
+  }
+  
+  .overlay-img {
+    position: absolute;
+    top: 42px;
+    left: 40px;
+    width: 50px; /* Set size of the image */
+    height: 50px;
+    z-index: 2; /* Ensure image stays on top */
+  }
+  .svg-background {
+  
+  width: 95vw;
+  height: 100%;
+  background-image: url('../assets/Home/bgsvg.svg'); /* Replace with your SVG file or URL */
+  background-size: cover;  /* Adjust how the SVG is sized */
+  background-position: center; /* Center the SVG */
+  background-repeat: no-repeat; /* Ensure the SVG does not repeat */
+  background-color:#E6E4D5 ;
+}
+.background-image {
+    width: 100%; /* Make the image fill the width of the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .image-container {
+    position: relative; /* This is important to position text absolutely relative to the image */
+    width: 100%; /* Adjust to fit your layout */
+    max-width: 100%; /* Optional: Set a max-width for your container */
+  }
+  .overlay-text {
+    position: absolute; /* Position text over the image */
+    top: 0; /* Position it vertically (50% from top) */
+    left: 30px; /* Position it horizontally (50% from left) */
+    color: white; /* Make the text stand out */
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 2; /* Ensure text stays on top of the image */
+    color:black;
+  }
+  .overlay-text-2 {
+    position: absolute; /* Position text over the image */
+    top: 50px; /* Position it vertically (50% from top) */
+    left: 30px; /* Position it horizontally (50% from left) */
+    color: white; /* Make the text stand out */
+    font-size: 35px;
+    font-weight: bolder;
+    z-index: 2; /* Ensure text stays on top of the image */
+    color:black;
+    /* padding-left: 30px; */
+  }
+  .overlay-text-3{
+    position: absolute; /* Position text over the image */
+    top: 111px; /* Position it vertically (50% from top) */
+    left: 320px; /* Position it horizontally (50% from left) */
+    z-index: 2; /* Ensure text stays on top of the image */
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 1000px; /* rounded-full is equivalent to a very large border-radius */
+    width: 11rem; /* w-44 is equivalent to 11rem in Tailwind */
+    overflow: hidden;
+  }
+  :hover.overlay-text-3{
+    cursor: pointer;
+    scale: 1.2;
+  }
+  
+  .cursor {
+    font-weight: bold;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  #rotating-svg {
+    animation: rotate 8s linear infinite;
+    /* Adjust the duration as needed (3s, 5s, etc.) */
+  }
+  

@@ -5,6 +5,7 @@ import Team from './sections/Team'
 
 import About from './sections/About'
 import bgimage from './assets/bg-image.svg'
+import Collaborate from './sections/Collaborate'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Events/>
 
         <Team/>
+        <Collaborate/>
         <Footer/>
         
         

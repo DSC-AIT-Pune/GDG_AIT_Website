@@ -11,6 +11,7 @@ function TeamBar({ selected, setSelectedCategory }) {
               <li
               key={cat}
               onClick={()=>setSelectedCategory(cat)}
+              className={`cursor-pointer  rounded-full transition-all duration-200 ${selected === cat ? 'underline  font-bold' : ''}`}
               >
                 {cat}
               </li>

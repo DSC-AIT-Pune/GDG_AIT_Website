@@ -7,11 +7,37 @@ const categories = ['Faculty Member', 'Mentors', 'Leads', 'Core Members'];
 
 const allTeamMembers = {
   'Faculty Member': [
-    { message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 1', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 2', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 3', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 5', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 6', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 7', position: 'GDSC LEAD', instagram: '@insta_id' },
   ],
-  Mentors: Array(6).fill({ message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' }),
-  Leads: Array(6).fill({ message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' }),
-  'Core Members': Array(6).fill({ message: 'Hi!!! I’m Arshia Thakur garg', position: 'GDSC LEAD', instagram: '@insta_id' }),
+  Mentors: [
+    { message: 'Hi!!! 8', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 9', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 10', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 11', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 12', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 13', position: 'GDSC LEAD', instagram: '@insta_id' },
+  ],
+  Leads: [
+    { message: 'Hi!!! 14', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 24', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 34', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 54', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 64', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 75', position: 'GDSC LEAD', instagram: '@insta_id' },
+  ],
+  'Core Members': [
+        { message: 'Hi!!! 17', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 27', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 37', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 57', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 67', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Hi!!! 77', position: 'GDSC LEAD', instagram: '@insta_id' },
+  ]
 };
 
 function Team() {

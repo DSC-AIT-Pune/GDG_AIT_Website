@@ -10,8 +10,11 @@ function App() {
     <>
       <div className='flex flex-col gap-8 mb-4'>
         {/* <Home/> */}
+        <About/>
+        <Events/>
 
         <Team/>
+        <Footer/>
 
       </div>
 

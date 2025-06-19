@@ -1,16 +1,23 @@
-import React from 'react'
+import React from 'react';
 
-function TeamBar() {
+function TeamBar({ selected, setSelectedCategory }) {
+  const categories = ['Faculty Member', 'Mentors', 'Leads', 'Core Members'];
+
   return (
-    <div className='bg-black text-white text-[clamp(0.5313rem,2.6vw,1.25rem)] py-[0.625rem] w-[75vw] lg:w-[55vw] rounded-[1.25rem]'>
-        <ul className='flex flex-row justify-around flex-nowrap px-4 list-none'>
-            <li>Faculty Member</li>
-            <li>Mentor</li>
-            <li>Lead</li>
-            <li>Core Members</li>
-        </ul>
+    <div className='bg-black text-white rounded-full px-6 py-2 w-[85vw] max-w-[720px] overflow-x-auto no-scrollbar'>
+      <ul className='flex justify-around gap-4 text-sm md:text-base'>
+        {categories.map((cat) => (
+          <li
+            key={cat}
+            onClick={() => setSelectedCategory(cat)}
+            className={`cursor-pointer px-3 py-1 rounded-full transition-all duration-200 ${selected === cat ? 'bg-white text-black font-bold' : ''}`}
+          >
+            {cat}
+          </li>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }
 
-export default TeamBar
+export default TeamBar;

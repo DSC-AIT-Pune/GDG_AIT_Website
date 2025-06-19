@@ -9,7 +9,7 @@ import bgimage from './assets/bg-image.svg'
 function App() {
   return (
     <>
-      <div className='flex flex-col gap-8 relative bg-primarybg md:bg-black rounded-b-xl mb-4' >
+        <div className='flex flex-col gap-8 relative bg-primarybg md:bg-black rounded-b-xl mb-4' >
         {/* <Home/> */}
         <About/>
         <Events/>
@@ -17,8 +17,12 @@ function App() {
         <Team/>
         <Footer/>
         
-      </div>
-      <img className='bottom-0 w-full' src={bgimage} alt="" />
+        
+        </div>
+        <img className='w-[95vw]' src={bgimage} alt="" />
+      
+      
+      
 
     </>
   )

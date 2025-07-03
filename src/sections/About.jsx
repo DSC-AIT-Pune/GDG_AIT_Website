@@ -1,12 +1,13 @@
 import React from 'react';
-import about from "../assets/About/about.png";
-import pattern from "../assets/About/pattern.png"
-import rightBlock from '../assets/About/right-block.svg';
-import leftBlock from '../assets/About/left-block.svg';
+import about from "../Assets/About/about.png";
+import pattern from "../Assets/About/pattern.png"
+import rightBlock from '../Assets/About/right-block.svg';
+import leftBlock from '../Assets/About/left-block.svg';
+import '@fontsource/rubik-one';
 
 const AboutUs = () => {
   return (
-    <section className="bg-[#E6E4D5] pb-6 px-2 sm:px-6 md:px-10 lg:px-16 xl:px-24  rounded-2xl relative w-[95vw] min-h-screen overflow-hidden">
+    <section className="bg-[#E6E4D5] pb-6 px-2 sm:px-6 md:px-10 lg:px-16 xl:px-24 m-[2vw] rounded-3xl relative w-[96vw] min-h-screen overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0 z-0"
@@ -23,7 +24,7 @@ const AboutUs = () => {
         {/* ABOUT US */}
         <h1
           className="
-            font-seconday
+            font-['Rubik_One',sans-serif]
             text-[2.2rem]
             xs:text-[2.8rem]
             sm:text-[3.5rem]

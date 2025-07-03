@@ -56,11 +56,11 @@ const TypingEffect = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-6 w-full flex flex-col items-center justify-between ">
-      <div className="bg-white w-[60%] py-3 px-6 space-y-4 mx-auto rounded-3xl shadow-lg ">
+    <div className="container mx-auto px-2 sm:px-6 w-full flex flex-col items-center justify-between">
+      <div className="bg-white w-full max-w-lg sm:w-[60%] lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl py-3 px-3 sm:px-6 space-y-4 mx-auto rounded-3xl shadow-lg">
         
         {/*Search Text Section*/}
-        <div className="flex items-center w-full space-x-4">
+        <div className="flex items-center w-full space-x-2 sm:space-x-4">
           {/* Search Icon */}
           <div>
             <svg
@@ -91,7 +91,7 @@ const TypingEffect = () => {
 
           {/* Search Text */}
           <div className="flex-grow">
-            <span className="text-gray-800 font-semibold text-lg">
+            <span className="text-gray-800 font-semibold text-lg sm:text-lg">
               {displayedText}
               <span className={`cursor ${showCursor ? "opacity-100" : "opacity-0"}`}>
                 |
@@ -101,35 +101,35 @@ const TypingEffect = () => {
 
           {/* Mic */}
           <div className="text-gray-500">
-            <img src={mic} alt="Mic Icon" />
+            <img src={mic} alt="Mic Icon" className="w-5 h-5 sm:w-6 sm:h-6" />
           </div>
 
           {/* Camera  */}
           <div className="text-gray-500">
-            <img src={lens} alt="Camera Icon" />
+            <img src={lens} alt="Camera Icon" className="w-5 h-5 sm:w-6 sm:h-6" />
           </div>
         </div>
 
-        <div className="w-[98%] h-[2px] ml-2 bg-gray-300"></div>
+        <div className="w-full h-[2px] bg-gray-300"></div>
 
         {/*Search History */}
         <div className="space-y-2 text-gray-800">
           <div className="flex items-center space-x-2">
-            <img src={recent} alt="Recent Icon" />
-            <span>Google Developer Students Club, AIT PUNE</span>
+            <img src={recent} alt="Recent Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span className="text-sm sm:text-lg">Google Developer Students Club, AIT PUNE</span>
           </div>
           <div className="flex items-center space-x-2">
-            <img src={recent} alt="Recent Icon" />
-            <span>GDSC, Army Institute Of Technology Pune</span>
+            <img src={recent} alt="Recent Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span className="text-sm sm:text-lg">GDSC, Army Institute Of Technology Pune</span>
           </div>
         </div>
 
         {/*Buttons */}
-        <div className="flex space-x-4 justify-center">
-          <button className="bg-blue-500 text-white rounded-full py-2 px-6 font-semibold hover:bg-blue-600">
+        <div className="flex flex-col sm:flex-row gap-2 sm:space-x-4 justify-center">
+          <button className="bg-blue-500 text-white rounded-full py-2 px-4 sm:px-6 font-semibold hover:bg-blue-600">
             Google Search
           </button>
-          <button className="bg-gray-100 text-blue-500 rounded-full py-2 px-6 font-semibold hover:bg-gray-200">
+          <button className="bg-gray-100 text-blue-500 rounded-full py-2 px-4 sm:px-6 font-semibold hover:bg-gray-200">
             I'm Feeling AITian
           </button>
         </div>

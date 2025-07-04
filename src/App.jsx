@@ -13,7 +13,7 @@ import Home from "./sections/Home";
 function App() {
   return (
     <>
-      <div className="flex flex-col gap-8 relative justify-center bg-primarybg md:bg-black rounded-b-xl mb-4">
+      <div className="flex flex-col gap-8 mt-4 relative justify-center w-full bg-primarybg md:bg-black rounded-b-xl mb-4">
         <Home />
         <About />
         <Events />
@@ -24,7 +24,7 @@ function App() {
 
         {/* <SideBar/> */}
       </div>
-      <img className="w-[95vw]" src={bgimage} alt="" />
+      <img className="w-[95vw] mx-auto" src={bgimage} alt="" />
     </>
   );
 }

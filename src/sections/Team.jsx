@@ -67,7 +67,7 @@ function Team() {
   const teamToDisplay = filteredTeam.slice(scrollIndex * visibleCount, (scrollIndex + 1) * visibleCount);
 
   return (
-    <div className='flex flex-col justify-center gap-y-14 py-6 rounded-xl w-full max-w-[95vw] bg-primarybg items-center mx-auto px-4'>
+    <div className='flex flex-col justify-center gap-y-14 py-6 rounded-xl w-full  max-w-[95vw] bg-primarybg items-center mx-auto px-4'>
       <h2 className='text-center font-seconday text-[clamp(1.75rem,8vw,6rem)] text-[#E94436]'>MEET OUR TEAM</h2>
 
       <TeamBar selected={selectedCategory} setSelectedCategory={setSelectedCategory} />

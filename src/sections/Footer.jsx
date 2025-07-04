@@ -10,7 +10,7 @@ import email from "../assets/Footer/email.svg"
 
 function Footer() {
   return (
-    <div className='bg-primarybg w-[95vw] h-auto flex flex-col lg:flex-row gap-y-8 justify-between mt-16 md:mt-0 lg:mt-0 px-3.5 md:pl-9 md:pb-7 align-top pt-[1.1675rem] pb-6 rounded-b-xl md:rounded-xl border-t-4 border-black'>
+    <div className='bg-primarybg w-[95vw] mx-auto h-auto flex flex-col lg:flex-row gap-y-8 justify-between mt-16 md:mt-0 lg:mt-0 px-3.5 md:pl-9 md:pb-7 align-top pt-[1.1675rem] pb-6 rounded-b-xl md:rounded-xl border-t-4 border-black'>
         <div className='basis-1/3 flex flex-col justify-center gap-y-4 mt-[4px] '>
             {/* icon part */}
             <div className='flex flex-row gap-2 lg:justify-start justify-center align-top'>

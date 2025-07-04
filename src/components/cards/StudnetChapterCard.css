@@ -1,82 +1,8 @@
-.image-container {
-  position: relative;
-  width: 90vw; /* Default for small screens */
-  max-width: 600px;
-  margin: auto;
-  transition: all 0.3s ease;
-}
-
-.background-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.overlay-text {
-  position: absolute;
-  top: 0;
-  left: 5vw;
-  font-size: 4vw;
-  font-weight: bold;
-  color: black;
-  z-index: 2;
-}
-
-.overlay-text-2 {
-  position: absolute;
-  top: 8vw;
-  left: 5vw;
-  font-size: 6vw;
-  font-weight: bolder;
-  color: black;
-  z-index: 2;
-}
-
-.overlay-text-3 {
-  position: absolute;
-  top: 17vw;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  border: 2px solid black;
-  border-radius: 1000px;
-  width: 12rem;
-  overflow: hidden;
-  z-index: 2;
-  transition: transform 0.3s ease;
-}
-
-.overlay-text-3:hover {
-  cursor: pointer;
-  transform: translateX(-50%) scale(1.05);
-}
-
-/* Media queries for responsiveness */
-@media screen and (min-width: 768px) {
-  .image-container {
-    width: 45vw;
-  }
-
-  .overlay-text {
-    font-size: 1.2rem;
-    top: 10px;
-    left: 30px;
-  }
-
-  .overlay-text-2 {
-    font-size: 2rem;
-    top: 50px;
-    left: 30px;
-  }
-
-  .overlay-text-3 {
-    top: 130px;
-    left: 320px;
-    transform: none;
-  }
-
-  .overlay-text-3:hover {
-    transform: scale(1.1);
-  }
+.bgimage {
+    background-image: url('../assets/Calender/card-shape.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%; 
+    width: 100%;
+    height: auto;
 }

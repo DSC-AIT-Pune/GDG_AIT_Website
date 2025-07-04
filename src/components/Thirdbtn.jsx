@@ -3,12 +3,12 @@
 
 import React from 'react';
 
-function Primarybtn({ label }) {
+function Thirdbtn({ label }) {
   return (
     <div className='flex justify-center items-center rounded-full w-fit relative h-fit
     bg-white border-[0.0513rem] border-black border-solid '>
         <div className='  mr-4 ml-1 h-auto flex justify-start my-1.5 px-6 items-center'>
-            <p className='text-[0.8rem] py-1.5 pr-5 text-center font-bold md:text-[1.2rem]  translate-y-[0.5px]'>{label}</p>
+            <p className='text-[0.8rem]  pr-1 text-center font-bold md:text-[1.2rem]  translate-y-[0.5px]'>{label}</p>
         </div>
         
         <div className='absolute flex border-l-[0.0513rem] border-black border-solid  justify-center items-center right-0 top-1/2 transform -translate-y-[50%] rounded-full h-full aspect-square   bg-[#FBFF5A] z-5 '>
@@ -20,4 +20,4 @@ function Primarybtn({ label }) {
   );
 }
 
-export default Primarybtn;
+export default Thirdbtn;

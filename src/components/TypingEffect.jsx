@@ -2,9 +2,9 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import '../styles/Home.css';
 
-import mic from '../Assets/Home/mic.png';
-import lens from '../Assets/Home/lens.png';
-import recent from '../Assets/Home/recent.png';
+import mic from '../assets/Home/mic.png';
+import lens from '../assets/Home/lens.png';
+import recent from '../assets/Home/recent.png';
 
 
 

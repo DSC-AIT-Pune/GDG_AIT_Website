@@ -5,6 +5,7 @@ import shape from "../assets/Home/Polygon.svg";
 import TypingEffect from "../components/TypingEffect";
 import StudentChapterCard from "../components/cards/StudentChapterCard";
 import NavBar from "../components/NavBar";
+import cartoon from '../assets/Home/GDSCimage.svg'
 
 function Home() {
   return (
@@ -30,7 +31,7 @@ function Home() {
         {/* <StudentChapterCard/> */}
         <img
           className="max-w-[35vw] lg:w-[390px]  h-auto"
-          src="src\assets\Home\GDSCimage.png"
+          src={cartoon}
           alt=""
         />
       </div>

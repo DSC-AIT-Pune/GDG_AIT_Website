@@ -1,8 +1,8 @@
 import React from 'react';
-import about from "../Assets/About/about.png";
-import pattern from "../Assets/About/pattern.png"
-import rightBlock from '../Assets/About/right-block.svg';
-import leftBlock from '../Assets/About/left-block.svg';
+import about from "../assets/About/about.png";
+import pattern from "../assets/About/pattern.png"
+import rightBlock from '../assets/About/right-block.svg';
+import leftBlock from '../assets/About/left-block.svg';
 // import '@fontsource/rubik-one';
 
 const AboutUs = () => {

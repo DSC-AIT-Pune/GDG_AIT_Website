@@ -35,13 +35,16 @@ function Calender() {
             <div>
                 <CalenderComp/>
             </div>
-            <div className='max-w-[945px] bg-center relative bg-no-repeat bg-[length:100%_100%] bgimage'>
-                <p className='text-black absolute text-[14px] md:text-[18px] lg:text-[28px] lg:left-7 lg:top-3 font-bold top-2 left-4'>Upcoming Events</p>
-                
-                <div className='flex flex-row gap-4 lg:mx-4 my-[3%] mt-[7%] justify-evenly  items-center p-5'>
+            <div className='max-w-[945px]  bg-cente h-full relative bg-no-repeat bg-[length:100%_100%] bgimage'>
+                <p className='text-black absolute text-[16px] md:text-[18px] lg:text-[28px] lg:left-7 lg:top-3 font-bold top-1 left-4'>Upcoming Events</p>
+                <div className='h-2'></div>
+                <div className='flex flex-col lg:flex-row gap-10 lg:gap-10  lg:mx-4 lg:my-[3%] lg:mt-[7%] justify-evenly items-center p-5'>
                     {events.map((event, index) => (
-                        <div key={index} className="flex justify-center">
-                        <UpcomingEvents className='' eventimage={event.imgsrc} date={event.date} />
+                        <div
+                          key={index}
+                          className="flex justify-center w-full max-w-[95vw] sm:max-w-[80vw] md:max-w-[60vw] lg:max-w-xs"
+                        >
+                          <UpcomingEvents eventimage={event.imgsrc} date={event.date} />
                         </div>
                     ))}
                 </div>

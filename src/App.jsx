@@ -14,7 +14,7 @@ import Hamburger from "./components/Hamburger";
 function App() {
   return (
     <>
-      <div className="flex flex-col gap-8 mt-4 relative justify-center w-full bg-primarybg md:bg-black rounded-b-xl mb-4">
+      <div className="flex flex-col gap-8 mt-4 relative justify-center w-full max-w-[95vw] mx-auto  bg-primarybg md:bg-black rounded-b-xl rounded-t-xl mb-4">
         <Home />
         <About />
         <Events />

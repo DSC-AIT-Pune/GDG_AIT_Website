@@ -9,7 +9,7 @@ import cartoon from '../assets/Home/GDSCimage.svg'
 
 function Home() {
   return (
-    <div className="relative flex flex-col gap-y-14 py-6 rounded-xl justify-center w-[95vw] max-w-[95vw] items-center bg-primarybg mx-auto">
+    <div className="relative flex flex-col gap-y-14 py-6 rounded-xl justify-center  w-[95vw] items-center bg-primarybg mx-auto">
       <div className="absolute hidden top-0 left-1/2 transform -translate-x-1/2  md:flex justify-center">
         <NavBar />
       </div>

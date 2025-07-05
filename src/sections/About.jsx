@@ -7,7 +7,7 @@ import leftBlock from '../assets/About/left-block.svg';
 
 const AboutUs = () => {
   return (
-    <section className="bg-[#E6E4D5] pb-6 px-2 sm:px-6 md:px-10 lg:px-16 xl:px-24 m-[2vw] rounded-3xl relative w-[96vw] min-h-screen overflow-hidden">
+    <section className="bg-[#E6E4D5] pb-6 px-2 sm:px-6 md:px-10 lg:px-16 xl:px-24 mx-auto rounded-3xl relative w-[95vw] min-h-screen overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0 z-0"

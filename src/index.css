@@ -40,13 +40,13 @@ src: url('/fonts/RubikOne-Regular.woff') format('woff');
     align-items: center;
     justify-content: center;
 
-    width: 100vw;
-
-
+    
+    
 }
 
 body {
-    @apply font-primary
+    @apply font-primary;
+    width: 100vw;
 }
 
 

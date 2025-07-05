@@ -9,6 +9,7 @@ import Collaborate from "./sections/Collaborate";
 import Calender from "./sections/Calender";
 import SideBar from "./components/SideBar";
 import Home from "./sections/Home";
+import Hamburger from "./components/Hamburger";
 
 function App() {
   return (

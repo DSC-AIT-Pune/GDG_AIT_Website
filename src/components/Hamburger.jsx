@@ -3,7 +3,7 @@ import Group from "../assets/Home/Group.png";
 import { Menu, X } from "lucide-react";
 
 const Hamburger = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div
@@ -11,25 +11,19 @@ const Hamburger = () => {
         isOpen ? "bg-black text-white rounded-lg p-4" : ""
       }`}
     >
-
-
-
-      
-
       <div className="flex  justify-between w-full mb-3">
-
         {isOpen ? (
           <img src={Group} alt="Group Logo" className="w-10 h-8" />
         ) : (
           <div></div>
         )}
 
-
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle Menu"
-        >
-          {isOpen ? <X size={24} color="white" /> : <Menu size={24} color="black" />}
+        <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
+          {isOpen ? (
+            <X size={24} color="white" />
+          ) : (
+            <Menu size={24} color="black" />
+          )}
         </button>
       </div>
 
@@ -55,7 +49,11 @@ const Hamburger = () => {
                 strokeWidth="2"
                 viewBox="0 0 24 24"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </span>
           </button>

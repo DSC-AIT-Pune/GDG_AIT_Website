@@ -7,12 +7,12 @@ import lens from '../assets/Home/lens.png';
 import recent from '../assets/Home/recent.png';
 
 
-
+// created by previous FE's i.e. current TE's of GDSC AIT PUNE.
 
 {/*Middle Section*/}
 
 const TypingEffect = () => {
-  const fullText = "Google Developer Students Club";
+  const fullText = "Google Developer Group";
   const [displayedText, setDisplayedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -116,11 +116,11 @@ const TypingEffect = () => {
         <div className="space-y-2 text-gray-800">
           <div className="flex items-center space-x-2">
             <img src={recent} alt="Recent Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="text-sm sm:text-lg">Google Developer Students Club, AIT PUNE</span>
+            <span className="text-sm sm:text-lg">Google Developer Group , AIT PUNE</span>
           </div>
           <div className="flex items-center space-x-2">
             <img src={recent} alt="Recent Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="text-sm sm:text-lg">GDSC, Army Institute Of Technology Pune</span>
+            <span className="text-sm sm:text-lg">GDG, Army Institute Of Technology Pune</span>
           </div>
         </div>
 

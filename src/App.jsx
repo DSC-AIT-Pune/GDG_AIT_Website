@@ -24,14 +24,13 @@ function App() {
       )}
 
       <div className="flex flex-col gap-8 mt-4 relative justify-center w-full max-w-[95vw] mx-auto  bg-primarybg md:bg-black rounded-b-xl rounded-t-xl mb-4">
-        <Home onMenuClick={() => setSidebarOpen(true)} />
-        <About />
-        <Events />
-        <Team />
-        <Calender />
-        <Collaborate />
-        <Footer />
-
+        <div id="home"><Home onMenuClick={() => setSidebarOpen(true)} /></div>
+        <div id="about us"><About /></div>
+        <div id="events"><Events /></div>
+        <div id="team"><Team /></div>
+        <div id="calender"><Calender /></div>
+        <div id="contact us"><Collaborate /></div>
+        <div id="footer"><Footer /></div>
         {/* <SideBar/> */}
       </div>
       <Hamburger isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />

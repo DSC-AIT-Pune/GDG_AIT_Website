@@ -42,14 +42,24 @@ function Hamburger({ isOpen, onClose }) {
         <div>
           <ul>
             <div className="pl-6 pt-2">
-              {menuitems.map((item, index) => (
-                <li
-                  key={index}
-                  className="text-white text-lg font-primary font-normal py-2 px-4 hover:bg-gray-700 cursor-pointer"
-                >
-                  {item}
-                </li>
-              ))}
+              {menuitems.map((item, index) => {
+                const sectionId = item.toLowerCase()
+                return (
+                  <li
+                    key={index}
+                    className="text-white text-lg font-primary font-normal py-2 px-4 hover:bg-gray-700 cursor-pointer"
+                    onClick={() => {
+                      const section = document.getElementById(sectionId)
+                      if (section) {
+                        section.scrollIntoView({ behavior: "smooth" })
+                        onClose();
+                      }
+                    }}
+                  >
+                    {item}
+                  </li>
+                );
+              })}
             </div>
           </ul>
         </div>

@@ -7,7 +7,7 @@ import StudentChapterCard from "../components/cards/StudentChapterCard";
 import NavBar from "../components/NavBar";
 import cartoon from '../assets/Home/GDSCimage.svg'
 
-function Home() {
+function Home({ onMenuClick }) {
   return (
     <div className="relative flex flex-col gap-y-14 py-6 rounded-xl justify-center  w-[95vw] items-center bg-primarybg mx-auto">
       <div className="absolute hidden top-0 left-1/2 transform -translate-x-1/2  md:flex justify-center">
@@ -15,7 +15,10 @@ function Home() {
       </div>
       <div className="flex flex-row w-full justify-between px-5 ">
         <img src={Logo} alt="Logo" />
-        <img className="md:hidden" src={Hamburger} alt="Hamburger Menu" />
+        <img onClick={onMenuClick}
+        className="md:hidden cursor-pointer"
+        src={Hamburger}
+        alt="Hamburger Menu" />
       </div>
 
       <TypingEffect />

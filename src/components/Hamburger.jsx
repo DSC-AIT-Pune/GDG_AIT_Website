@@ -1,66 +1,61 @@
-import React, { useState } from "react";
-import Group from "../assets/Home/Group.png";
-import { Menu, X } from "lucide-react";
+import React from "react";
+import { IoCloseOutline } from "react-icons/io5";
+import logo from "../assets/Home/Group.png";
 
-const Hamburger = () => {
-  const [isOpen, setIsOpen] = useState(true);
+function Hamburger({ isOpen, onClose }) {
+  const menuitems = [
+    "Home",
+    "About Us",
+    "Events",
+    "Team",
+    "Calender",
+    "Contact Us",
+  ];
 
   return (
-    <div
-      className={`md:hidden w-full max-w-[300px] ${
-        isOpen ? "bg-black text-white rounded-lg p-4" : ""
-      }`}
-    >
-      <div className="flex  justify-between w-full mb-3">
-        {isOpen ? (
-          <img src={Group} alt="Group Logo" className="w-10 h-8" />
-        ) : (
-          <div></div>
-        )}
-
-        <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
-          {isOpen ? (
-            <X size={24} color="white" />
-          ) : (
-            <Menu size={24} color="black" />
-          )}
-        </button>
-      </div>
-
-      {/* Sidebar menu content */}
-      {isOpen && (
-        <div className="flex flex-col gap-6 text-2xl mt-[20px]">
-          {["Home", "About us", "Events", "Team", "Calendar", "Contact Us"].map(
-            (item) => (
-              <a key={item} href="#" className="hover:underline text-sm">
-                {item}
-              </a>
-            )
-          )}
-
-          {/* Login Button */}
-          <button className="flex items-center gap-2 bg-yellow-100 text-black px-4 py-1 rounded-full mt-2 hover:bg-yellow-200 transition self-end">
-            <span className="font-semibold">Login</span>
-            <span className="bg-yellow-400 p-1 rounded-full">
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="black"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </span>
+    <div className={`fixed top-0 left-0 h-full w-72 bg-black z-50 transform transition-transform duration-300 ease-in-out ${
+        isOpen ? 'translate-x-0' : '-translate-x-[120%]'
+      }`}>
+      <div className="flex flex-col  bg-black gap-y-3 h-screen w-[86vw]">
+        <div className="flex flex-row px-2 pt-7 justify-between">
+          <img className="h-6 pl-3 w-auto" src={logo} alt="Logo" />
+          <button onClick={onClose} className="pr-3">
+            <svg
+              class="w-8 h-8 text-gray-800 dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18 17.94 6M18 18 6.06 6"
+              />
+            </svg>
           </button>
         </div>
-      )}
+        <div>
+          <ul>
+            <div className="pl-6 pt-2">
+              {menuitems.map((item, index) => (
+                <li
+                  key={index}
+                  className="text-white text-lg font-primary font-normal py-2 px-4 hover:bg-gray-700 cursor-pointer"
+                >
+                  {item}
+                </li>
+              ))}
+            </div>
+          </ul>
+        </div>
+      </div>
     </div>
   );
-};
+}
 
 export default Hamburger;

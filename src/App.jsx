@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "./sections/Footer";
 import Events from "./sections/Events";
 import Team from "./sections/Team";
@@ -12,10 +12,19 @@ import Home from "./sections/Home";
 import Hamburger from "./components/Hamburger";
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <>
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0  backdrop-blur-xs z-40"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       <div className="flex flex-col gap-8 mt-4 relative justify-center w-full max-w-[95vw] mx-auto  bg-primarybg md:bg-black rounded-b-xl rounded-t-xl mb-4">
-        <Home />
+        <Home onMenuClick={() => setSidebarOpen(true)} />
         <About />
         <Events />
         <Team />
@@ -25,6 +34,7 @@ function App() {
 
         {/* <SideBar/> */}
       </div>
+      <Hamburger isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <img className="w-[95vw] mx-auto" src={bgimage} alt="" />
     </>
   );

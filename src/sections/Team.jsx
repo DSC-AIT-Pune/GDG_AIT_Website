@@ -10,6 +10,7 @@ import Nikhil from "../assets/Team/img4.png";
 import divyanshu from "../assets/Team/img7.jpeg";
 import Aditya from "../assets/Team/img6.jpeg";
 import vignesh from "../assets/Team/img8.jpeg"
+
 const categories = [ 'Mentors', 'Leads', 'Core Members'];
 
 const allTeamMembers = {
@@ -50,9 +51,9 @@ function Team() {
   useEffect(() => {
     const updateVisibleCount = () => {
       if (window.innerWidth < 768) {
-        setVisibleCount(3); // 1 col × 3 rows
+        setVisibleCount(3); 
       } else {
-        setVisibleCount(3); // 1 row × 3 cols
+        setVisibleCount(3);
       }
     };
     updateVisibleCount();

@@ -2,41 +2,43 @@ import React, { useState, useEffect } from 'react';
 import TeamBar from '../components/TeamBar';
 import IntroCard from '../components/cards/IntroCard';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-
-const categories = ['Faculty Member', 'Mentors', 'Leads', 'Core Members'];
+import Arshia from "../assets/Team/img1.jpg"
+import Gaurav from "../assets/Team/img3.jpg"
+import Sumit from "../assets/Team/img2.jpg"
+import Gourav from "../assets/Team/img5.png";
+import Nikhil from "../assets/Team/img4.png";
+import divyanshu from "../assets/Team/img7.jpeg";
+import Aditya from "../assets/Team/img6.jpeg";
+import vignesh from "../assets/Team/img8.jpeg"
+const categories = [ 'Mentors', 'Leads', 'Core Members'];
 
 const allTeamMembers = {
-  'Faculty Member': [
-    { message: 'Hi!!! 1', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 2', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 3', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 5', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 6', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 7', position: 'GDSC LEAD', instagram: '@insta_id' },
-  ],
   Mentors: [
-    { message: 'Hi!!! 8', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 9', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 10', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 11', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 12', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 13', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Arshia Garg', position: 'BE Mentor', instagram: '@insta_id', imageSrc: Arshia },
+    { message: 'Sumit Nath ', position: 'BE Mentor', instagram: '@insta_id', imageSrc: Sumit },
+    { message: 'Gaurav Kumar', position: 'BE Mentor', instagram: '@insta_id' , imageSrc : Gaurav},
+    { message: 'Gourav Singh ', position: 'BE Mentor', instagram: '@insta_id', imageSrc: Gourav },
+    { message: 'Nikhil Dhariwal ', position: 'BE Mentor', instagram: '@insta_id', imageSrc: Nikhil },
+    { message: 'Aditya Singh ', position: 'BE Mentor', instagram: '@insta_id', imageSrc: Aditya },
+    { message: 'Vignesh Pandi ', position: 'BE Mentor', instagram: '@insta_id',imageSrc: vignesh },
+    { message: 'Divyanshu Rai ', position: 'BE Mentor', instagram: '@insta_id', imageSrc:divyanshu },
+    // { message: 'Aditya Kumar ', position: 'BE Mentor', instagram: '@insta_id' },
   ],
   Leads: [
-    { message: 'Hi!!! 14', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 24', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 34', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 54', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 64', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 75', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
   ],
   'Core Members': [
-        { message: 'Hi!!! 17', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 27', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 37', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 57', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 67', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: 'Hi!!! 77', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
   ]
 };
 
@@ -79,6 +81,7 @@ function Team() {
           {teamToDisplay.map((member, index) => (
             <IntroCard
               key={index}
+              imageSrc={member.imageSrc}
               position={member.position}
               message={member.message}
               instagram={member.instagram}
@@ -110,4 +113,3 @@ function Team() {
 }
 
 export default Team;
-

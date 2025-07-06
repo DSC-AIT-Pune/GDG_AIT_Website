@@ -1,11 +1,11 @@
 import React from 'react';
-import ImageSrc from '../../assets/Team/18143e5b4f128b3c9c3a11604cdeaa42.jpeg';
 import GdscLogo from '../../assets/Footer/gdsclogo.png';
 
 const IntroCard = ({
+  imageSrc,
   instagram = "@insta_id",
   position = "GDSC LEAD",
-  message = "I’m Arshia Thakur garg",
+  message = "I'm Arshia Thakur garg",
 }) => {
   return (
     <div className="transform scale-85 md:scale-[0.80] lg:scale-[1] flex flex-col items-start w-fit mx-auto">
@@ -22,11 +22,21 @@ const IntroCard = ({
           <span className="ml-4 text-sm text-black font-medium truncate">{instagram}</span>
         </div>
         {/* Image */}
-        <div className="aspect-square w-full">
-          <img src={ImageSrc} alt="Team" className="object-cover w-full h-full aspect-square" />
+        <div className="aspect-square w-full overflow-hidden">
+          {imageSrc ? (
+            <img 
+              src={imageSrc} 
+              alt="Team" 
+              className="w-full h-full object-cover object-center" 
+            />
+          ) : (
+            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+              <span className="text-gray-500 text-sm">No Image</span>
+            </div>
+          )}
         </div>
       </div>
-
+      
       {/* Info Card */}
       <div className="-mt-8 ml-20 w-[250px] border border-black bg-white shadow-md">
         {/* Yellow Header */}
@@ -36,7 +46,7 @@ const IntroCard = ({
         {/* Message */}
         <div className="px-4 py-3 text-left">
           <p className="text-xl font-bold leading-snug mb-3">
-            Hi!!! <br />
+           <br />
             {message}
           </p>
           {/* GDSC Footer */}

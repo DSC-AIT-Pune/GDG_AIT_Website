@@ -4,9 +4,9 @@ import linkedin from "../assets/Footer/linkedin.svg"
 import fb from "../assets/Footer/fb.svg"
 import insta from "../assets/Footer/insta.svg"
 import twitter from "../assets/Footer/twitter.svg"
-import address from "../assets/Footer/address.svg"
-import mobile from "../assets/Footer/mobile.svg"
-import email from "../assets/Footer/email.svg"
+import address from "../assets/Footer/addSvg.svg"
+import mobile from "../assets/Footer/mobSvg.svg"
+import email from "../assets/Footer/mailSvg.svg"
 
 function Footer() {
   return (
@@ -40,22 +40,22 @@ function Footer() {
                 </a>
 
                 {/*Twitter */}
-                <a 
+                {/* <a 
                 href="#" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 >
                 <img className='h-6 md:h-8 w-auto' src={twitter} alt="twitter" />
-                </a>
+                </a> */}
 
                 {/*Facebook */}
-                <a 
+                {/* <a 
                 href="#" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 >
                 <img className='h-6 md:h-8 w-auto' src={fb} alt="Facebook" />
-                </a>
+                </a> */}
 
                 {/*Linkedin */}
                 <a 
@@ -67,7 +67,7 @@ function Footer() {
                 </a>
             </div>
         </div>
-        <div className='basis-2/3 flex justify-around lg:items-center flex-row gap-2 text-[0.3763rem]'>
+        <div className='basis-2/3 flex justify-around lg:items-start flex-row gap-2 text-[0.3763rem]'>
             {/* explore */}
             <div className='flex flex-col gap-3'>
                 <div>
@@ -129,17 +129,17 @@ function Footer() {
                     <p className='text-xl md:text-[2.5rem]'>Get in Touch</p>
                 </div>
                 <div className='flex flex-col gap-2 md:gap-6 '>
-                    <div className='flex flex-row gap-1 justify-start items-center text-xs md:text-xl'> 
-                        <img src={address} alt="" />
-                        <p>Home</p>
+                    <div className='flex flex-row gap-3 justify-start items-center text-xs md:text-xl'> 
+                        <img className='h-10 w-auto' src={address} alt="" />
+                        <p className='text-base'>Army Institute of Technology, Pune <br />Maharashtra - 411015</p>
                     </div>
                     <div className='flex flex-row gap-1 justify-start items-center text-xs md:text-xl'>
-                        <img src={mobile} alt="" />
-                        <p>Mob NO:-9649959730</p>
+                        <img className='h-10 w-auto' src={mobile} alt="" />
+                        <p className='text-base'>Mobile:- 9649959730</p>
                     </div>
                     <div className='flex flex-row gap-1 justify-start items-center text-xs md:text-xl'>
-                        <img src={email} alt="" />
-                        <p>Email</p>
+                        <img className='h-10 w-auto' src={email} alt="" />
+                        <p className='text-base'>Email</p>
                     </div>
 
                 </div>

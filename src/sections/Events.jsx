@@ -36,7 +36,7 @@ function Events() {
 
         <div className='flex flex-col w-full'  >
             <div >
-                <p className='text-[#0F9D58] text-[clamp(1.75rem,8vw,6rem)] font-seconday text-center'>OUR EVENTS</p>
+                <p className='text-[#0F9D58] z-10 text-[clamp(1.75rem,8vw,6rem)] font-seconday text-center'>OUR EVENTS</p>
             </div>
             <div className='flex justify-center w-full'>
                 <p className='text-[clamp(0.15rem,3vw,1rem)] w-3/5 text-center  '>Lorem ipsum dolor sit amet consectetur nobis odit. Lorem ipsum dolor sit amet.</p>

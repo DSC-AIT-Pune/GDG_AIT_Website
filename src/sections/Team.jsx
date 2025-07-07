@@ -18,10 +18,10 @@ import Rishabh from "../assets/Team/img13.jpg"
 import Ashutosh from "../assets/Team/img14.png"
 import TeamBG from "../assets/Team/TeamBG.png"
 
-const categories = [ 'Mentors', 'Leads', 'Core Members'];
+const categories = [ 'Mentors', 'Leads & Domain Heads', 'Facilitators'];
 
 const allTeamMembers = {
-  Mentors: [
+  'Mentors': [
     { message: 'Arshia Garg', position: 'BE Mentor', instagram: '@insta_id', imageSrc: Arshia },
     { message: 'Sumit Nath ', position: 'BE Mentor', instagram: '@insta_id', imageSrc: Sumit },
     { message: 'Gaurav Kumar', position: 'BE Mentor', instagram: '@insta_id' , imageSrc : Gaurav},
@@ -32,7 +32,7 @@ const allTeamMembers = {
     { message: 'Divyanshu Rai ', position: 'BE Mentor', instagram: '@insta_id', imageSrc:divyanshu },
     // { message: 'Aditya Kumar ', position: 'BE Mentor', instagram: '@insta_id' },
   ],
-  Leads: [
+  'Leads & Domain Heads': [
     { message: 'Nishant Singh', position: 'GDSC LEAD', instagram: '@insta_id' , imageSrc: Nishant },
     { message: 'Sanshey', position: 'GDSC LEAD', instagram: '@insta_id' , imageSrc: Sanshey},
     { message: 'Arun Kumar Kushwaha', position: 'GDSC LEAD', instagram: '@insta_id' , imageSrc: Arun},
@@ -53,7 +53,7 @@ const allTeamMembers = {
 
 
 function Team() {
-  const [selectedCategory, setSelectedCategory] = useState('Leads');
+  const [selectedCategory, setSelectedCategory] = useState('Leads & Domain Heads');
   const [scrollIndex, setScrollIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(3);
 
@@ -94,7 +94,7 @@ function Team() {
         ></div>
 
 
-      <h2 className='text-center font-seconday text-[clamp(1.75rem,8vw,6rem)] text-[#E94436]'>MEET OUR TEAM</h2>
+      <h2 className='text-center font-seconday text-[clamp(1.75rem,8vw,6rem)] z-10 text-[#E94436]'>MEET OUR TEAM</h2>
 
       <TeamBar selected={selectedCategory} setSelectedCategory={setSelectedCategory} />
 

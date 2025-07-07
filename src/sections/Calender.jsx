@@ -8,6 +8,7 @@ import carved from '../assets/Calender/carved.svg'
 import UpcomingEvents from '../components/cards/UpcomingEvents'
 import eventimg from '../assets/Events/event-image.svg'
 import CalenderComp from '../components/CalenderComp'
+import CalenderBG from '../assets/Calender/CalenderBG.png'
 
 
 function Calender() {
@@ -21,7 +22,21 @@ function Calender() {
 
 
   return (
-    <div className='flex flex-col mx-auto gap-y-14 py-6 rounded-xl justify-center w-[95vw] min-w-[95vw] items-center bg-primarybg'>
+    <div className='relative flex flex-col mx-auto gap-y-14 py-6 rounded-xl justify-center w-[95vw] min-w-[95vw] items-center bg-primarybg'>
+        
+        {/* Background */}
+        <div
+            className="absolute inset-0 z-0"
+            style={{
+            backgroundColor: '#f3f1e7',
+            backgroundImage: `url(${CalenderBG})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: 'auto',
+            opacity: '5%',
+            }}
+        ></div>
+
+
         <div className='flex flex-col w-full'  >
             <div >
                 <p className='text-[#0F9D58] text-[clamp(1.75rem,8vw,6rem)] font-seconday text-center'>Yearly Calender</p>

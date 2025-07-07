@@ -21,7 +21,7 @@ function Hamburger({ isOpen, onClose }) {
           <img className="h-6 pl-3 w-auto" src={logo} alt="Logo" />
           <button onClick={onClose} className="pr-3">
             <svg
-              class="w-8 h-8 text-gray-800 dark:text-white"
+              className="w-8 h-8 text-gray-800 dark:text-white"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -31,9 +31,9 @@ function Hamburger({ isOpen, onClose }) {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M6 18 17.94 6M18 18 6.06 6"
               />
             </svg>

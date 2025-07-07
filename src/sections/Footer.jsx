@@ -26,14 +26,45 @@ function Footer() {
             </div>
             {/* text part */}
             <div className='w-full flex justify-center lg:justify-start'>
-                <p className='text-xs text-center lg:text-start md:text-xl w-2/3 lg:max-w-4/5 lg:min-w-3/4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <p className='text-xs text-center lg:text-start md:text-xl w-2/3 lg:max-w-4/5 lg:min-w-3/4'>Tech-driven student community focused on learning, building, and solving real-world challenges.</p>
             </div>
             {/* icon part */}
             <div className='flex flex-row gap-6 md:gap-9 justify-center lg:justify-start mt-4 '>
+                {/*Instagram */}
+                <a 
+                href="https://www.instagram.com/gdsc_aitpune?igsh=b21kMDRzZ3h2dHh2" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                >
                 <img className='h-6 md:h-8 w-auto' src={insta} alt="instagram" />
+                </a>
+
+                {/*Twitter */}
+                <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                >
                 <img className='h-6 md:h-8 w-auto' src={twitter} alt="twitter" />
-                <img className='h-6 md:h-8 w-auto' src={fb} alt="facebook" />
+                </a>
+
+                {/*Facebook */}
+                <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                >
+                <img className='h-6 md:h-8 w-auto' src={fb} alt="Facebook" />
+                </a>
+
+                {/*Linkedin */}
+                <a 
+                href="https://www.linkedin.com/company/gdsc-aitpune/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                >
                 <img className='h-6 md:h-8 w-auto' src={linkedin} alt="linkedin" />
+                </a>
             </div>
         </div>
         <div className='basis-2/3 flex justify-around lg:items-center flex-row gap-2 text-[0.3763rem]'>
@@ -44,25 +75,52 @@ function Footer() {
                 </div>
                 <div>
                     <ul className='list-disc list-inside space-y-1.5 md:space-y-3 text-xs md:text-xl'>
-                        <li >Home</li>
-                        <li>About</li>
-                        <li>Events</li>
-                        <li>Team</li>
+                        <li
+                            className='cursor-pointer hover:text-[#a1a095] transition-colors duration-300'
+                            onClick={() => {
+                            const section = document.getElementById('home');
+                            if (section) {
+                                section.scrollIntoView({ behavior: 'smooth' });
+                            }
+                            }}
+                        >
+                            Home
+                        </li>
+                        <li
+                            className='cursor-pointer hover:text-[#a1a095] transition-colors duration-300'
+                            onClick={() => {
+                            const section = document.getElementById('about us');
+                            if (section) {
+                                section.scrollIntoView({ behavior: 'smooth' });
+                            }
+                            }}
+                        >
+                            About
+                        </li>
+                        <li
+                            className='cursor-pointer hover:text-[#a1a095] transition-colors duration-300'
+                            onClick={() => {
+                            const section = document.getElementById('events');
+                            if (section) {
+                                section.scrollIntoView({ behavior: 'smooth' });
+                            }
+                            }}
+                        >
+                            Events
+                        </li>
+                        <li
+                            className='cursor-pointer hover:text-[#a1a095] transition-colors duration-300'
+                            onClick={() => {
+                            const section = document.getElementById('team');
+                            if (section) {
+                                section.scrollIntoView({ behavior: 'smooth' });
+                            }
+                            }}
+                        >
+                            Team
+                        </li>
                     </ul>
-                </div>
-            </div>
-            {/* quick links */}
-            <div className='flex flex-col gap-3'>
-                <div>
-                    <p className='text-xl md:text-[2.5rem]'>Quick Links</p>
-                </div>
-                <div>
-                    <ul className='list-disc list-inside space-y-1.5 md:space-y-3 text-xs md:text-xl'>
-                        <li>Privacy</li>
-                        <li>Terms & Conditions</li>
-                        <li>Upcoming Events</li>
-                        <li>GDSC Chapter</li>
-                    </ul>
+
                 </div>
             </div>
             {/* get in touch (appropriately 😁) */}
@@ -77,7 +135,7 @@ function Footer() {
                     </div>
                     <div className='flex flex-row gap-1 justify-start items-center text-xs md:text-xl'>
                         <img src={mobile} alt="" />
-                        <p>Mob NO</p>
+                        <p>Mob NO:-9649959730</p>
                     </div>
                     <div className='flex flex-row gap-1 justify-start items-center text-xs md:text-xl'>
                         <img src={email} alt="" />

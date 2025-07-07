@@ -3,6 +3,7 @@ import EventCard from '../components/cards/EventCard'
 import eventlogo from '../assets/Events/event-logo.svg'
 import eventimage from '../assets/Events/event-image.svg'
 import Primarybtn from '../components/Primarybtn'
+import EventBG from '../assets/Events/EventsBG.png'
 
 
 function Events() {
@@ -17,7 +18,22 @@ function Events() {
     ]
 
   return (
-    <div className='flex flex-col gap-y-14 mx-auto py-6 rounded-xl justify-center w-[95vw] min-w-[95vw] items-center bg-primarybg'>
+    <div className='relative flex flex-col gap-y-14 mx-auto py-6 rounded-xl justify-center w-[95vw] min-w-[95vw] items-center bg-primarybg'>
+
+
+        {/* Background */}
+        <div
+            className="absolute inset-0 z-0"
+            style={{
+            backgroundColor: '#f3f1e7',
+            backgroundImage: `url(${EventBG})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: 'auto',
+            opacity: '5%',
+            }}
+        ></div>
+
+
         <div className='flex flex-col w-full'  >
             <div >
                 <p className='text-[#0F9D58] text-[clamp(1.75rem,8vw,6rem)] font-seconday text-center'>OUR EVENTS</p>

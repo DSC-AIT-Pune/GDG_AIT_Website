@@ -10,6 +10,13 @@ import Nikhil from "../assets/Team/img4.png";
 import divyanshu from "../assets/Team/img7.jpeg";
 import Aditya from "../assets/Team/img6.jpeg";
 import vignesh from "../assets/Team/img8.jpeg"
+import Nishant from "../assets/Team/img9.jpg"
+import Sanshey from "../assets/Team/img10.jpg"
+import Arun from "../assets/Team/img11.jpg"
+import Aayush from "../assets/Team/img12.jpg"
+import Rishabh from "../assets/Team/img13.jpg"
+import Ashutosh from "../assets/Team/img14.png"
+import TeamBG from "../assets/Team/TeamBG.png"
 
 const categories = [ 'Mentors', 'Leads', 'Core Members'];
 
@@ -26,12 +33,12 @@ const allTeamMembers = {
     // { message: 'Aditya Kumar ', position: 'BE Mentor', instagram: '@insta_id' },
   ],
   Leads: [
-    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+    { message: 'Nishant Singh', position: 'GDSC LEAD', instagram: '@insta_id' , imageSrc: Nishant },
+    { message: 'Sanshey', position: 'GDSC LEAD', instagram: '@insta_id' , imageSrc: Sanshey},
+    { message: 'Arun Kumar Kushwaha', position: 'GDSC LEAD', instagram: '@insta_id' , imageSrc: Arun},
+    { message: 'Aayush Kumar', position: 'GDSC LEAD', instagram: '@insta_id' , imageSrc: Aayush},
+    { message: 'Rishabh Kumar', position: 'GDSC LEAD', instagram: '@insta_id' , imageSrc: Rishabh},
+    { message: 'Ashutosh Singh', position: 'GDSC LEAD', instagram: '@insta_id' , imageSrc: Ashutosh},
   ],
   'Core Members': [
     { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
@@ -42,6 +49,8 @@ const allTeamMembers = {
     { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
   ]
 };
+
+
 
 function Team() {
   const [selectedCategory, setSelectedCategory] = useState('Leads');
@@ -70,7 +79,21 @@ function Team() {
   const teamToDisplay = filteredTeam.slice(scrollIndex * visibleCount, (scrollIndex + 1) * visibleCount);
 
   return (
-    <div className='flex flex-col justify-center gap-y-14 py-6 rounded-xl w-full  max-w-[95vw] bg-primarybg items-center mx-auto px-4'>
+    <div className='relative flex flex-col justify-center gap-y-14 py-6 rounded-xl w-full  max-w-[95vw] bg-primarybg items-center mx-auto px-4'>
+
+        {/* Background */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundColor: '#f3f1e7',
+            backgroundImage: `url(${TeamBG})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: 'auto',
+            opacity: '5%',
+          }}
+        ></div>
+
+
       <h2 className='text-center font-seconday text-[clamp(1.75rem,8vw,6rem)] text-[#E94436]'>MEET OUR TEAM</h2>
 
       <TeamBar selected={selectedCategory} setSelectedCategory={setSelectedCategory} />

@@ -90,17 +90,18 @@ const AboutUs = () => {
                 <div className="w-[20%] h-[5px] bg-[#4285F4]" />
               </div>
               <p className="mt-2 text-sm sm:text-base md:text-m text-gray-700">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo. Sed ut perspiciatis unde omnis iste natus error sit
-                voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                <b>Google Developer Student Clubs (GDSC) AIT Pune </b> is a student-driven community powered by Google Developers.
+                We aim to bridge the gap between theory and practice through hands-on learning.
+                Our members explore technologies like Web, Android, AI/ML, and Cloud.
+                We organize workshops, hackathons, and events to upskill and collaborate.
+                Together, we learn, build, and solve real-world problems using tech.
               </p>
             </div>
 
             {/* Vision Block */}
             <ContentBlock
               title="VISION"
-              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero omnis repellat soluta maxime voluptates asperiores ipsum! Officiis voluptates itaque eum expedita."
+              content="To build a collaborative and inclusive tech community at AIT Pune, where students are inspired to learn, create, and contribute to real-world solutions using technology."
               alignment="right"
               className="mb-6"
             />
@@ -108,7 +109,7 @@ const AboutUs = () => {
             {/* Mission Block */}
             <ContentBlock
               title="MISSION"
-              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero omnis repellat soluta maxime voluptates asperiores ipsum! Officiis voluptates itaque eum expedita."
+              content="To empower members to make meaningful contributions to local and global tech challenges, including the annual Google Solution Challenge."
               alignment="left"
               className="mb-6"
             />

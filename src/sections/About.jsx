@@ -1,9 +1,33 @@
 import React from 'react';
 import about from "../assets/About/about.png";
 import pattern from "../assets/About/pattern.png"
-import rightBlock from '../assets/About/right-block.svg';
-import leftBlock from '../assets/About/left-block.svg';
 // import '@fontsource/rubik-one';
+
+const ContentBlock = ({ title, content, alignment = "left", className = "" }) => {
+  return (
+    <div className={`relative w-full ${className}`}>
+      {/* File folder container */}
+      <div className="relative">
+        {/* Folder tab */}
+        <div
+          className={`bg-white border-2 border-black border-b-0 rounded-t-lg ${
+            alignment === "right" ? "ml-auto mr-8" : "ml-8 mr-auto"
+          }`}
+          style={{ width: '120px', height: '30px' }}
+        >
+          <div className="flex items-center justify-center h-full">
+            <h3 className="font-bold text-sm">{title}</h3>
+          </div>
+        </div>
+        
+        {/* Main folder body */}
+        <div className="bg-white border-2 border-black rounded-2xl rounded-tl-none p-6">
+          <p className="text-sm sm:text-base md:text-lg text-gray-800 leading-relaxed">{content}</p>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 const AboutUs = () => {
   return (
@@ -74,26 +98,20 @@ const AboutUs = () => {
             </div>
 
             {/* Vision Block */}
-            <div className="relative w-full max-w-full min-h-[120px]">
-              <img src={rightBlock} alt="Right Block" className="w-full h-auto" />
-              <h3 className="absolute font-bold text-lg sm:text-xl md:text-2xl px-2 sm:px-4 pt-2 pb-1 top-[10px] right-[8%] whitespace-nowrap">
-                VISION
-              </h3>
-              <p className="absolute text-xs sm:text-sm md:text-base text-gray-700 flex-1 px-2 sm:px-4 pt-1 top-[50px] right-0 left-0">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero omnis repellat soluta maxime voluptates asperiores ipsum! Officiis voluptates itaque eum expedita.
-              </p>
-            </div>
+            <ContentBlock
+              title="VISION"
+              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero omnis repellat soluta maxime voluptates asperiores ipsum! Officiis voluptates itaque eum expedita."
+              alignment="right"
+              className="mb-6"
+            />
 
             {/* Mission Block */}
-            <div className="relative w-full max-w-full min-h-[120px]">
-              <img src={leftBlock} alt="Left Block" className="w-full h-auto" />
-              <h3 className="absolute font-bold text-lg sm:text-xl md:text-2xl px-2 sm:px-4 pt-2 pb-1 top-[10px] left-[8%] whitespace-nowrap">
-                MISSION
-              </h3>
-              <p className="absolute text-xs sm:text-sm md:text-base text-gray-700 flex-1 px-2 sm:px-4 pt-1 top-[50px] right-0 left-0">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero omnis repellat soluta maxime voluptates asperiores ipsum! Officiis voluptates itaque eum expedita.
-              </p>
-            </div>
+            <ContentBlock
+              title="MISSION"
+              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero omnis repellat soluta maxime voluptates asperiores ipsum! Officiis voluptates itaque eum expedita."
+              alignment="left"
+              className="mb-6"
+            />
           </div>
         </div>
       </div>

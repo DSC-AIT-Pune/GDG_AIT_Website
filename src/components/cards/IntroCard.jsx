@@ -1,50 +1,66 @@
 import React from 'react';
-import ImageSrc from '../../assets/Team/18143e5b4f128b3c9c3a11604cdeaa42.jpeg';
 import GdscLogo from '../../assets/Footer/gdsclogo.png';
 
 const IntroCard = ({
+  imageSrc,
   instagram = "@insta_id",
   position = "GDSC LEAD",
-  message = "I’m Arshia Thakur garg",
+  message = "I'm Arshia Thakur garg",
 }) => {
   return (
-    <div className="transform scale-85 md:scale-[0.80] lg:scale-[1] flex flex-col items-start w-fit mx-auto">
+    <div className="transform scale-100 flex flex-col items-start w-fit mx-auto">
       {/* Image Card */}
-      <div className="border border-black bg-white w-[250px]">
+      <div className="border border-black bg-white w-[240px] sm:w-[260px] md:w-[280px] lg:w-[300px]">
         {/* Browser header */}
-        <div className="bg-[#E5E5E5] border-b border-black flex items-center px-3 py-1">
+        <div className="bg-[#E5E5E5] border-b border-black flex items-center px-2.5 sm:px-3 py-1 sm:py-1.5">
           <div className="flex items-center space-x-1">
-            <span className="w-3 h-3 rounded-full bg-red-500" />
-            <span className="w-3 h-3 rounded-full bg-yellow-500" />
-            <span className="w-3 h-3 rounded-full bg-green-500" />
-            <span className="w-3 h-3 rounded-full bg-blue-500" />
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-500" />
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-500" />
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500" />
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-blue-500" />
           </div>
-          <span className="ml-4 text-sm text-black font-medium truncate">{instagram}</span>
+          <span className="ml-3 sm:ml-4 text-xs sm:text-sm text-black font-medium truncate flex-1">
+            {instagram}
+          </span>
         </div>
         {/* Image */}
-        <div className="aspect-square w-full">
-          <img src={ImageSrc} alt="Team" className="object-cover w-full h-full aspect-square" />
+        <div className="aspect-square w-full overflow-hidden">
+          {imageSrc ? (
+            <img 
+              src={imageSrc} 
+              alt="Team member" 
+              className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
+            />
+          ) : (
+            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+              <span className="text-gray-500 text-sm sm:text-base">No Image</span>
+            </div>
+          )}
         </div>
       </div>
-
+      
       {/* Info Card */}
-      <div className="-mt-8 ml-20 w-[250px] border border-black bg-white shadow-md">
+      <div className="-mt-6 sm:-mt-8 ml-14 sm:ml-16 md:ml-20 w-[240px] sm:w-[260px] md:w-[280px] lg:w-[300px] border border-black bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
         {/* Yellow Header */}
-        <div className="bg-[#FABD03] border-b border-black text-center py-2 font-bold text-sm">
+        <div className="bg-[#FABD03] border-b border-black text-center py-1.5 sm:py-2 md:py-2.5 font-bold text-xs sm:text-sm md:text-base">
           {position}
         </div>
         {/* Message */}
-        <div className="px-4 py-3 text-left">
-          <p className="text-xl font-bold leading-snug mb-3">
-            Hi!!! <br />
+        <div className="px-3 sm:px-4 md:px-5 py-2.5 sm:py-3 md:py-4 text-left">
+          <p className="text-lg sm:text-xl md:text-2xl font-bold leading-snug mb-2 sm:mb-3 md:mb-4">
+            <br className="hidden sm:block" />
             {message}
           </p>
           {/* GDSC Footer */}
-          <div className="flex justify-end items-center gap-2">
-            <img src={GdscLogo} alt="GDSC Logo" className="h-6" />
-            <div className="text-right text-[10px] leading-tight">
-              <div>Google Developer Student Clubs</div>
-              <div>Army Institute of Technology, Pune</div>
+          <div className="flex justify-end items-center gap-1.5 sm:gap-2">
+            <img 
+              src={GdscLogo} 
+              alt="GDSC Logo" 
+              className="h-5 sm:h-6 md:h-7" 
+            />
+            <div className="text-right text-[9px] sm:text-[10px] md:text-[11px] leading-tight">
+              <div className="font-medium">Google Developer Student Clubs</div>
+              <div className="text-gray-700">Army Institute of Technology, Pune</div>
             </div>
           </div>
         </div>

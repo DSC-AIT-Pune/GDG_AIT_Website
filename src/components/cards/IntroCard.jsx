@@ -29,7 +29,7 @@ const IntroCard = ({
             <img 
               src={imageSrc} 
               alt="Team member" 
-              className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
+              className="w-full h-full object-cover object-center"
             />
           ) : (
             <div className="w-full h-full bg-gray-200 flex items-center justify-center">

@@ -81,7 +81,7 @@ const AboutUs = () => {
           {/* Right Content */}
           <div className="w-full md:w-5/12 space-y-8">
             <div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-[800]">GDSC AIT</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-[800]">GDG AIT</h2>
               {/* Colored lines */}
               <div className="flex w-full max-w-[170px] mb-4">
                 <div className="w-[20%] h-[5px] bg-[#EA4335]" />
@@ -90,7 +90,7 @@ const AboutUs = () => {
                 <div className="w-[20%] h-[5px] bg-[#4285F4]" />
               </div>
               <p className="mt-2 text-sm sm:text-base md:text-m text-gray-700">
-                <b>Google Developer Student Clubs (GDSC) AIT Pune </b> is a student-driven community powered by Google Developers.
+                <b>Google Developer Group (GDG) AIT Pune </b> is a student-driven community powered by Google Developers.
                 We aim to bridge the gap between theory and practice through hands-on learning.
                 Our members explore technologies like Web, Android, AI/ML, and Cloud.
                 We organize workshops, hackathons, and events to upskill and collaborate.

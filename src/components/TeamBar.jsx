@@ -1,7 +1,7 @@
 import React from 'react'
 
 function TeamBar({ selected, setSelectedCategory }) {
-  const categories = [ 'Mentors', 'Leads & Domain Heads', 'Facilitators'];
+  const categories = [ 'Mentors', 'Leads & Domain Heads'];
 
   return (
     <div className='z-10 bg-black text-white text-[clamp(0.5313rem,2.6vw,1.25rem)] py-[0.625rem] w-[75vw] lg:w-[55vw] rounded-[1.25rem]'>

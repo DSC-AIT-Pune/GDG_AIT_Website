@@ -10,10 +10,13 @@ import Calender from "./sections/Calender";
 import SideBar from "./components/SideBar";
 import Home from "./sections/Home";
 import Hamburger from "./components/Hamburger";
+import upward from './assets/uparrow.svg'
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const lenisRef = useRef(null);
+
+
 
   useEffect(() => {
     // Initialize Lenis
@@ -74,6 +77,12 @@ function App() {
         <div id="calender"><Calender /></div>
         <div id="contact us"><Collaborate /></div>
         <div id="footer"><Footer /></div>
+        <img className="fixed cursor-pointer  z-10 bottom-8 right-8 w-[50px] h-auto" src={upward} alt="" onClick={()=>{
+          const section = document.getElementById("home")
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth" })
+          }
+        }} />
         {/* <SideBar/> */}
       </div>
       <Hamburger isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />

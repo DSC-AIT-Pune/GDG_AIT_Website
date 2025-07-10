@@ -18,7 +18,8 @@ import Ashutosh from "../assets/Team/img14.png"
 import TeamBG from "../assets/Team/TeamBG.png"
 import Pavan from "../assets/Team/img20.jpeg"
 import Divyanshi from "../assets/Team/img19.jpeg"
-const categories = [ 'Mentors', 'Leads & Domain Heads', 'Facilitators'];
+
+const categories = [ 'Mentors', 'Leads & Domain Heads'];
 
 const allTeamMembers = {
   'Mentors': [
@@ -34,21 +35,21 @@ const allTeamMembers = {
   'Leads & Domain Heads': [
     { message: 'Nishant Singh', position: 'GDG LEAD', instagram: '@insta_id' , imageSrc: Nishant },
     { message: 'Rishabh Kumar', position: 'GDG LEAD', instagram: '@insta_id' , imageSrc: Rishabh},
-    { message: 'Divyanshi Choudhary', position: 'GDG Secratry', instagram: '@insta_id' , imageSrc: Divyanshi},
+    { message: 'Divyanshi Choudhary', position: 'GDG Secretary', instagram: '@insta_id' , imageSrc: Divyanshi},
     { message: 'Sanshey', position: 'UI/UX LEAD', instagram: '@insta_id' , imageSrc: Sanshey},
     { message: 'Arun Kumar Kushwaha', position: 'FLUTTER LEAD', instagram: '@insta_id' , imageSrc: Arun},
     { message: 'Aayush Kumar', position: 'AI/ML LEAD ', instagram: '@insta_id' , imageSrc: Aayush},
     { message: 'Ashutosh Singh', position: 'AI/ML LEAD', instagram: '@insta_id' , imageSrc: Ashutosh},
     { message: 'Pavan Kumar', position: 'CLOUD LEAD', instagram: '@insta_id' , imageSrc: Pavan},
   ],
-  'Core Members': [
-    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
-    { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
-  ]
+  // 'Core Members': [
+  //   { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+  //   { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+  //   { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+  //   { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+  //   { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+  //   { message: ' ', position: 'GDSC LEAD', instagram: '@insta_id' },
+  // ]
 };
 
 function Team() {

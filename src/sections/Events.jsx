@@ -4,15 +4,19 @@ import eventlogo from '../assets/Events/event-logo.svg'
 import eventimage from '../assets/Events/event-image.svg'
 import Primarybtn from '../components/Primarybtn'
 import EventBG from '../assets/Events/EventsBG.png'
+import enliven from '../assets/Events/enliven.webp'
+import solution from '../assets/Events/solution.webp'
+import flutter from '../assets/Events/flutter.webp'
+import hacktober from '../assets/Events/hacktober.jpg'
 
 
 function Events() {
 
     const events =[
-        {icon: eventlogo, name:"", imgsrc: eventimage},
-        {icon: eventlogo, name:"", imgsrc: eventimage},
-        {icon: eventlogo, name:"", imgsrc: eventimage},
-        {icon: eventlogo, name:"", imgsrc: eventimage},
+        {icon: eventlogo, name:"Enliven", imgsrc: enliven},
+        {icon: eventlogo, name:"", imgsrc: solution},
+        {icon: eventlogo, name:"", imgsrc: flutter},
+        {icon: eventlogo, name:"", imgsrc: hacktober},
 
 
     ]

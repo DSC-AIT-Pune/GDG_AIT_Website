@@ -9,8 +9,8 @@ function Secondarybtn({label}) {
   return (
     <div className='flex justify-center items-center rounded-full w-fit relative h-fit
      bg-white border-[0.0513rem] border-black border-solid'>
-        <div className='w-[60%]  mr-4 ml-1 h-auto flex justify-start items-center'>
-            <p className='text-[0.5rem] py-1.5 pr-5 text-center font-bold md:text-[0.7rem]  translate-y-[0.5px]'>{label}</p>
+        <div className='w-[60%]  mr-7 ml-1 h-auto flex justify-start items-center'>
+            <p className='text-[0.8rem] py-1.5 pr-5 text-center font-bold md:text-[1rem]  translate-y-[0.5px]'>{label}</p>
         </div>
         
         <div className='absolute flex border-l-[0.0513rem] border-black border-solid  justify-center items-center right-0 top-1/2 transform -translate-y-[50%] rounded-full h-full aspect-square   bg-blue-300 z-5 '>

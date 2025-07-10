@@ -3,21 +3,23 @@
 import React from 'react'
 import Primarybtn from '../Primarybtn'
 import Secondarybtn from '../Secondarybtn'
+import EventBtn from '../EventBtn'
 
-function EventCard({ eventimage, eventlogo }) {
+function EventCard({ eventimage,eventname, eventlogo }) {
   return (
-    <div className="flex flex-row gap-2 justify-center items-center border border-black py-4 px-3.5 bg-transparent rounded-xl w-[90vw] sm:w-[400px] md:w-[450px]">
-      <div className="flex flex-col gap-y-5 justify-center items-center flex-shrink-0 w-[40%]">
-        <img className="w-14 md:w-20 h-auto" src={eventlogo} alt="logo" />
-        <Secondarybtn label="FLUTTER STUDY JAMS"/>
-      </div>
+    <div className="flex flex-col gap-y-8 justify-center items-center border p-6 bg-white shadow-lg rounded-xl ">
 
-      <div className="flex justify-center items-center w-[60%]">
+
+      <div className="flex justify-center items-center w-[260px] md:w-[300px] lg:w-[330px]">
         <img
-          className="h-auto w-full max-w-[250px] rounded-xl"
+          className="h-auto w-full border-black border-solid border-1 rounded-xl"
           src={eventimage}
           alt="event"
         />
+      </div>
+
+            <div className="flex flex-col gap-y-5 justify-center items-center flex-shrink-0 w-[40%]">
+        <EventBtn label={eventname}/>
       </div>
     </div>
   )

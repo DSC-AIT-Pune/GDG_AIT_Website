@@ -8,6 +8,7 @@ import enliven from '../assets/Events/enliven.webp'
 import solution from '../assets/Events/solution.webp'
 import flutter from '../assets/Events/flutter.webp'
 import hacktober from '../assets/Events/hacktober.jpg'
+import GenAI from '../assets/Events/GenAI.webp'
 
 
 function Events() {
@@ -17,6 +18,7 @@ function Events() {
         {icon: eventlogo, name:"Solutions", imgsrc: solution},
         {icon: eventlogo, name:"Flutter Workshop", imgsrc: flutter},
         {icon: eventlogo, name:"Hacktober Fest", imgsrc: hacktober},
+        {icon: eventlogo, name:"ML Study Jam", imgsrc: GenAI},
 
 
     ]

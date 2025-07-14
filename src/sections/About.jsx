@@ -101,7 +101,7 @@ const AboutUs = () => {
             {/* Vision Block */}
             <ContentBlock
               title="VISION"
-              content="To build a collaborative and inclusive tech community at AIT Pune, where students are inspired to learn, create, and contribute to real-world solutions using technology."
+              content="To empower members to make meaningful contributions to local and global tech challenges, including the annual Google Solution Challenge."
               alignment="right"
               className="mb-6"
             />
@@ -109,7 +109,7 @@ const AboutUs = () => {
             {/* Mission Block */}
             <ContentBlock
               title="MISSION"
-              content="To empower members to make meaningful contributions to local and global tech challenges, including the annual Google Solution Challenge."
+              content="To build a collaborative and inclusive tech community at AIT Pune, where students are inspired to learn, create, and contribute to real-world solutions using technology."
               alignment="left"
               className="mb-6"
             />

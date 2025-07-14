@@ -19,9 +19,17 @@ const IntroCard = ({
             <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500" />
             <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-blue-500" />
           </div>
-          <span className="ml-3 sm:ml-4 text-xs sm:text-sm text-black font-medium truncate flex-1">
+          
+          {/*Instagram */}
+          <a
+            href={`https://instagram.com/${instagram.replace('@', '')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-3 sm:ml-4 text-xs sm:text-sm text-black font-medium truncate flex-1"
+          >
             {instagram}
-          </span>
+          </a>
+
         </div>
         {/* Image */}
         <div className="aspect-square w-full overflow-hidden">

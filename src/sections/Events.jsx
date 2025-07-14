@@ -9,6 +9,9 @@ import solution from '../assets/Events/solution.webp'
 import flutter from '../assets/Events/flutter.webp'
 import hacktober from '../assets/Events/hacktober.jpg'
 import GenAI from '../assets/Events/GenAI.webp'
+import EventData from '../Data/EventData.js'
+import { Link,  } from 'react-router-dom'
+
 
 
 function Events() {
@@ -49,9 +52,11 @@ function Events() {
             </div>
         </div>
         <div className="flex w-[80%] flex-wrap justify-around gap-y-15 gap-x-15 md:px-4 mx-auto">
-        {events.map((event, index) => (
+        {EventData.map((event, index) => (
             <div key={index} className="flex justify-center">
+            <Link to={`/eventdetails/${event.id}`}>
             <EventCard eventlogo={event.icon} eventname={event.name} eventimage={event.imgsrc} />
+            </Link>
             </div>
         ))}
         </div>

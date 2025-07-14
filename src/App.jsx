@@ -12,6 +12,7 @@ import Home from "./sections/Home";
 import Hamburger from "./components/Hamburger";
 import upward from './assets/uparrow.svg';
 import Loader from './components/loader'; // Import your Loader component
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);

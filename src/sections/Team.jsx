@@ -8,7 +8,7 @@ import Gourav from "../assets/Team/img5.png";
 import Nikhil from "../assets/Team/img4.png";
 import divyanshu from "../assets/Team/img7.jpeg";
 import Aditya from "../assets/Team/img6.jpeg";
-import vignesh from "../assets/Team/img8.jpeg"
+import vignesh from "../assets/Team/img8.png"
 import Nishant from "../assets/Team/img9.jpg"
 import Sanshey from "../assets/Team/img10.jpg"
 import Arun from "../assets/Team/img11.jpg"

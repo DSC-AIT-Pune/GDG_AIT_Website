@@ -14,8 +14,8 @@ import GenAI from '../assets/Events/GenAI.webp'
 function Events() {
 
     const events =[
-        {icon: eventlogo, name:"Enliven", imgsrc: enliven},
-        {icon: eventlogo, name:"Solutions", imgsrc: solution},
+        {icon: eventlogo, name:"Enliven Hackathon", imgsrc: enliven},
+        {icon: eventlogo, name:"Google Solutions", imgsrc: solution},
         {icon: eventlogo, name:"Flutter Workshop", imgsrc: flutter},
         {icon: eventlogo, name:"Hacktober Fest", imgsrc: hacktober},
         {icon: eventlogo, name:"ML Study Jam", imgsrc: GenAI},

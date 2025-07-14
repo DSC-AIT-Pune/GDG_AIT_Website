@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import Primarybtn from '../Primarybtn'
 import Secondarybtn from '../Secondarybtn'

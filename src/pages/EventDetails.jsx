@@ -78,7 +78,7 @@ function EventDetails() {
                                         rel="noopener noreferrer"
                                         className='transform hover:scale-105 transition-transform duration-200'
                                     >
-                                        <Primarybtn label={"REGISTER NOW"} />
+                                        {/* <Primarybtn label={"REGISTER NOW"} /> */}
                                     </a>
                                 </div>
                             </div>

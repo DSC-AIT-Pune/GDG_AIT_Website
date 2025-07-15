@@ -41,9 +41,9 @@ const allTeamMembers = {
     { message: 'Divyanshu Rai ', position: 'BE Mentor', instagram: '@drak_sensei', imageSrc:divyanshu },
   ],
   'Leads & Domain Heads': [
-    { message: 'Nishant Singh', position: 'GDG LEAD', instagram: '@_nishant_singhh_' , imageSrc: Nishant },
-    { message: 'Rishabh Kumar', position: 'GDG LEAD', instagram: '@insta_id' , imageSrc: Rishabh},
+    { message: 'Nishant Singh', position: 'GDG Secretary', instagram: '@_nishant_singhh_' , imageSrc: Nishant },
     { message: 'Divyanshi Choudhary', position: 'GDG Secretary', instagram: '@insta_id' , imageSrc: Divyanshi},
+    { message: 'Rishabh Kumar', position: 'WEB DEV LEAD', instagram: '@insta_id' , imageSrc: Rishabh},
     { message: 'Sanshey', position: 'UI/UX LEAD', instagram: '@09_s.unshine' , imageSrc: Sanshey},
     { message: 'Arun Kumar Kushwaha', position: 'FLUTTER LEAD', instagram: '@imwfy_a' , imageSrc: Arun},
     { message: 'Aayush Kumar', position: 'AI/ML LEAD ', instagram: '@nomumonu' , imageSrc: Aayush},

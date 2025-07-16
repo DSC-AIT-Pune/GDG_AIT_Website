@@ -20,7 +20,7 @@ function EventDetails() {
 
     return (
         <>
-            <div className='relative flex flex-col gap-y-14 mx-auto py-6 rounded-xl justify-center w-[95vw] items-center bg-primarybg'>
+            <div className='relative flex flex-col gap-y-14 mx-auto py-6 rounded-xl justify-center w-[95vw] items-center mt-8 bg-primarybg mb-8'>
                 
                 {/* Background */}
                 <div

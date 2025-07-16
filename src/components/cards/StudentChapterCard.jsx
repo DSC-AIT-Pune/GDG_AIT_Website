@@ -1,6 +1,16 @@
+import React, { useState } from 'react'
 import EventBtn from "./JoinNow"
 
 const StudentChapterCard = () => {
+  const [showToast, setShowToast] = useState(false)
+
+  const handleJoinClick = () => {
+    setShowToast(true)
+    setTimeout(() => {
+      setShowToast(false)
+    }, 3000)
+  }
+
   return (
     <div className="w-[80vw] min-w-[70vw] md:max-w-[40vw] md:min-w-[35vw] mx-auto">
       <div className="relative bg-white rounded-2xl border-2 border-black p-6 shadow-lg">
@@ -10,9 +20,6 @@ const StudentChapterCard = () => {
             <div className="w-3 h-3 bg-gradient-to-r from-blue-500 via-green-500 to-yellow-500 rounded-full"></div>
           </div>
         </div>
-
-        {/* Handle/Tab at top */}
-        {/* <div className="absolute -top-1 left-20 w-16 h-4 bg-white border-2 border-black border-b-0 rounded-t-lg"></div> */}
 
         {/* Content */}
         <div className="pt-4">
@@ -30,10 +37,28 @@ const StudentChapterCard = () => {
               </h2>
             </div>
 
-            <EventBtn label="Join Us"/>
+            <div onClick={handleJoinClick}>
+              <EventBtn label="Join Us"/>
+            </div>
           </div>
         </div>
       </div>
+
+      
+      {showToast && (
+        <div className="fixed top-4 right-4 z-50 bg-white border-2 border-black rounded-lg p-4 shadow-lg animate-slide-in">
+          <div className="flex items-center">
+            <div className="w-3 h-3 bg-yellow-500 rounded-full mr-3"></div>
+            <p className="text-black font-medium">Forms are not open yet!</p>
+            <button 
+              onClick={() => setShowToast(false)}
+              className="ml-4 text-gray-500 hover:text-black"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

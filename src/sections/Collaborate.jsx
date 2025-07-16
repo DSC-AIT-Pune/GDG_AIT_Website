@@ -1,6 +1,7 @@
 import React from 'react'
 import Primarybtn from '../components/Primarybtn'
 import CollabBG from '../assets/Collaborate/CollabBG.png'
+import { Link } from 'react-router-dom'
 
 function Collaborate() {
   return (
@@ -22,7 +23,8 @@ function Collaborate() {
         <div>
             <p className='text-black text-[clamp(1.75rem,8vw,3.875rem)] font-bold text-center lg:text-left'>Want To Collaborate<br/>Just Fill Out The Form</p>
         </div>
-        <div className=''><Primarybtn label={"FILL THE FORM"}/></div>
+        <Link to="https://forms.gle/nCqwFKEs4zEgFtBd8" target='_blank'><Primarybtn label={"FILL THE FORM"}/></Link>
+
     </div>
   )
 }

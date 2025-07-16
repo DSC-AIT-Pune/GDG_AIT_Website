@@ -1,9 +1,11 @@
 import React from 'react'
 import Footer from '../sections/Footer';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import EventData from '../Data/EventData.js';
 import EventBG from '../assets/Events/EventsBG.png'
 import Primarybtn from '../components/Primarybtn';
+import gdglogo from '../assets/logoGdsc.svg';
+import backbtn from '../assets/backbtn.svg';
 
 function EventDetails() {
 
@@ -12,6 +14,9 @@ function EventDetails() {
     if (!data) {
         return <div>Event not found</div>;
     }
+
+    const navigate = useNavigate();
+
 
     return (
         <>
@@ -28,6 +33,11 @@ function EventDetails() {
                         opacity: '5%',
                     }}
                 ></div>
+
+                <div className='w-full flex z-10 flex-row justify-between lg:px-14 px-6  '>
+                    <img className='lg:h-17 w-auto lg' src={gdglogo} alt="GDG Logo" />
+                    <button onClick={() => {console.log('Back button clicked'); navigate(-1)}}><img className='lg:h-17 h-14 w-auto' src={backbtn} alt="Back Button" /></button>
+                </div>
 
                 {/* Title */}
                 <div className='flex flex-col w-full z-10'>

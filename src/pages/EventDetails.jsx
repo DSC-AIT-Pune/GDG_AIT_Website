@@ -35,8 +35,11 @@ function EventDetails() {
                 ></div>
 
                 <div className='w-full flex z-10 flex-row justify-between lg:px-14 px-6  '>
-                    <img className='lg:h-17 w-auto lg' src={gdglogo} alt="GDG Logo" />
-                    <button onClick={() => {console.log('Back button clicked'); navigate(-1)}}><img className='lg:h-17 h-14 w-auto' src={backbtn} alt="Back Button" /></button>
+                    
+                    <img className='lg:h-17  w-auto lg' src={gdglogo} alt="GDG Logo" />
+                    
+                    
+                    <button onClick={() => {console.log('Back button clicked'); navigate(-1)}}><img className='lg:h-17 h-14 cursor-pointer w-auto' src={backbtn} alt="Back Button" /></button>
                 </div>
 
                 {/* Title */}

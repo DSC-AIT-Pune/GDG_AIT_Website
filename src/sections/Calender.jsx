@@ -9,6 +9,7 @@ import UpcomingEvents from '../components/cards/UpcomingEvents'
 import eventimg from '../assets/Events/event-image.svg'
 import CalenderComp from '../components/CalenderComp'
 import CalenderBG from '../assets/Calender/CalenderBG.png'
+import eventdata from '../Data/UpcomingEvent.js'
 
 
 function Calender() {
@@ -54,12 +55,12 @@ function Calender() {
                 <p className='text-black absolute text-[16px] md:text-[18px] lg:text-[28px] lg:left-7 lg:top-3 font-bold top-1 left-4'>Upcoming Events</p>
                 <div className='h-2'></div>
                 <div className='flex flex-col lg:flex-row gap-10 lg:gap-10  lg:mx-4 lg:my-[3%] lg:mt-[7%] justify-evenly items-center p-5'>
-                    {events.map((event, index) => (
+                    {eventdata.map((event, index) => (
                         <div
                           key={index}
                           className="flex justify-center w-full max-w-[95vw] sm:max-w-[80vw] md:max-w-[60vw] lg:max-w-xs"
                         >
-                          <UpcomingEvents eventimage={event.imgsrc} date={event.date} />
+                          <UpcomingEvents eventimage={event.imgsrc} date={event.deadline} />
                         </div>
                     ))}
                 </div>

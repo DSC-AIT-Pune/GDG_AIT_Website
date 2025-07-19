@@ -8,9 +8,9 @@ const projects = [
   { 
     id: 1,
     imgsrc: enliven, 
-    name: 'Enliven Hackathon', 
+    name: 'Enliven 3.0', 
     description: 'Join an intensive 48-hour coding marathon where innovative minds collaborate to solve real-world challenges using cutting-edge technologies. Work in teams to build groundbreaking solutions, guided by industry mentors and Google technology experts, while competing for exciting prizes and recognition.', 
-    deadline: "15/07/2025", 
+    deadline: "March 2026", 
     Eligibility: "Open to all", 
     status: "Active", 
     PriePool: "35000/-", 

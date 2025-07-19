@@ -26,7 +26,7 @@ import Sahil from "../assets/Team/img25.png"
 import Abrish from "../assets/Team/img26.png"
 import Prikshit from "../assets/Team/img27.png"
 import Ankit from "../assets/Team/img28.png"
-import Srijan from "../assets/Team/img21.jpeg";
+import Srijan from "../assets/Team/srijan1.jpeg";
 
 const categories = [ 'Mentors', 'Leads & Domain Heads','Alumni'];
 

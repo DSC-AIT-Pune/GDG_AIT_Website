@@ -26,6 +26,7 @@ import Sahil from "../assets/Team/img25.png"
 import Abrish from "../assets/Team/img26.png"
 import Prikshit from "../assets/Team/img27.png"
 import Ankit from "../assets/Team/img28.png"
+import Srijan from "../assets/Team/srijan1.jpeg";
 
 const categories = [ 'Mentors', 'Leads & Domain Heads','Alumni'];
 
@@ -49,6 +50,7 @@ const allTeamMembers = {
     { message: 'Aayush Kumar', position: 'AI/ML LEAD ', instagram: '@nomumonu' , imageSrc: Aayush},
     { message: 'Ashutosh Singh', position: 'AI/ML LEAD', instagram: '@ashutoshsingh058' , imageSrc: Ashutosh},
     { message: 'Pavan Kumar', position: 'CLOUD LEAD', instagram: '@pavankumar_07s' , imageSrc: Pavan},
+    { message: 'Srijan Tripathi', position: 'BLOCKCHAIN LEAD', instagram: '@sriijannn' , imageSrc: Srijan},
   ],
 'Alumni': [
   { message: 'Nikita Kumari', position: 'Alumni 2025', instagram: '@sugarplum_1203', imageSrc: Nikita },

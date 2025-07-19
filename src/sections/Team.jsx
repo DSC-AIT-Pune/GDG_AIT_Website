@@ -51,14 +51,14 @@ const allTeamMembers = {
     { message: 'Pavan Kumar', position: 'CLOUD LEAD', instagram: '@pavankumar_07s' , imageSrc: Pavan},
   ],
 'Alumni': [
-  { message: 'Nikita Kumari', position: 'Alumni 2024', instagram: '@sugarplum_1203', imageSrc: Nikita },
-  { message: 'Ajay Singh', position: 'Alumni 2024', instagram: '@instagram', imageSrc: Ajay },
-  { message: 'Kumari Ladli', position: 'Alumni 2024', instagram: '@instagram', imageSrc: Ladli },
-  { message: 'Kavya Chauhan', position: 'Alumni 2024', instagram: '@11001_kavya', imageSrc: Kavya },
-  { message: 'Sahil Kamate', position: 'Alumni 2024', instagram: '@sahilkamate_03', imageSrc: Sahil },
-  { message: 'S B Abrish Aditya', position: 'Alumni 2024', instagram: '@abrish_aadi', imageSrc: Abrish },
-  { message: 'Prikshit Sharma', position: 'Alumni 2024', instagram: '@prikshi.t', imageSrc: Prikshit },
-  { message: 'Ankit Kumar Singh', position: 'Alumni 2024', instagram: '@ankit_ya_i_am', imageSrc: Ankit },
+  { message: 'Nikita Kumari', position: 'Alumni 2025', instagram: '@sugarplum_1203', imageSrc: Nikita },
+  { message: 'Ajay Singh', position: 'Alumni 2025', instagram: '@instagram', imageSrc: Ajay },
+  { message: 'Kumari Ladli', position: 'Alumni 2025', instagram: '@instagram', imageSrc: Ladli },
+  { message: 'Kavya Chauhan', position: 'Alumni 2025', instagram: '@11001_kavya', imageSrc: Kavya },
+  { message: 'Sahil Kamate', position: 'Alumni 2025', instagram: '@sahilkamate_03', imageSrc: Sahil },
+  { message: 'S B Abrish Aditya', position: 'Alumni 2025', instagram: '@abrish_aadi', imageSrc: Abrish },
+  { message: 'Prikshit Sharma', position: 'Alumni 2025', instagram: '@prikshi.t', imageSrc: Prikshit },
+  { message: 'Ankit Kumar Singh', position: 'Alumni 2025', instagram: '@ankit_ya_i_am', imageSrc: Ankit },
 ],
 
 

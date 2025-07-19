@@ -31,7 +31,7 @@ const ContentBlock = ({ title, content, alignment = "left", className = "" }) =>
 
 const AboutUs = () => {
   return (
-    <section className="bg-[#E6E4D5] pb-6 px-2 sm:px-6 md:px-10 lg:px-16 xl:px-24 mx-auto rounded-3xl relative w-[95vw] min-h-screen overflow-hidden">
+    <section className="bg-[#E6E4D5] pb-6 px-2 sm:px-6 md:px-10 lg:px-16 xl:px-24 mx-auto rounded-xl relative w-[95vw] min-h-screen overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0 z-0"

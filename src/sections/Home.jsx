@@ -1,20 +1,32 @@
-"use client"
-import Hamburger from "../assets/Home/Hamburger.svg"
-import Logo from "../assets/Home/Group.png"
-import shape from "../assets/Home/Polygon.svg"
-import TypingEffect from "../components/TypingEffect"
-import StudentChapterCard from "../components/cards/StudentChapterCard"
-import NavBar from "../components/NavBar"
-import cartoon from "../assets/Home/GDSCimage.svg"
+"use client";
+import Hamburger from "../assets/Home/Hamburger.svg";
+import Logo from "../assets/Home/Group.png";
+import shape from "../assets/Home/Polygon.svg";
+import TypingEffect from "../components/TypingEffect";
+import StudentChapterCard from "../components/cards/StudentChapterCard";
+import NavBar from "../components/NavBar";
+import cartoon from "../assets/Home/GDSCimage.svg";
+import EventBG from "../assets/Home/homebg.svg";
 
 function Home({ onMenuClick }) {
   return (
     <div className="relative flex flex-col gap-y-14 py-6 rounded-xl justify-center w-[95vw] items-center bg-primarybg mx-auto">
-      <div className="absolute hidden top-0 left-1/2 transform -translate-x-1/2 md:flex justify-center">
+      {/* Background */}
+      <div
+        className="absolute inset-0 z-0 rounded-xl"
+        style={{
+          backgroundColor: "#f3f1e7",
+          backgroundImage: `url(${EventBG})`,
+          backgroundRepeat: "repeat",
+          backgroundSize: "auto",
+          opacity: "100%",
+        }}
+      ></div>
+      <div className="absolute hidden z-10 top-0 left-1/2 transform -translate-x-1/2 md:flex justify-center">
         <NavBar />
       </div>
 
-      <div className="flex flex-row w-full justify-between px-5">
+      <div className="flex z-10 flex-row w-full justify-between px-5">
         <img src={Logo || "/placeholder.svg"} alt="Logo" />
         <img
           onClick={onMenuClick}
@@ -26,7 +38,7 @@ function Home({ onMenuClick }) {
 
       <TypingEffect />
 
-      <div className="flex flex-row lg:mt-4 w-full justify-between lg:items-center md:px-12 items-end px-5">
+      <div className="flex flex-row lg:mt-4 w-full justify-between lg:items-center md:px-12 items-end px-5 z-10">
         <p className="text-[clamp(1.75rem,8vw,10rem)] tracking-wider md:leading-none font-seconday font-semibold">
           <span className="text-[#E94436]">G</span>
           <span className="text-[#4385F3]">D</span>
@@ -35,14 +47,22 @@ function Home({ onMenuClick }) {
           <br />
           <span>AIT PUNE</span>
         </p>
-        <img className="max-w-[35vw] lg:w-[390px] h-auto" src={cartoon || "/placeholder.svg"} alt="" />
+        <img
+          className="max-w-[35vw] lg:w-[390px] h-auto"
+          src={cartoon || "/placeholder.svg"}
+          alt=""
+        />
       </div>
 
       {/* Fixed bottom section with proper positioning */}
-      <div className="relative w-full flex justify-between items-end">
+      <div className="z-10 relative w-full flex justify-between items-end">
         {/* Left side - Shape image */}
         <div className="flex-shrink-0 hidden md:block">
-          <img className="max-w-[40vw] h-auto" src={shape || "/placeholder.svg"} alt="" />
+          <img
+            className="max-w-[40vw] h-auto"
+            src={shape || "/placeholder.svg"}
+            alt=""
+          />
         </div>
 
         {/* Right side - Student Chapter Card */}
@@ -51,7 +71,7 @@ function Home({ onMenuClick }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

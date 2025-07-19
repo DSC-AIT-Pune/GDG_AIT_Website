@@ -9,13 +9,13 @@ function Collaborate() {
         
         {/* Background */}
         <div
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 opacity-[3%] md:opacity-5 "
           style={{
             backgroundColor: '#f3f1e7',
             backgroundImage: `url(${CollabBG})`,
             backgroundRepeat: 'repeat',
             backgroundSize: 'auto',
-            opacity: '5%',
+            
           }}
         ></div>
         

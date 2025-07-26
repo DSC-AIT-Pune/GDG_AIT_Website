@@ -1,15 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import EventBtn from "./JoinNow"
 
-const StudentChapterCard = () => {
-  const [showToast, setShowToast] = useState(false)
+import { Link } from 'react-router-dom'
 
-  const handleJoinClick = () => {
-    setShowToast(true)
-    setTimeout(() => {
-      setShowToast(false)
-    }, 3000)
-  }
+
+const StudentChapterCard = () => {
+
+
+
 
   return (
     <div className="w-[80vw] min-w-[70vw] md:max-w-[40vw] md:min-w-[35vw] mx-auto">
@@ -37,28 +35,15 @@ const StudentChapterCard = () => {
               </h2>
             </div>
 
-            <div onClick={handleJoinClick}>
-              <EventBtn label="Join Us"/>
+            <div >
+              <Link to={"/form"} ><EventBtn label="Join Us"/></Link>   
             </div>
           </div>
         </div>
       </div>
 
       
-      {showToast && (
-        <div className="fixed top-4 right-4 z-50 bg-white border-2 border-black rounded-lg p-4 shadow-lg animate-slide-in">
-          <div className="flex items-center">
-            <div className="w-3 h-3 bg-yellow-500 rounded-full mr-3"></div>
-            <p className="text-black font-medium">Forms are not open yet!</p>
-            <button 
-              onClick={() => setShowToast(false)}
-              className="ml-4 text-gray-500 hover:text-black"
-            >
-              ×
-            </button>
-          </div>
-        </div>
-      )}
+
     </div>
   )
 }

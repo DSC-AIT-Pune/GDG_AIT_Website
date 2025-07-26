@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { ArrowLeft } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom';
-const Form = () => {
 
+const Form = () => {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         name: '',
@@ -80,7 +80,6 @@ const Form = () => {
         setIsSubmitting(false)
         alert('Form submitted successfully!')
         navigate("/");
-
     }
 
     return (
@@ -93,43 +92,42 @@ const Form = () => {
                             <span className="text-sm md:text-base font-semibold">Back</span>
                         </button>
                     </Link>
-
                 </div>
 
                 <div className="mb-12">
-                    <h1 className="font-secondary text-[2.2rem] xs:text-[2.8rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[6.5rem] xl:text-[7rem] text-[#4285F4] text-center mt-0 pt-8 leading-[1.05] select-none break-words font-black">
+                    <h1 className="text-center font-seconday text-[clamp(1.75rem,8vw,6rem)] z-10  text-[#4285F4]  mt-0 pt-8 leading-[1.05] select-none break-words font-black">
                         FILL YOUR DATA
                     </h1>
                 </div>
 
                 <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
-                    <div className="bg-gradient-to-r from-[#4285F4] via-[#0F9D58] to-[#EA4335] h-2"></div>
+                    <div className="h-2"></div>
 
                     <div className="p-8 md:p-12 space-y-8">
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="space-y-2">
-                                <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                <label className="block text-black font-medium text-lg md:text-xl mb-2">Full Name</label>
                                 <input
                                     type="text"
                                     name="name"
                                     value={formData.name}
                                     onChange={handleInputChange}
                                     placeholder="Enter your full name"
-                                    className={`w-full px-4 py-4 border-2 rounded-xl text-gray-800 placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.name ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
+                                    className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.name ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
                                 />
                                 {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                             </div>
 
                             <div className="space-y-2">
-                                <label className="block text-sm font-medium text-gray-700 mb-2">College Email</label>
+                                <label className="block text-black font-medium text-lg md:text-xl mb-2">College Email</label>
                                 <input
                                     type="email"
                                     name="email"
                                     value={formData.email}
                                     onChange={handleInputChange}
                                     placeholder="Enter your college email"
-                                    className={`w-full px-4 py-4 border-2 rounded-xl text-gray-800 placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.email ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
+                                    className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.email ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
                                 />
                                 {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
@@ -138,12 +136,12 @@ const Form = () => {
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="space-y-2">
-                                <label className="block text-sm font-medium text-gray-700 mb-2">Branch</label>
+                                <label className="block text-black font-medium text-lg md:text-xl mb-2">Branch</label>
                                 <select
                                     name="branch"
                                     value={formData.branch}
                                     onChange={handleInputChange}
-                                    className={`w-full px-4 py-4 border-2 rounded-xl text-gray-800 bg-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.branch ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
+                                    className={`w-full h-12 px-4 py-4 border-2 rounded-xl text-black bg-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.branch ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
                                 >
                                     <option value="">Select Your Branch</option>
@@ -160,14 +158,14 @@ const Form = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="block text-sm font-medium text-gray-700 mb-2">Registration Number</label>
+                                <label className="block text-black font-medium text-lg md:text-xl mb-2">Registration Number</label>
                                 <input
                                     type="text"
                                     name="reg"
                                     value={formData.reg}
                                     onChange={handleInputChange}
                                     placeholder="Enter registration number"
-                                    className={`w-full px-4 py-4 border-2 rounded-xl text-gray-800 placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.reg ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
+                                    className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.reg ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
                                 />
                                 {errors.reg && <p className="text-red-500 text-sm mt-1">{errors.reg}</p>}
@@ -176,21 +174,21 @@ const Form = () => {
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="space-y-2">
-                                <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <label className="block text-black font-medium text-lg md:text-xl mb-2">Phone Number</label>
                                 <input
                                     type="tel"
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleInputChange}
                                     placeholder="Enter 10-digit phone number"
-                                    className={`w-full px-4 py-4 border-2 rounded-xl text-gray-800 placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.phone ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
+                                    className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.phone ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
                                 />
                                 {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                             </div>
 
                             <div className="space-y-2">
-                                <label className="block text-sm font-medium text-gray-700 mb-2">Priority (1-5)</label>
+                                <label className="block text-black font-medium text-lg md:text-xl mb-2">Priority (1-5)</label>
                                 <input
                                     type="number"
                                     name="priority"
@@ -199,7 +197,7 @@ const Form = () => {
                                     placeholder="Rate GDSC priority (1-5)"
                                     min="1"
                                     max="5"
-                                    className={`w-full px-4 py-4 border-2 rounded-xl text-gray-800 placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.priority ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
+                                    className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.priority ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
                                 />
                                 {errors.priority && <p className="text-red-500 text-sm mt-1">{errors.priority}</p>}
@@ -207,14 +205,14 @@ const Form = () => {
                         </div>
 
                         <div className="space-y-2">
-                            <label className="block text-sm font-medium text-gray-700 mb-2">Why do you want to join GDSC?</label>
+                            <label className="block text-black font-medium text-lg md:text-xl mb-2">Why do you want to join GDSC?</label>
                             <textarea
                                 name="reason"
                                 value={formData.reason}
                                 onChange={handleInputChange}
                                 placeholder="Tell us your motivation to join Google Developer Student Clubs..."
                                 rows={4}
-                                className={`w-full px-4 py-4 border-2 rounded-xl text-gray-800 placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 resize-none ${errors.reason ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
+                                className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 resize-none ${errors.reason ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                     }`}
                             />
                             <div className="flex justify-between items-center">
@@ -225,28 +223,28 @@ const Form = () => {
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="space-y-2">
-                                <label className="block text-sm font-medium text-gray-700 mb-2">Your Domain</label>
+                                <label className="block text-black font-medium text-lg md:text-xl mb-2">Your Domain</label>
                                 <input
                                     type="text"
                                     name="domain"
                                     value={formData.domain}
                                     onChange={handleInputChange}
                                     placeholder="e.g., Web Development, AI/ML, Mobile Dev"
-                                    className={`w-full px-4 py-4 border-2 rounded-xl text-gray-800 placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.domain ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
+                                    className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.domain ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
                                 />
                                 {errors.domain && <p className="text-red-500 text-sm mt-1">{errors.domain}</p>}
                             </div>
 
                             <div className="space-y-2">
-                                <label className="block text-sm font-medium text-gray-700 mb-2">Best Project (GitHub Link)</label>
+                                <label className="block text-black font-medium text-lg md:text-xl mb-2">Best Project (GitHub Link)</label>
                                 <input
                                     type="url"
                                     name="bestProject"
                                     value={formData.bestProject}
                                     onChange={handleInputChange}
                                     placeholder="https://github.com/username/project"
-                                    className={`w-full px-4 py-4 border-2 rounded-xl text-gray-800 placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.bestProject ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
+                                    className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.bestProject ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
                                 />
                                 {errors.bestProject && <p className="text-red-500 text-sm mt-1">{errors.bestProject}</p>}
@@ -257,16 +255,16 @@ const Form = () => {
                             <button
                                 onClick={handleSubmit}
                                 disabled={isSubmitting}
-                                className={`w-full bg-gradient-to-r from-[#4285F4] via-[#0F9D58] to-[#EA4335] text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-200 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:shadow-2xl'
+                                className={`w-full text-black font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-blue-200 border-2 border-gray-300 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:shadow-2xl'
                                     }`}
                             >
                                 {isSubmitting ? (
                                     <div className="flex items-center justify-center space-x-3">
-                                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                                        <div className="w-5 h-5 border-2 border-gray-600 border-t-transparent rounded-full animate-spin"></div>
                                         <span>Submitting...</span>
                                     </div>
                                 ) : (
-                                    'Join GDSC Community'
+                                    'Submit Form'
                                 )}
                             </button>
                         </div>

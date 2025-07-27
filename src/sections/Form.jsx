@@ -83,66 +83,72 @@ const Form = () => {
     }
 
     return (
-        <div className='formBody min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 py-8 px-4'>
+        <main className='formBody min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 py-8 px-4'>
             <div className="max-w-4xl mx-auto">
-                <div className="mb-8">
-                    <Link to={"/"} >
+                <nav className="mb-8">
+                    <Link to={"/"} aria-label="Go back to home page">
                         <button className="flex items-center gap-3 bg-white px-4 py-3 rounded-xl shadow-md border border-gray-200 text-gray-700 hover:text-gray-900 hover:shadow-lg transition-all duration-200 group">
                             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
                             <span className="text-sm md:text-base font-semibold">Back</span>
                         </button>
                     </Link>
-                </div>
+                </nav>
 
-                <div className="mb-12">
-                    <h1 className="text-center font-seconday text-[clamp(1.75rem,8vw,6rem)] z-10  text-[#4285F4]  mt-0 pt-8 leading-[1.05] select-none break-words font-black">
+                <header className="mb-12">
+                    <h1 className="text-center font-seconday text-[clamp(1.75rem,8vw,6rem)] z-10 text-[#4285F4] mt-0 pt-8 leading-[1.05] select-none break-words font-black">
                         FILL YOUR DATA
                     </h1>
-                </div>
+                </header>
 
-                <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
-                    <div className="h-2"></div>
+                <form className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+                    <div className="h-2 bg-gradient-to-r from-blue-400 to-green-400"></div>
 
                     <div className="p-8 md:p-12 space-y-8">
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="space-y-2">
-                                <label className="block text-black font-medium text-lg md:text-xl mb-2">Full Name</label>
+                                <label htmlFor="name" className="block text-black font-medium text-lg md:text-xl mb-2">Full Name</label>
                                 <input
                                     type="text"
+                                    id="name"
                                     name="name"
                                     value={formData.name}
                                     onChange={handleInputChange}
                                     placeholder="Enter your full name"
                                     className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.name ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
+                                    aria-describedby={errors.name ? "name-error" : undefined}
                                 />
-                                {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+                                {errors.name && <p id="name-error" className="text-red-500 text-sm mt-1">{errors.name}</p>}
                             </div>
 
                             <div className="space-y-2">
-                                <label className="block text-black font-medium text-lg md:text-xl mb-2">College Email</label>
+                                <label htmlFor="email" className="block text-black font-medium text-lg md:text-xl mb-2">College Email</label>
                                 <input
                                     type="email"
+                                    id="email"
                                     name="email"
                                     value={formData.email}
                                     onChange={handleInputChange}
                                     placeholder="Enter your college email"
                                     className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.email ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
+                                    aria-describedby={errors.email ? "email-error" : undefined}
                                 />
-                                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                                {errors.email && <p id="email-error" className="text-red-500 text-sm mt-1">{errors.email}</p>}
                             </div>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="space-y-2">
-                                <label className="block text-black font-medium text-lg md:text-xl mb-2">Branch</label>
+                                <label htmlFor="branch" className="block text-black font-medium text-lg md:text-xl mb-2">Branch</label>
                                 <select
+                                    id="branch"
                                     name="branch"
                                     value={formData.branch}
                                     onChange={handleInputChange}
                                     className={`w-full h-12 px-4 py-4 border-2 rounded-xl text-black bg-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.branch ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
+                                    aria-describedby={errors.branch ? "branch-error" : undefined}
                                 >
                                     <option value="">Select Your Branch</option>
                                     <option value="COMP-A">Computer Engineering - A</option>
@@ -154,43 +160,48 @@ const Form = () => {
                                     <option value="ARE">Automobile Engineering</option>
                                     <option value="MECH">Mechanical Engineering</option>
                                 </select>
-                                {errors.branch && <p className="text-red-500 text-sm mt-1">{errors.branch}</p>}
+                                {errors.branch && <p id="branch-error" className="text-red-500 text-sm mt-1">{errors.branch}</p>}
                             </div>
 
                             <div className="space-y-2">
-                                <label className="block text-black font-medium text-lg md:text-xl mb-2">Registration Number</label>
+                                <label htmlFor="reg" className="block text-black font-medium text-lg md:text-xl mb-2">Registration Number</label>
                                 <input
                                     type="text"
+                                    id="reg"
                                     name="reg"
                                     value={formData.reg}
                                     onChange={handleInputChange}
                                     placeholder="Enter registration number"
                                     className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.reg ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
+                                    aria-describedby={errors.reg ? "reg-error" : undefined}
                                 />
-                                {errors.reg && <p className="text-red-500 text-sm mt-1">{errors.reg}</p>}
+                                {errors.reg && <p id="reg-error" className="text-red-500 text-sm mt-1">{errors.reg}</p>}
                             </div>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="space-y-2">
-                                <label className="block text-black font-medium text-lg md:text-xl mb-2">Phone Number</label>
+                                <label htmlFor="phone" className="block text-black font-medium text-lg md:text-xl mb-2">Phone Number</label>
                                 <input
                                     type="tel"
+                                    id="phone"
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleInputChange}
                                     placeholder="Enter 10-digit phone number"
                                     className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.phone ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
+                                    aria-describedby={errors.phone ? "phone-error" : undefined}
                                 />
-                                {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
+                                {errors.phone && <p id="phone-error" className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                             </div>
 
                             <div className="space-y-2">
-                                <label className="block text-black font-medium text-lg md:text-xl mb-2">Priority (1-5)</label>
+                                <label htmlFor="priority" className="block text-black font-medium text-lg md:text-xl mb-2">Priority (1-5)</label>
                                 <input
                                     type="number"
+                                    id="priority"
                                     name="priority"
                                     value={formData.priority}
                                     onChange={handleInputChange}
@@ -199,14 +210,16 @@ const Form = () => {
                                     max="5"
                                     className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.priority ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
+                                    aria-describedby={errors.priority ? "priority-error" : undefined}
                                 />
-                                {errors.priority && <p className="text-red-500 text-sm mt-1">{errors.priority}</p>}
+                                {errors.priority && <p id="priority-error" className="text-red-500 text-sm mt-1">{errors.priority}</p>}
                             </div>
                         </div>
 
                         <div className="space-y-2">
-                            <label className="block text-black font-medium text-lg md:text-xl mb-2">Why do you want to join GDSC?</label>
+                            <label htmlFor="reason" className="block text-black font-medium text-lg md:text-xl mb-2">Why do you want to join GDSC?</label>
                             <textarea
+                                id="reason"
                                 name="reason"
                                 value={formData.reason}
                                 onChange={handleInputChange}
@@ -214,53 +227,60 @@ const Form = () => {
                                 rows={4}
                                 className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 resize-none ${errors.reason ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                     }`}
+                                aria-describedby={errors.reason ? "reason-error" : undefined}
                             />
                             <div className="flex justify-between items-center">
-                                {errors.reason && <p className="text-red-500 text-sm">{errors.reason}</p>}
+                                {errors.reason && <p id="reason-error" className="text-red-500 text-sm">{errors.reason}</p>}
                                 <p className="text-gray-400 text-sm ml-auto">{formData.reason.length}/500</p>
                             </div>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="space-y-2">
-                                <label className="block text-black font-medium text-lg md:text-xl mb-2">Your Domain</label>
+                                <label htmlFor="domain" className="block text-black font-medium text-lg md:text-xl mb-2">Your Domain</label>
                                 <input
                                     type="text"
+                                    id="domain"
                                     name="domain"
                                     value={formData.domain}
                                     onChange={handleInputChange}
                                     placeholder="e.g., Web Development, AI/ML, Mobile Dev"
                                     className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.domain ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
+                                    aria-describedby={errors.domain ? "domain-error" : undefined}
                                 />
-                                {errors.domain && <p className="text-red-500 text-sm mt-1">{errors.domain}</p>}
+                                {errors.domain && <p id="domain-error" className="text-red-500 text-sm mt-1">{errors.domain}</p>}
                             </div>
 
                             <div className="space-y-2">
-                                <label className="block text-black font-medium text-lg md:text-xl mb-2">Best Project (GitHub Link)</label>
+                                <label htmlFor="bestProject" className="block text-black font-medium text-lg md:text-xl mb-2">Best Project (GitHub Link)</label>
                                 <input
                                     type="url"
+                                    id="bestProject"
                                     name="bestProject"
                                     value={formData.bestProject}
                                     onChange={handleInputChange}
                                     placeholder="https://github.com/username/project"
                                     className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.bestProject ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
+                                    aria-describedby={errors.bestProject ? "project-error" : undefined}
                                 />
-                                {errors.bestProject && <p className="text-red-500 text-sm mt-1">{errors.bestProject}</p>}
+                                {errors.bestProject && <p id="project-error" className="text-red-500 text-sm mt-1">{errors.bestProject}</p>}
                             </div>
                         </div>
 
                         <div className="pt-6">
                             <button
+                                type="button"
                                 onClick={handleSubmit}
                                 disabled={isSubmitting}
                                 className={`w-full text-black font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-blue-200 border-2 border-gray-300 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:shadow-2xl'
                                     }`}
+                                aria-busy={isSubmitting}
                             >
                                 {isSubmitting ? (
                                     <div className="flex items-center justify-center space-x-3">
-                                        <div className="w-5 h-5 border-2 border-gray-600 border-t-transparent rounded-full animate-spin"></div>
+                                        <div className="w-5 h-5 border-2 border-gray-600 border-t-transparent rounded-full animate-spin" aria-hidden="true"></div>
                                         <span>Submitting...</span>
                                     </div>
                                 ) : (
@@ -269,15 +289,15 @@ const Form = () => {
                             </button>
                         </div>
 
-                        <div className="text-center pt-4">
+                        <footer className="text-center pt-4">
                             <p className="text-gray-500 text-sm">
                                 By submitting this form, you agree to join our amazing community of developers!
                             </p>
-                        </div>
+                        </footer>
                     </div>
-                </div>
+                </form>
             </div>
-        </div>
+        </main>
     )
 }
 

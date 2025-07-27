@@ -22,8 +22,8 @@ function Events() {
     ]
 
     return (
-        <div className='relative flex flex-col gap-y-14 mx-auto py-6 rounded-xl justify-center w-[95vw] min-w-[95vw] items-center bg-primarybg z-5'>
-            {/* Background */}
+        <main className='relative flex flex-col gap-y-14 mx-auto py-6 rounded-xl justify-center w-[95vw] min-w-[95vw] items-center bg-primarybg z-5'>
+            {/* Decorative background - hidden from screen readers */}
             <div
                 className="absolute inset-0 -z-2"
                 style={{
@@ -33,15 +33,16 @@ function Events() {
                 backgroundSize: 'auto',
                 opacity: '5%',
                 }}
+                aria-hidden="true"
             ></div>
 
-            <div className='flex flex-col w-full gap-y-6'>
-                <div>
-                    <p className='text-[#0F9D58] z-10 text-[clamp(1.75rem,8vw,6rem)] font-seconday text-center'>OUR EVENTS</p>
-                </div>
+            <header className='flex flex-col w-full gap-y-6'>
+                <h1 className='text-[#0F9D58] z-10 text-[clamp(1.75rem,8vw,6rem)] font-seconday text-center'>
+                    OUR EVENTS
+                </h1>
                 
-                {/* Added descriptive text section */}
-                <div className='flex justify-center w-full px-4'>
+                {/* Event description section */}
+                <section className='flex justify-center w-full px-4'>
                     <div className='max-w-4xl text-center'>
                         <p className='text-[clamp(0.875rem,2vw,1.125rem)] text-gray-600 leading-relaxed mb-6'>
                             Join us for exciting workshops, hackathons, and tech talks that bring together passionate developers, 
@@ -49,23 +50,23 @@ function Events() {
                             designed to foster learning, networking, and collaboration within the Google Developer community at AIT Pune.
                         </p>
                     </div>
-                </div>
-            </div>
+                </section>
+            </header>
 
-            <div className="flex w-[80%] flex-wrap justify-around gap-y-15 gap-x-15 md:px-4 mx-auto">
+            <section className="flex w-[80%] flex-wrap justify-around gap-y-15 gap-x-15 md:px-4 mx-auto">
                 {EventData.map((event, index) => (
-                    <div key={index} className="flex justify-center">
-                        <Link to={`/eventdetails/${event.id}`}>
+                    <article key={index} className="flex justify-center">
+                        <Link to={`/eventdetails/${event.id}`} aria-label={`View details about ${event.name}`}>
                             <EventCard eventlogo={event.icon} eventname={event.name} eventimage={event.imgsrc} />
                         </Link>
-                    </div>
+                    </article>
                 ))}
-            </div>
+            </section>
             
-            <div>
+            <nav>
                 <Primarybtn label={"EXPLORE EVENTS"}/>
-            </div>
-        </div>
+            </nav>
+        </main>
     )
 }
 

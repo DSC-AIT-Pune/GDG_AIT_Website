@@ -89,7 +89,33 @@ body {
   border-radius: 8px;
 }
 
-/* On hover */
+
 ::-webkit-scrollbar-thumb:hover {
   background: #E6E4D5;
 }
+
+.formBody {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(243, 241, 231);
+}
+
+.formBody::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/src/assets/About/pattern.png");
+  background-repeat: repeat;
+  background-size: auto;
+  opacity: 0.05;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.formBody > * {
+  position: relative;
+  z-index: 1;
+}
+

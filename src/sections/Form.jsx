@@ -101,7 +101,7 @@ const Form = () => {
                 </header>
 
                 <form className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
-                    <div className="h-2 bg-gradient-to-r from-blue-400 to-green-400"></div>
+                    <div className="h-2 "></div>
 
                     <div className="p-8 md:p-12 space-y-8">
                         <div className="grid md:grid-cols-2 gap-8">

@@ -2,10 +2,9 @@ import React from 'react'
 import Footer from '../sections/Footer';
 import { useNavigate, useParams } from 'react-router-dom';
 import EventData from '../Data/EventData.js';
-import EventBG from '../assets/Events/EventsBG.png'
+
 import Primarybtn from '../components/Primarybtn';
-import gdglogo from '../assets/logoGdsc.svg';
-import backbtn from '../assets/backbtn.svg';
+
 
 function EventDetails() {
 
@@ -27,7 +26,7 @@ function EventDetails() {
                     className="absolute inset-0 z-0"
                     style={{
                         backgroundColor: '#f3f1e7',
-                        backgroundImage: `url(${EventBG})`,
+                        backgroundImage: `url("https://i.ibb.co/BKd2MfkQ/EventsBG.png)`,
                         backgroundRepeat: 'repeat',
                         backgroundSize: 'auto',
                         opacity: '5%',
@@ -36,10 +35,10 @@ function EventDetails() {
 
                 <div className='w-full flex z-10 flex-row justify-between lg:px-14 px-6  '>
                     
-                    <img className='lg:h-17  w-auto lg' src={gdglogo} alt="GDG Logo" />
+                    <img className='lg:h-17  w-auto lg' src="https://i.ibb.co/WNnV0H6Y/logoGdsc.png" alt="GDG Logo" />
                     
                     
-                    <button onClick={() => {console.log('Back button clicked'); navigate(-1)}}><img className='lg:h-17 h-14 cursor-pointer w-auto' src={backbtn} alt="Back Button" /></button>
+                    <button onClick={() => {console.log('Back button clicked'); navigate(-1)}}><img className='lg:h-17 h-14 cursor-pointer w-auto' src="https://i.ibb.co/C5hFYjVX/backbtn.png" alt="Back Button" /></button>
                 </div>
 
                 {/* Title */}

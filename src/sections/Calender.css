@@ -1,5 +1,5 @@
 .bgimage {
-    background-image: url('../assets/vertcard.svg');
+    background-image: url('https://i.ibb.co/nqwBFBFf/vertcard.png');
     background-repeat: no-repeat;
     background-position: center;
     /* background-size: 100% 100%;  */
@@ -10,7 +10,7 @@
 
 @media (min-width: 1024px) {
   .bgimage {
-    background-image: url('../assets/Calender/card-shape.svg');
+    background-image: url('https://i.ibb.co/sh7x4xf/card-shape.png');
   }
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import about from "../assets/About/about.png";
-import pattern from "../assets/About/pattern.png"
+
+// import pattern from "../assets/About/pattern.png"
 
 const ContentBlock = ({ title, content, alignment = "left", className = "" }) => {
   return (
@@ -36,7 +36,7 @@ const AboutUs = () => {
         className="absolute inset-0 z-0"
         style={{
           backgroundColor: '#f3f1e7',
-          backgroundImage: `url(${pattern})`,
+          backgroundImage: `url("https://i.ibb.co/N6XK4tcB/pattern.png")`,
           backgroundRepeat: 'repeat',
           backgroundSize: 'auto',
           opacity: '5%',
@@ -72,7 +72,7 @@ const AboutUs = () => {
           {/* Left Image */}
           <figure className="w-full md:w-7/12 flex justify-center mb-6 md:mb-0">
             <img
-              src={about}
+              src="https://i.ibb.co/Q7w0V8SJ/about.png"
               alt="About Us Illustration showing GDG AIT Pune community members collaborating"
               className="w-[80vw] max-w-[400px] md:max-w-[500px] h-auto rounded-xl object-contain"
             />

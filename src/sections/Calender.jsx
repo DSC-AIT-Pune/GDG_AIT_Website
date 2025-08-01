@@ -1,14 +1,10 @@
 import React from 'react'
 import EventCard from '../components/cards/EventCard'
-import eventlogo from '../assets/Events/event-logo.svg'
-import eventimage from '../assets/Events/event-image.svg'
 import Primarybtn from '../components/Primarybtn'
 import './Calender.css'
-import carved from '../assets/Calender/carved.svg'
 import UpcomingEvents from '../components/cards/UpcomingEvents'
-import eventimg from '../assets/Events/event-image.svg'
 import CalenderComp from '../components/CalenderComp'
-import CalenderBG from '../assets/Calender/CalenderBG.png'
+
 import eventdata from '../Data/UpcomingEvent.js'
 
 function Calender() {
@@ -19,7 +15,7 @@ function Calender() {
             className="absolute inset-0 z-0"
             style={{
             backgroundColor: '#f3f1e7',
-            backgroundImage: `url(${CalenderBG})`,
+            backgroundImage: `url("https://i.ibb.co/QvMfnFQW/Calender-BG.png")`,
             backgroundRepeat: 'repeat',
             backgroundSize: 'auto',
             opacity: '5%',

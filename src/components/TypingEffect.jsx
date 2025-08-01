@@ -2,10 +2,6 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import '../styles/Home.css';
 
-import mic from '../assets/Home/mic.png';
-import lens from '../assets/Home/lens.png';
-import recent from '../assets/Home/recent.png';
-
 
 // created by previous FE's i.e. current TE's of GDSC AIT PUNE.
 
@@ -101,12 +97,12 @@ const TypingEffect = () => {
 
           {/* Mic */}
           <div className="text-gray-500">
-            <img src={mic} alt="Mic Icon" className="w-5 h-5 sm:w-6 sm:h-6" />
+            <img src="https://i.ibb.co/Rpy4xtXG/mic.png" alt="Mic Icon" className="w-5 h-5 sm:w-6 sm:h-6" />
           </div>
 
           {/* Camera  */}
           <div className="text-gray-500">
-            <img src={lens} alt="Camera Icon" className="w-5 h-5 sm:w-6 sm:h-6" />
+            <img src="https://i.ibb.co/FkYkxZHV/lens.png" alt="Camera Icon" className="w-5 h-5 sm:w-6 sm:h-6" />
           </div>
         </div>
 
@@ -115,11 +111,11 @@ const TypingEffect = () => {
         {/*Search History */}
         <div className="space-y-2 text-gray-800">
           <div className="flex items-center space-x-2">
-            <img src={recent} alt="Recent Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
+            <img src="https://i.ibb.co/b9Y6ncd/recent.png" alt="Recent Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
             <span className="text-sm sm:text-lg">Google Developer Group , AIT PUNE</span>
           </div>
           <div className="flex items-center space-x-2">
-            <img src={recent} alt="Recent Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
+            <img src="https://i.ibb.co/b9Y6ncd/recent.png" alt="Recent Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
             <span className="text-sm sm:text-lg">GDG, Army Institute Of Technology Pune</span>
           </div>
         </div>

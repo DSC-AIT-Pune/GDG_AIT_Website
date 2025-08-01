@@ -20,7 +20,7 @@
   
   width: 95vw;
   height: 100%;
-  background-image: url('../assets/Home/bgsvg.svg'); /* Replace with your SVG file or URL */
+  background-image: url('https://i.ibb.co/gMwBYKv5/bgsvg.png'); /* Replace with your SVG file or URL */
   background-size: cover;  /* Adjust how the SVG is sized */
   background-position: center; /* Center the SVG */
   background-repeat: no-repeat; /* Ensure the SVG does not repeat */

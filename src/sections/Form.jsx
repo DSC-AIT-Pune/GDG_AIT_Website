@@ -76,10 +76,29 @@ const Form = () => {
         }
 
         setIsSubmitting(true)
-        await new Promise(resolve => setTimeout(resolve, 2000))
-        setIsSubmitting(false)
-        alert('Form submitted successfully!')
-        navigate("/");
+
+        try {
+            const response = await fetch('https://gdgbackend-2mfw.onrender.com/form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data = await response.json();
+            alert('Form submitted successfully!');
+            navigate("/");
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('There was an error submitting the form. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     }
 
     return (
@@ -141,25 +160,31 @@ const Form = () => {
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="space-y-2">
                                 <label htmlFor="branch" className="block text-black font-medium text-lg md:text-xl mb-2">Branch</label>
-                                <select
-                                    id="branch"
-                                    name="branch"
-                                    value={formData.branch}
-                                    onChange={handleInputChange}
-                                    className={`w-full h-12 px-4 py-4 border-2 rounded-xl text-black bg-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.branch ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
-                                        }`}
-                                    aria-describedby={errors.branch ? "branch-error" : undefined}
-                                >
-                                    <option value="">Select Your Branch</option>
-                                    <option value="COMP-A">Computer Engineering - A</option>
-                                    <option value="COMP-B">Computer Engineering - B</option>
-                                    <option value="IT-A">Information Technology - A</option>
-                                    <option value="IT-B">Information Technology - B</option>
-                                    <option value="ENTC-A">Electronics & Telecom - A</option>
-                                    <option value="ENTC-B">Electronics & Telecom - B</option>
-                                    <option value="ARE">Automobile Engineering</option>
-                                    <option value="MECH">Mechanical Engineering</option>
-                                </select>
+                                <div className="relative">
+                                    <select
+                                        id="branch"
+                                        name="branch"
+                                        value={formData.branch}
+                                        onChange={handleInputChange}
+                                        className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 appearance-none transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.branch ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'} ${!formData.branch ? 'text-gray-400' : 'text-black'}`}
+                                        aria-describedby={errors.branch ? "branch-error" : undefined}
+                                    >
+                                        <option value="" disabled hidden>Select Your Branch</option>
+                                        <option value="COMP-A">Computer Engineering - A</option>
+                                        <option value="COMP-B">Computer Engineering - B</option>
+                                        <option value="IT-A">Information Technology - A</option>
+                                        <option value="IT-B">Information Technology - B</option>
+                                        <option value="ENTC-A">Electronics & Telecom - A</option>
+                                        <option value="ENTC-B">Electronics & Telecom - B</option>
+                                        <option value="ARE">Automobile Engineering</option>
+                                        <option value="MECH">Mechanical Engineering</option>
+                                    </select>
+                                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                                        <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
                                 {errors.branch && <p id="branch-error" className="text-red-500 text-sm mt-1">{errors.branch}</p>}
                             </div>
 
@@ -238,17 +263,31 @@ const Form = () => {
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="space-y-2">
                                 <label htmlFor="domain" className="block text-black font-medium text-lg md:text-xl mb-2">Your Domain</label>
-                                <input
-                                    type="text"
-                                    id="domain"
-                                    name="domain"
-                                    value={formData.domain}
-                                    onChange={handleInputChange}
-                                    placeholder="e.g., Web Development, AI/ML, Mobile Dev"
-                                    className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.domain ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
-                                        }`}
-                                    aria-describedby={errors.domain ? "domain-error" : undefined}
-                                />
+                                <div className="relative">
+                                    <select
+                                        id="domain"
+                                        name="domain"
+                                        value={formData.domain}
+                                        onChange={handleInputChange}
+                                        className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 appearance-none transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.domain ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'} ${!formData.domain ? 'text-gray-400' : 'text-black'}`}
+                                        aria-describedby={errors.domain ? "domain-error" : undefined}
+                                    >
+                                        <option value="" disabled hidden>Select Your Domain</option>
+                                        <option value="Web Development">Web Development</option>
+                                        <option value="AI/ML">AI/ML</option>
+                                        <option value="Design">Design</option>
+                                        <option value="Blockchain">Blockchain</option>
+                                        <option value="Cloud">Cloud</option>
+                                        <option value="App Dev">App Dev</option>
+                                        <option value="Flutter">Flutter</option>
+                                        <option value="Outreach">Outreach</option>
+                                    </select>
+                                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                                        <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
                                 {errors.domain && <p id="domain-error" className="text-red-500 text-sm mt-1">{errors.domain}</p>}
                             </div>
 

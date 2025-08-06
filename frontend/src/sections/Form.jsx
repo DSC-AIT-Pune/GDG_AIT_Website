@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { ArrowLeft } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom';
+import api from "../api/axios";
+
 
 const Form = () => {
     const navigate = useNavigate();
@@ -76,10 +78,20 @@ const Form = () => {
         }
 
         setIsSubmitting(true)
-        await new Promise(resolve => setTimeout(resolve, 2000))
-        setIsSubmitting(false)
-        alert('Form submitted successfully!')
-        navigate("/");
+        try {
+            const response = await api.post("/api/form", formData);
+            if (response.status === 201) {
+            alert("Form submitted successfully!");
+            navigate("/");
+            } else {
+            alert("Unexpected response from server");
+            }
+        } catch (error) {
+            console.error(error);
+            alert(error.response?.data?.error || "Failed to submit form");
+        } finally {
+            setIsSubmitting(false);
+        }
     }
 
     return (
@@ -146,7 +158,7 @@ const Form = () => {
                                     name="branch"
                                     value={formData.branch}
                                     onChange={handleInputChange}
-                                    className={`w-full h-12 px-4 py-4 border-2 rounded-xl text-black bg-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.branch ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
+                                    className={`w-full px-3 py-4 border-2 rounded-xl text-black bg-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.branch ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
                                         }`}
                                     aria-describedby={errors.branch ? "branch-error" : undefined}
                                 >
@@ -236,38 +248,73 @@ const Form = () => {
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-8">
+                        {/* Domain Selector */}
                             <div className="space-y-2">
-                                <label htmlFor="domain" className="block text-black font-medium text-lg md:text-xl mb-2">Your Domain</label>
-                                <input
-                                    type="text"
-                                    id="domain"
-                                    name="domain"
-                                    value={formData.domain}
-                                    onChange={handleInputChange}
-                                    placeholder="e.g., Web Development, AI/ML, Mobile Dev"
-                                    className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.domain ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
-                                        }`}
-                                    aria-describedby={errors.domain ? "domain-error" : undefined}
-                                />
-                                {errors.domain && <p id="domain-error" className="text-red-500 text-sm mt-1">{errors.domain}</p>}
+                                <label
+                                htmlFor="domain"
+                                className="block text-black font-medium text-lg md:text-xl mb-2"
+                                >
+                                Your Domain
+                                </label>
+                                <select
+                                id="domain"
+                                name="domain"
+                                value={formData.domain}
+                                onChange={handleInputChange}
+                                className={`w-full px-3 py-4 border-2 rounded-xl text-black bg-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${
+                                    errors.domain
+                                    ? "border-red-400 bg-red-50"
+                                    : "border-gray-200 hover:border-gray-300 focus:border-blue-400"
+                                }`}
+                                aria-describedby={errors.domain ? "domain-error" : undefined}
+                                >
+                                <option value="">Select Your Domain</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="AI/ML">AI / ML</option>
+                                <option value="UI/UX">UI / UX</option>
+                                <option value="Flutter">Flutter</option>
+                                <option value="Cloud">Cloud</option>
+                                <option value="Blockchain">Blockchain</option>
+                                <option value="Android">Android</option>
+                                <option value="Outreach">Outreach</option>
+                                </select>
+                                {errors.domain && (
+                                <p id="domain-error" className="text-red-500 text-sm mt-1">
+                                    {errors.domain}
+                                </p>
+                                )}
                             </div>
 
+                            {/* Best Project Input */}
                             <div className="space-y-2">
-                                <label htmlFor="bestProject" className="block text-black font-medium text-lg md:text-xl mb-2">Best Project (GitHub Link)</label>
+                                <label
+                                htmlFor="bestProject"
+                                className="block text-black font-medium text-lg md:text-xl mb-2"
+                                >
+                                Best Project (GitHub Link)
+                                </label>
                                 <input
-                                    type="url"
-                                    id="bestProject"
-                                    name="bestProject"
-                                    value={formData.bestProject}
-                                    onChange={handleInputChange}
-                                    placeholder="https://github.com/username/project"
-                                    className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.bestProject ? 'border-red-400 bg-red-50' : 'border-gray-200 hover:border-gray-300 focus:border-blue-400'
-                                        }`}
-                                    aria-describedby={errors.bestProject ? "project-error" : undefined}
+                                type="url"
+                                id="bestProject"
+                                name="bestProject"
+                                value={formData.bestProject}
+                                onChange={handleInputChange}
+                                placeholder="https://github.com/username/project"
+                                className={`w-full px-4 py-4 border-2 rounded-xl text-black placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-100 ${
+                                    errors.bestProject
+                                    ? "border-red-400 bg-red-50"
+                                    : "border-gray-200 hover:border-gray-300 focus:border-blue-400"
+                                }`}
+                                aria-describedby={errors.bestProject ? "project-error" : undefined}
                                 />
-                                {errors.bestProject && <p id="project-error" className="text-red-500 text-sm mt-1">{errors.bestProject}</p>}
+                                {errors.bestProject && (
+                                <p id="project-error" className="text-red-500 text-sm mt-1">
+                                    {errors.bestProject}
+                                </p>
+                                )}
                             </div>
                         </div>
+
 
                         <div className="pt-6">
                             <button

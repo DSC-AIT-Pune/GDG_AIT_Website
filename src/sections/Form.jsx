@@ -1,9 +1,55 @@
-import React, { useState } from 'react'
-import { ArrowLeft } from 'lucide-react'
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
+import { ArrowLeft, CheckCircle, XCircle, X } from 'lucide-react'
+
+const Toast = ({ type, message, onClose }) => {
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            onClose();
+        }, 4000);
+
+        return () => clearTimeout(timer);
+    }, [onClose]);
+
+    return (
+        <div className="fixed top-4 left-4 right-4 z-[9999] flex justify-center md:left-auto md:right-6 md:justify-end">
+            <div className={`flex items-center gap-4 px-6 py-4 rounded-2xl shadow-2xl border backdrop-blur-sm transform transition-all duration-500 hover:scale-105 w-full max-w-md ${
+                type === 'success' 
+                    ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-green-300 text-green-900 shadow-green-200/50' 
+                    : 'bg-gradient-to-r from-red-50 to-rose-50 border-red-300 text-red-900 shadow-red-200/50'
+            } animate-in slide-in-from-top duration-500`}>
+                <div className={`p-2 rounded-full ${
+                    type === 'success' ? 'bg-green-100' : 'bg-red-100'
+                }`}>
+                    {type === 'success' ? (
+                        <CheckCircle className="w-5 h-5 text-green-600" />
+                    ) : (
+                        <XCircle className="w-5 h-5 text-red-600" />
+                    )}
+                </div>
+                <div className="flex-1">
+                    <p className="font-semibold text-sm">{type === 'success' ? 'Success!' : 'Error!'}</p>
+                    <p className="text-sm opacity-90">{message}</p>
+                </div>
+                <button
+                    onClick={onClose}
+                    className={`p-2 rounded-full hover:scale-110 transition-all duration-200 ${
+                        type === 'success' 
+                            ? 'hover:bg-green-200 text-green-600' 
+                            : 'hover:bg-red-200 text-red-600'
+                    }`}
+                    aria-label="Close notification"
+                >
+                    <X className="w-4 h-4" />
+                </button>
+                
+                {/* Progress bar */}
+                <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-transparent via-current to-transparent opacity-30 rounded-b-2xl animate-pulse"></div>
+            </div>
+        </div>
+    );
+};
 
 const Form = () => {
-    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -18,6 +64,15 @@ const Form = () => {
 
     const [errors, setErrors] = useState({})
     const [isSubmitting, setIsSubmitting] = useState(false)
+    const [toast, setToast] = useState(null)
+
+    const showToast = (type, message) => {
+        setToast({ type, message });
+    };
+
+    const hideToast = () => {
+        setToast(null);
+    };
 
     const validateForm = () => {
         const newErrors = {}
@@ -72,10 +127,14 @@ const Form = () => {
 
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors)
+            // Scroll to top to show validation errors
+            window.scrollTo({ top: 0, behavior: 'smooth' });
             return
         }
 
         setIsSubmitting(true)
+        // Immediately scroll to top when form submission starts
+        window.scrollTo({ top: 0, behavior: 'smooth' });
 
         try {
             const response = await fetch('https://gdgbackend-2mfw.onrender.com/form', {
@@ -91,11 +150,15 @@ const Form = () => {
             }
 
             const data = await response.json();
-            alert('Form submitted successfully!');
-            navigate("/");
+            showToast('success', 'Form submitted successfully!');
+            
+            // Navigate to home after toast completes (4.5 seconds to ensure toast is seen)
+            setTimeout(() => {
+                window.history.back();
+            }, 4500);
         } catch (error) {
             console.error('Error submitting form:', error);
-            alert('There was an error submitting the form. Please try again.');
+            showToast('error', 'There was an error submitting the form. Please try again.');
         } finally {
             setIsSubmitting(false);
         }
@@ -103,14 +166,24 @@ const Form = () => {
 
     return (
         <main className='formBody min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 py-8 px-4'>
+            {toast && (
+                <Toast 
+                    type={toast.type} 
+                    message={toast.message} 
+                    onClose={hideToast} 
+                />
+            )}
+            
             <div className="max-w-4xl mx-auto">
                 <nav className="mb-8">
-                    <Link to={"/"} aria-label="Go back to home page">
-                        <button className="flex items-center gap-3 bg-white px-4 py-3 rounded-xl shadow-md border border-gray-200 text-gray-700 hover:text-gray-900 hover:shadow-lg transition-all duration-200 group">
-                            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
-                            <span className="text-sm md:text-base font-semibold">Back</span>
-                        </button>
-                    </Link>
+                    <button 
+                        onClick={() => window.history.back()} 
+                        aria-label="Go back to previous page"
+                        className="flex items-center gap-3 bg-white px-4 py-3 rounded-xl shadow-md border border-gray-200 text-gray-700 hover:text-gray-900 hover:shadow-lg transition-all duration-200 group"
+                    >
+                        <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
+                        <span className="text-sm md:text-base font-semibold">Back</span>
+                    </button>
                 </nav>
 
                 <header className="mb-12">
@@ -119,7 +192,7 @@ const Form = () => {
                     </h1>
                 </header>
 
-                <form className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+                <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
                     <div className="h-2 "></div>
 
                     <div className="p-8 md:p-12 space-y-8">
@@ -334,7 +407,7 @@ const Form = () => {
                             </p>
                         </footer>
                     </div>
-                </form>
+                </div>
             </div>
         </main>
     )

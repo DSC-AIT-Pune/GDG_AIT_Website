@@ -105,11 +105,9 @@ const Form = () => {
             newErrors.reason = 'Please provide at least 20 characters'
         }
         if (!formData.domain.trim()) newErrors.domain = 'Domain is required'
-        if (!formData.bestProject.trim()) {
-            newErrors.bestProject = 'Project link is required'
-        } else if (!/^https?:\/\/.+/.test(formData.bestProject)) {
-            newErrors.bestProject = 'Please enter a valid URL'
-        }
+        // else if (!/^https?:\/\/.+/.test(formData.bestProject)) {
+        //     newErrors.bestProject = 'Please enter a valid URL'
+        // }
 
         return newErrors
     }
@@ -150,6 +148,7 @@ const Form = () => {
             }
 
             const data = await response.json();
+            console.log(data)
             showToast('success', 'Form submitted successfully!');
             
             // Navigate to home after toast completes (4.5 seconds to ensure toast is seen)
@@ -365,7 +364,7 @@ const Form = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label htmlFor="bestProject" className="block text-black font-medium text-lg md:text-xl mb-2">Best Project (GitHub Link)</label>
+                                <label htmlFor="bestProject" className="block text-black font-medium text-lg md:text-xl mb-2">Best Project (GitHub Link) Not Compulsory</label>
                                 <input
                                     type="url"
                                     id="bestProject"

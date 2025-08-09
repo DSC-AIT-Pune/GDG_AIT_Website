@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { ArrowLeft, CheckCircle, XCircle, X } from 'lucide-react'
 
+
+
 const Toast = ({ type, message, onClose }) => {
+
     useEffect(() => {
         const timer = setTimeout(() => {
             onClose();
@@ -12,14 +15,12 @@ const Toast = ({ type, message, onClose }) => {
 
     return (
         <div className="fixed top-4 left-4 right-4 z-[9999] flex justify-center md:left-auto md:right-6 md:justify-end">
-            <div className={`flex items-center gap-4 px-6 py-4 rounded-2xl shadow-2xl border backdrop-blur-sm transform transition-all duration-500 hover:scale-105 w-full max-w-md ${
-                type === 'success' 
-                    ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-green-300 text-green-900 shadow-green-200/50' 
+            <div className={`flex items-center gap-4 px-6 py-4 rounded-2xl shadow-2xl border backdrop-blur-sm transform transition-all duration-500 hover:scale-105 w-full max-w-md ${type === 'success'
+                    ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-green-300 text-green-900 shadow-green-200/50'
                     : 'bg-gradient-to-r from-red-50 to-rose-50 border-red-300 text-red-900 shadow-red-200/50'
-            } animate-in slide-in-from-top duration-500`}>
-                <div className={`p-2 rounded-full ${
-                    type === 'success' ? 'bg-green-100' : 'bg-red-100'
-                }`}>
+                } animate-in slide-in-from-top duration-500`}>
+                <div className={`p-2 rounded-full ${type === 'success' ? 'bg-green-100' : 'bg-red-100'
+                    }`}>
                     {type === 'success' ? (
                         <CheckCircle className="w-5 h-5 text-green-600" />
                     ) : (
@@ -32,16 +33,15 @@ const Toast = ({ type, message, onClose }) => {
                 </div>
                 <button
                     onClick={onClose}
-                    className={`p-2 rounded-full hover:scale-110 transition-all duration-200 ${
-                        type === 'success' 
-                            ? 'hover:bg-green-200 text-green-600' 
+                    className={`p-2 rounded-full hover:scale-110 transition-all duration-200 ${type === 'success'
+                            ? 'hover:bg-green-200 text-green-600'
                             : 'hover:bg-red-200 text-red-600'
-                    }`}
+                        }`}
                     aria-label="Close notification"
                 >
                     <X className="w-4 h-4" />
                 </button>
-                
+
                 {/* Progress bar */}
                 <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-transparent via-current to-transparent opacity-30 rounded-b-2xl animate-pulse"></div>
             </div>
@@ -121,19 +121,20 @@ const Form = () => {
     }
 
     const handleSubmit = async () => {
-        const newErrors = validateForm()
 
+        if (isSubmitting) return;
+    
+        const newErrors = validateForm()
+    
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors)
-            // Scroll to top to show validation errors
             window.scrollTo({ top: 0, behavior: 'smooth' });
             return
         }
-
+    
         setIsSubmitting(true)
-        // Immediately scroll to top when form submission starts
         window.scrollTo({ top: 0, behavior: 'smooth' });
-
+    
         try {
             const response = await fetch('https://gdgbackend-2mfw.onrender.com/form', {
                 method: 'POST',
@@ -142,41 +143,41 @@ const Form = () => {
                 },
                 body: JSON.stringify(formData),
             });
-
+    
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-
+    
             const data = await response.json();
             console.log(data)
             showToast('success', 'Form submitted successfully!');
             
-            // Navigate to home after toast completes (4.5 seconds to ensure toast is seen)
+
             setTimeout(() => {
                 window.history.back();
             }, 4500);
         } catch (error) {
             console.error('Error submitting form:', error);
             showToast('error', 'There was an error submitting the form. Please try again.');
-        } finally {
-            setIsSubmitting(false);
+            setIsSubmitting(false); 
         }
+
     }
 
     return (
         <main className='formBody min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 py-8 px-4'>
             {toast && (
-                <Toast 
-                    type={toast.type} 
-                    message={toast.message} 
-                    onClose={hideToast} 
+                <Toast
+                    type={toast.type}
+                    message={toast.message}
+                    onClose={hideToast}
                 />
             )}
-            
+
             <div className="max-w-4xl mx-auto">
                 <nav className="mb-8">
-                    <button 
-                        onClick={() => window.history.back()} 
+                    <button
+                        onClick={() => window.history.back()}
                         aria-label="Go back to previous page"
                         className="flex items-center gap-3 bg-white px-4 py-3 rounded-xl shadow-md border border-gray-200 text-gray-700 hover:text-gray-900 hover:shadow-lg transition-all duration-200 group"
                     >
@@ -309,7 +310,7 @@ const Form = () => {
                                         }`}
                                     aria-describedby={errors.priority ? "priority-error" : undefined}
                                 />
-                                <span style={{fontSize:"1rem"}}>*Highest priority is 1</span>
+                                <span style={{ fontSize: "1rem" }}>*Highest priority is 1</span>
                                 {errors.priority && <p id="priority-error" className="text-red-500 text-sm mt-1">{errors.priority}</p>}
                             </div>
                         </div>
@@ -386,7 +387,9 @@ const Form = () => {
                                 type="button"
                                 onClick={handleSubmit}
                                 disabled={isSubmitting}
-                                className={`w-full text-black font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-blue-200 border-2 border-gray-300 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:shadow-2xl'
+                                className={`w-full text-black font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-blue-200 border-2 ${isSubmitting
+                                    ? 'opacity-70 cursor-not-allowed border-gray-300'
+                                    : 'border-gray-300 hover:scale-[1.02] hover:shadow-2xl'
                                     }`}
                                 aria-busy={isSubmitting}
                             >

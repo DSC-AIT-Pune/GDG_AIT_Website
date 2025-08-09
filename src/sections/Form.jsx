@@ -248,7 +248,7 @@ const Form = () => {
                                         <option value="IT-B">Information Technology - B</option>
                                         <option value="ENTC-A">Electronics & Telecom - A</option>
                                         <option value="ENTC-B">Electronics & Telecom - B</option>
-                                        <option value="ARE">Automobile Engineering</option>
+                                        <option value="ARE">Automation and Robotics Engineering</option>
                                         <option value="MECH">Mechanical Engineering</option>
                                     </select>
                                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
@@ -295,7 +295,7 @@ const Form = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label htmlFor="priority" className="block text-black font-medium text-lg md:text-xl mb-2">Priority (1-5)</label>
+                                <label htmlFor="priority" className="block text-black font-medium text-lg md:text-xl mb-2">Priority (1-5) </label>
                                 <input
                                     type="number"
                                     id="priority"
@@ -309,6 +309,7 @@ const Form = () => {
                                         }`}
                                     aria-describedby={errors.priority ? "priority-error" : undefined}
                                 />
+                                <span style={{fontSize:"1rem"}}>*Highest priority is 1</span>
                                 {errors.priority && <p id="priority-error" className="text-red-500 text-sm mt-1">{errors.priority}</p>}
                             </div>
                         </div>

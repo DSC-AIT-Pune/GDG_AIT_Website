@@ -27,8 +27,31 @@ import Abrish from "../assets/Team/img26.png"
 import Prikshit from "../assets/Team/img27.png"
 import Ankit from "../assets/Team/img28.png"
 import Srijan from "../assets/Team/srijan1.jpeg";
+import palak from "../assets/Team/palak.jpg";
+import aryan from "../assets/Team/aryan.jpg";
+import annu from "../assets/Team/annu.jpg";
+import abhishek from "../assets/Team/abhishek.jpg";
+import arsh from "../assets/Team/arsh.jpg";
+import aryanP from "../assets/Team/aryanP.jpg";
+import ayush from "../assets/Team/ayush.jpg";
+import raj from "../assets/Team/raj.jpg";
+import pranav from "../assets/Team/pranav.jpg";
+import vivek from "../assets/Team/vivek.jpg";
+import Sreyash from "../assets/Team/Sreyash.jpg";
+import ashu from "../assets/Team/ashu.jpg";
+import Shashwat from "../assets/Team/shashwat.jpg";
+import Nithesh from "../assets/Team/nithesh.jpg";
+import peyush from "../assets/Team/peyush.jpg";
 
-const categories = [ 'Mentors', 'Leads & Domain Heads','Alumni'];
+// Import core members images
+  // import Core1 from "../assets/Team/core1.jpg";
+  // import Core2 from "../assets/Team/core2.jpg";
+  // import Core3 from "../assets/Team/core3.jpg";
+  // import Core4 from "../assets/Team/core4.jpg";
+  // import Core5 from "../assets/Team/core5.jpg";
+  // import Core6 from "../assets/Team/core6.jpg";
+
+const categories = [ 'Mentors', 'Leads & Domain Heads','Alumni','Core Members' ];
 
 const allTeamMembers = {
   'Mentors': [
@@ -52,26 +75,34 @@ const allTeamMembers = {
     { message: 'Pavan Kumar', position: 'CLOUD LEAD', instagram: '@pavankumar_07s' , imageSrc: Pavan},
     { message: 'Srijan Tripathi', position: 'BLOCKCHAIN LEAD', instagram: '@sriijannn' , imageSrc: Srijan},
   ],
-'Alumni': [
-  { message: 'Nikita Kumari', position: 'Alumni 2025', instagram: '@sugarplum_1203', imageSrc: Nikita },
-  { message: 'Ajay Singh', position: 'Alumni 2025', instagram: '@instagram', imageSrc: Ajay },
-  { message: 'Kumari Ladli', position: 'Alumni 2025', instagram: '@instagram', imageSrc: Ladli },
-  { message: 'Kavya Chauhan', position: 'Alumni 2025', instagram: '@11001_kavya', imageSrc: Kavya },
-  { message: 'Sahil Kamate', position: 'Alumni 2025', instagram: '@sahilkamate_03', imageSrc: Sahil },
-  { message: 'S B Abrish Aditya', position: 'Alumni 2025', instagram: '@abrish_aadi', imageSrc: Abrish },
-  { message: 'Prikshit Sharma', position: 'Alumni 2025', instagram: '@prikshi.t', imageSrc: Prikshit },
-  { message: 'Ankit Kumar Singh', position: 'Alumni 2025', instagram: '@ankit_ya_i_am', imageSrc: Ankit },
-],
-
-
-  // 'Core Members': [
-  //   { message: ' a', position: 'GDSC LEAD', instagram: '@insta_id' },
-  //   { message: ' b', position: 'GDSC LEAD', instagram: '@insta_id' },
-  //   { message: ' c', position: 'GDSC LEAD', instagram: '@insta_id' },
-  //   { message: ' d', position: 'GDSC LEAD', instagram: '@insta_id' },
-  //   { message: ' e', position: 'GDSC LEAD', instagram: '@insta_id' },
-  //   { message: ' f', position: 'GDSC LEAD', instagram: '@insta_id' },
-  // ]
+  'Alumni': [
+    { message: 'Nikita Kumari', position: 'Alumni 2025', instagram: '@sugarplum_1203', imageSrc: Nikita },
+    { message: 'Ajay Singh', position: 'Alumni 2025', instagram: '@instagram', imageSrc: Ajay },
+    { message: 'Kumari Ladli', position: 'Alumni 2025', instagram: '@instagram', imageSrc: Ladli },
+    { message: 'Kavya Chauhan', position: 'Alumni 2025', instagram: '@11001_kavya', imageSrc: Kavya },
+    { message: 'Sahil Kamate', position: 'Alumni 2025', instagram: '@sahilkamate_03', imageSrc: Sahil },
+    { message: 'S B Abrish Aditya', position: 'Alumni 2025', instagram: '@abrish_aadi', imageSrc: Abrish },
+    { message: 'Prikshit Sharma', position: 'Alumni 2025', instagram: '@prikshi.t', imageSrc: Prikshit },
+    { message: 'Ankit Kumar Singh', position: 'Alumni 2025', instagram: '@ankit_ya_i_am', imageSrc: Ankit },
+  ],
+  'Core Members': [
+    { message: 'Palak Kumari', position: 'Core Member', instagram: '@_.palak_k',imageSrc: palak  },
+    { message: 'Aryan', position: 'Core Member', instagram: '@aryancheers',imageSrc: aryan  },
+    { message: 'Annu', position: 'Core Member', instagram: '@verifiedoutrage',imageSrc: annu  },
+    { message: 'Peyush Yadav', position: 'Core Member', instagram: '@peush_btw', imageSrc: peyush  },
+    { message: 'Abhishek', position: 'Core Member', instagram: '@ok.abhishek',imageSrc:abhishek  },
+    { message: 'Aryan Pratap Singh', position: 'Core Member', instagram: '@aryan_32__1',imageSrc:aryanP  },
+    { message: 'Raj Singh', position: 'Core Member', instagram: '@rajsinghrajput980',imageSrc:raj  },
+    { message: 'Pranav Patil', position: 'Core Member', instagram: '@pan._av',imageSrc:pranav  },
+    { message: 'Vivek Sharma', position: 'Core Member', instagram: '@viveksharmaaa_',imageSrc:vivek  },
+    { message: 'Ayush Kumar', position: 'Core Member', instagram: '@ayush._singh.05',imageSrc:ayush  },
+    { message: 'Arsh Tiwari', position: 'Core Member', instagram: '@mr_arshtiwari', imageSrc: arsh },
+    { message: 'Sreyash Singh', position: 'Core Member', instagram: '@sreyashsingh2024', imageSrc: Sreyash },
+    { message: 'Ashutosh Mishra', position: 'Core Member', instagram: '@ashum_9', imageSrc: ashu },
+    { message: 'Shashwat Trivedi', position: 'Core Member', instagram: '@shashwatrivedi', imageSrc: Shashwat },
+    { message: 'Nithesh Yadav', position: 'Core Member', instagram: '@nit.ydv', imageSrc: Nithesh },
+    
+  ]
 };
 
 function Team() {

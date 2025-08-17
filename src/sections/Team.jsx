@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import TeamBar from '../components/TeamBar';
 import IntroCard from '../components/cards/IntroCard';
 
+const categories = ['Core Members', 'Mentors', 'Leads & Domain Heads','Alumni'];
+
 const allTeamMembers = {
   'Mentors': [
     { message: 'Arshia Garg', position: 'BE Mentor', instagram: '@arshiaa_garg', imageSrc: "https://i.ibb.co/5xYr0yc2/img1.jpg" },

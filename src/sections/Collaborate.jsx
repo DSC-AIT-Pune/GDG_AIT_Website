@@ -1,6 +1,5 @@
 import React from 'react'
 import Primarybtn from '../components/Primarybtn'
-import CollabBG from '../assets/Collaborate/CollabBG.png'
 import { Link } from 'react-router-dom'
 
 function Collaborate() {
@@ -12,7 +11,7 @@ function Collaborate() {
           className="absolute inset-0 z-0 opacity-[3%] md:opacity-5"
           style={{
             backgroundColor: '#f3f1e7',
-            backgroundImage: `url(${CollabBG})`,
+            backgroundImage: `url("https://i.ibb.co/DDdXLfS5/CollabBG.png")`,
             backgroundRepeat: 'repeat',
             backgroundSize: 'auto',
           }}

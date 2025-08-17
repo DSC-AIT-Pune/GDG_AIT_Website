@@ -4,13 +4,10 @@ import Footer from "./sections/Footer";
 import Events from "./sections/Events";
 import Team from "./sections/Team";
 import About from "./sections/About";
-import bgimage from "./assets/bg-image.svg";
 import Collaborate from "./sections/Collaborate";
 import Calender from "./sections/Calender";
-import SideBar from "./components/SideBar";
 import Home from "./sections/Home";
 import Hamburger from "./components/Hamburger";
-import upward from './assets/uparrow.svg';
 import Loader from './components/loader'; // Import your Loader component
 import { Outlet } from "react-router-dom";
 
@@ -79,7 +76,7 @@ function App() {
         <div id="footer"><Footer /></div>
         <img 
           className="fixed cursor-pointer z-10 bottom-8 right-8 w-[50px] h-auto" 
-          src={upward} 
+          src="https://i.ibb.co/LXxN0YDT/uparrow.png"
           alt="" 
           onClick={() => {
             const section = document.getElementById("home")
@@ -90,7 +87,7 @@ function App() {
         />
       </div>
       <Hamburger isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-      <img className="w-[95vw] mx-auto" src={bgimage} alt="" />
+      <img className="w-[95vw] mx-auto" src="https://i.postimg.cc/HWJvSvFM/bg-image-1.png" alt="" />
     </Loader>
   );
 }

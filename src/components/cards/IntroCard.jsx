@@ -1,5 +1,5 @@
 import React from 'react';
-import GdscLogo from '../../assets/Footer/gdsclogo.png';
+
 
 const IntroCard = ({
   imageSrc,
@@ -66,7 +66,7 @@ const IntroCard = ({
           {/* GDSC Footer */}
           <footer className="flex justify-end items-center gap-1.5 sm:gap-2">
             <img 
-              src={GdscLogo} 
+              src="https://i.ibb.co/bg8jr6hL/gdsclogo.png"
               alt="GDSC Logo" 
               className="h-5 sm:h-6 md:h-7" 
               loading="lazy"

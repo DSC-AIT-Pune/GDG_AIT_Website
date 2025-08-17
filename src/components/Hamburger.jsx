@@ -1,6 +1,5 @@
 import React from "react";
 import { IoCloseOutline } from "react-icons/io5";
-import logo from "../assets/Home/Group.png";
 
 function Hamburger({ isOpen, onClose }) {
   const menuitems = [
@@ -18,7 +17,7 @@ function Hamburger({ isOpen, onClose }) {
       }`}>
       <div className="flex flex-col  bg-black gap-y-3 h-screen w-[86vw]">
         <div className="flex flex-row px-2 pt-7 justify-between">
-          <img className="h-6 pl-3 w-auto" src={logo} alt="Logo" />
+          <img className="h-6 pl-3 w-auto" src="https://i.ibb.co/mrXrkSzF/Group.png" alt="Logo" />
           <button onClick={onClose} className="pr-3">
             <svg
               className="w-8 h-8 text-gray-800 dark:text-white"

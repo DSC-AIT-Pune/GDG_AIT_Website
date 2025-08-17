@@ -1,12 +1,5 @@
 import React from 'react'
-import logo from '../assets/logoGdsc.svg'
-import linkedin from "../assets/Footer/linkedin.svg"
-import fb from "../assets/Footer/fb.svg"
-import insta from "../assets/Footer/insta.svg"
-import twitter from "../assets/Footer/twitter.svg"
-import address from "../assets/Footer/addSvg.svg"
-import mobile from "../assets/Footer/mobSvg.svg"
-import email from "../assets/Footer/mailSvg.svg"
+
 
 function Footer() {
   return (
@@ -14,7 +7,7 @@ function Footer() {
         <div className='basis-1/3 flex flex-col justify-center gap-y-4 mt-[4px]'>
             {/* Organization info */}
             <address className='flex flex-row gap-2 lg:justify-start justify-center align-top not-italic'>
-                <img className="w-10 md:w-[4.25rem] h-auto" src={logo} alt="GDSC AIT Pune Logo" />
+                <img className="w-10 md:w-[4.25rem] h-auto" src="https://i.ibb.co/ZzsC7RN8/logo-Gdsc-2.png" alt="GDSC AIT Pune Logo" />
                 <div className='flex flex-col'>
                     <div>
                         <p className='text-[0.8125rem] md:text-[1.1494rem]'>Google Developer Student Clubs</p>
@@ -40,7 +33,7 @@ function Footer() {
                     rel="noopener noreferrer"
                     aria-label="Visit our Instagram page"
                 >
-                    <img className='h-6 md:h-8 w-auto' src={insta} alt="Instagram" />
+                    <img className='h-6 md:h-8 w-auto' src="https://i.ibb.co/JjP2njzY/insta-1.png" alt="Instagram" />
                 </a>
 
                 <a 
@@ -49,7 +42,8 @@ function Footer() {
                     rel="noopener noreferrer"
                     aria-label="Visit our LinkedIn page"
                 >
-                    <img className='h-6 md:h-8 w-auto' src={linkedin} alt="LinkedIn" />
+                 
+                    <img className='h-6 md:h-8 w-auto' src="https://i.ibb.co/hJppwDtG/linkedin.png" alt="LinkedIn" />
                 </a>
             </nav>
         </div>
@@ -123,15 +117,15 @@ function Footer() {
                 <h2 className='text-xl md:text-[2.5rem]'>Get in Touch</h2>
                 <div className='flex flex-col gap-2 md:gap-6'>
                     <div className='flex flex-row gap-3 justify-start items-center text-xs md:text-xl'> 
-                        <img className='h-10 w-auto' src={address} alt="" aria-hidden="true" />
+                        <img className='h-10 w-auto' src="https://i.ibb.co/0RDKXzT3/addSvg.png" alt="" aria-hidden="true" />
                         <p className='text-base'>Army Institute of Technology, Pune <br />Maharashtra - 411015</p>
                     </div>
                     <div className='flex flex-row gap-1 justify-start items-center text-xs md:text-xl'>
-                        <img className='h-10 w-auto' src={mobile} alt="" aria-hidden="true" />
+                        <img className='h-10 w-auto' src="https://i.ibb.co/Fk2kyp7Z/mobSvg.png" alt="" aria-hidden="true" />
                         <p className='text-base'>Mobile: <a href="tel:+919649959730">9649959730</a></p>
                     </div>
                     <div className='flex flex-row gap-1 justify-start items-center text-xs md:text-xl'>
-                        <img className='h-10 w-auto' src={email} alt="" aria-hidden="true" />
+                        <img className='h-10 w-auto' src="https://i.postimg.cc/KvKP01Gd/mail-Svg-removebg-preview.png" alt="" aria-hidden="true" />
                         <p className='text-base'>Email: <a href="mailto:gdsc@aitpune.edu.in">gdsc@aitpune.edu.in</a></p>
                     </div>
                 </div>

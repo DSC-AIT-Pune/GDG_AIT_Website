@@ -28,6 +28,18 @@ const allTeamMembers = {
     { message: 'Srijan Tripathi', position: 'BLOCKCHAIN LEAD', instagram: '@sriijannn' , imageSrc: "https://i.ibb.co/d0MDVsBT/srijan1.jpg"},
   ],
 
+'Alumni': [
+  { message: 'Nikita Kumari', position: 'Alumni 2025', instagram: '@sugarplum_1203', imageSrc: "https://i.ibb.co/W4B2L7XL/img21.jpg" },
+  { message: 'Ajay Singh', position: 'Alumni 2025', instagram: '@instagram', imageSrc: "https://i.ibb.co/1DBFGq7/img22.png" },
+  { message: 'Kumari Ladli', position: 'Alumni 2025', instagram: '@instagram', imageSrc: "https://i.ibb.co/gLr0C5dY/img23.png" },
+  { message: 'Kavya Chauhan', position: 'Alumni 2025', instagram: '@11001_kavya', imageSrc: "https://i.ibb.co/2355Fhmg/img24.png" },
+  { message: 'Sahil Kamate', position: 'Alumni 2025', instagram: '@sahilkamate_03', imageSrc: "https://i.ibb.co/qFWN3Fhm/img25.png" },
+  { message: 'S B Abrish Aditya', position: 'Alumni 2025', instagram: '@abrish_aadi', imageSrc: "https://i.ibb.co/99rhd2q6/img26.png"},
+  { message: 'Prikshit Sharma', position: 'Alumni 2025', instagram: '@prikshi.t', imageSrc: "https://i.ibb.co/chc3jjsJ/img27.png" },
+  { message: 'Ankit Kumar Singh', position: 'Alumni 2025', instagram: '@ankit_ya_i_am', imageSrc: "https://i.ibb.co/pvSBcTvy/img28.png" },
+],
+
+
   'Alumni': [
     { message: 'Nikita Kumari', position: 'Alumni 2025', instagram: '@sugarplum_1203', imageSrc: "https://i.ibb.co/W4B2L7XL/img21.jpg" },
     { message: 'Ajay Singh', position: 'Alumni 2025', instagram: '@instagram', imageSrc: "https://i.ibb.co/1DBFGq7/img22.png" },

@@ -1,12 +1,8 @@
 "use client";
-import Hamburger from "../assets/Home/Hamburger.svg";
-import Logo from "../assets/Home/Group.png";
-import shape from "../assets/Home/Polygon.svg";
 import TypingEffect from "../components/TypingEffect";
 import StudentChapterCard from "../components/cards/StudentChapterCard";
 import NavBar from "../components/NavBar";
-import cartoon from "../assets/Home/GDSCimage.svg";
-import EventBG from "../assets/Home/homebg.svg";
+
 
 function Home({ onMenuClick }) {
   return (
@@ -16,7 +12,7 @@ function Home({ onMenuClick }) {
         className="absolute inset-0 z-0 rounded-xl"
         style={{
           backgroundColor: "#f3f1e7",
-          backgroundImage: `url(${EventBG})`,
+          backgroundImage: `url("https://i.ibb.co/wZv4v3Fz/homebg.png")`,
           backgroundRepeat: "repeat",
           backgroundSize: "auto",
           opacity: "100%",
@@ -31,7 +27,7 @@ function Home({ onMenuClick }) {
 
       <div className="flex z-10 flex-row w-full justify-between px-5">
         <img 
-          src={Logo || "/placeholder.svg"} 
+          src={"https://i.ibb.co/mrXrkSzF/Group.png" || "/placeholder.svg"} 
           alt="GDG AIT Pune Logo" 
           className="h-auto"
         />
@@ -41,7 +37,7 @@ function Home({ onMenuClick }) {
           aria-label="Toggle menu"
         >
           <img
-            src={Hamburger || "/placeholder.svg"}
+            src={"https://i.ibb.co/HDp7RzqH/Hamburger.png" || "/placeholder.svg"}
             alt="Mobile menu toggle"
           />
         </button>
@@ -59,7 +55,7 @@ function Home({ onMenuClick }) {
         </h1>
         <img
           className="max-w-[35vw] lg:w-[390px] h-auto"
-          src={cartoon || "/placeholder.svg"}
+          src={"https://i.ibb.co/zTLP9rFJ/GDSCimage.png" || "/placeholder.svg"}
           alt="GDG AIT Pune community illustration"
         />
       </section>
@@ -70,7 +66,7 @@ function Home({ onMenuClick }) {
         <div className="flex-shrink-0 hidden md:block">
           <img
             className="max-w-[40vw] h-auto"
-            src={shape || "/placeholder.svg"}
+            src={"https://i.ibb.co/RGrN0Jvx/Polygon.png" || "/placeholder.svg"}
             alt="Decorative shape"
             aria-hidden="true"
           />

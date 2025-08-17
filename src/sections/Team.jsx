@@ -54,8 +54,8 @@ const allTeamMembers = {
   'Core Members': [
     { message: 'Palak Kumari', position: 'Core Member', instagram: '@_.pala__k', imageSrc: "https://i.ibb.co/XxDGZh5x/palak.jpg" },
     { message: 'Aryan', position: 'Core Member', instagram: '@aryancheers', imageSrc: "https://i.ibb.co/DDK0z5Zk/aryan.jpg" },
-    { message: 'Annu', position: 'Core Member', instagram: '@verifiedoutrage', imageSrc: "https://i.ibb.co/NkyRrsY/annu.jpg" },
-    { message: 'Peyush Yadav', position: 'Core Member', instagram: '@peush_btw', imageSrc: "https://i.ibb.co/ZzYFGNwt/peyush.jpg" },
+    { message: 'Anu Kumari', position: 'Core Member', instagram: '@verifiedoutrage', imageSrc: "https://i.ibb.co/NkyRrsY/annu.jpg" },
+    { message: 'Peush Yadav', position: 'Core Member', instagram: '@peush_btw', imageSrc: "https://i.ibb.co/ZzYFGNwt/peyush.jpg" },
     { message: 'Abhishek', position: 'Core Member', instagram: '@ok.abhishek', imageSrc: "https://i.ibb.co/gMDJ6Wzq/abhishek.jpg" },
     { message: 'Aryan Pratap Singh', position: 'Core Member', instagram: '@aryan_32__1', imageSrc: "https://i.ibb.co/Zpc3d2jv/aryanP.jpg" },
     { message: 'Raj Singh', position: 'Core Member', instagram: '@rajsinghrajput980', imageSrc: "https://i.ibb.co/PH38pHP/raj.jpg" },

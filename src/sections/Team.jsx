@@ -43,15 +43,9 @@ import Shashwat from "../assets/Team/shashwat.jpg";
 import Nithesh from "../assets/Team/nithesh.jpg";
 import peyush from "../assets/Team/peyush.jpg";
 
-// Import core members images
-  // import Core1 from "../assets/Team/core1.jpg";
-  // import Core2 from "../assets/Team/core2.jpg";
-  // import Core3 from "../assets/Team/core3.jpg";
-  // import Core4 from "../assets/Team/core4.jpg";
-  // import Core5 from "../assets/Team/core5.jpg";
-  // import Core6 from "../assets/Team/core6.jpg";
 
-const categories = [ 'Mentors', 'Leads & Domain Heads','Alumni','Core Members' ];
+
+
 
 const allTeamMembers = {
   'Mentors': [

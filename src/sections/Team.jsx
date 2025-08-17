@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import TeamBar from '../components/TeamBar';
 import IntroCard from '../components/cards/IntroCard';
 
-
-const categories = [ 'Mentors', 'Leads & Domain Heads','Alumni'];
+const categories = ['Core Members', 'Mentors', 'Leads & Domain Heads', 'Alumni'];
 
 const allTeamMembers = {
   'Mentors': [
@@ -28,6 +27,7 @@ const allTeamMembers = {
     { message: 'Pavan Kumar', position: 'CLOUD LEAD', instagram: '@pavankumar_07s' , imageSrc: "https://i.ibb.co/823k0WK/img20.jpg"},
     { message: 'Srijan Tripathi', position: 'BLOCKCHAIN LEAD', instagram: '@sriijannn' , imageSrc: "https://i.ibb.co/d0MDVsBT/srijan1.jpg"},
   ],
+
 'Alumni': [
   { message: 'Nikita Kumari', position: 'Alumni 2025', instagram: '@sugarplum_1203', imageSrc: "https://i.ibb.co/W4B2L7XL/img21.jpg" },
   { message: 'Ajay Singh', position: 'Alumni 2025', instagram: '@instagram', imageSrc: "https://i.ibb.co/1DBFGq7/img22.png" },
@@ -40,14 +40,34 @@ const allTeamMembers = {
 ],
 
 
-  // 'Core Members': [
-  //   { message: ' a', position: 'GDSC LEAD', instagram: '@insta_id' },
-  //   { message: ' b', position: 'GDSC LEAD', instagram: '@insta_id' },
-  //   { message: ' c', position: 'GDSC LEAD', instagram: '@insta_id' },
-  //   { message: ' d', position: 'GDSC LEAD', instagram: '@insta_id' },
-  //   { message: ' e', position: 'GDSC LEAD', instagram: '@insta_id' },
-  //   { message: ' f', position: 'GDSC LEAD', instagram: '@insta_id' },
-  // ]
+  'Alumni': [
+    { message: 'Nikita Kumari', position: 'Alumni 2025', instagram: '@sugarplum_1203', imageSrc: "https://i.ibb.co/W4B2L7XL/img21.jpg" },
+    { message: 'Ajay Singh', position: 'Alumni 2025', instagram: '@instagram', imageSrc: "https://i.ibb.co/1DBFGq7/img22.png" },
+    { message: 'Kumari Ladli', position: 'Alumni 2025', instagram: '@instagram', imageSrc: "https://i.ibb.co/gLr0C5dY/img23.png" },
+    { message: 'Kavya Chauhan', position: 'Alumni 2025', instagram: '@11001_kavya', imageSrc: "https://i.ibb.co/2355Fhmg/img24.png" },
+    { message: 'Sahil Kamate', position: 'Alumni 2025', instagram: '@sahilkamate_03', imageSrc: "https://i.ibb.co/qFWN3Fhm/img25.png" },
+    { message: 'S B Abrish Aditya', position: 'Alumni 2025', instagram: '@abrish_aadi', imageSrc: "https://i.ibb.co/99rhd2q6/img26.png"},
+    { message: 'Prikshit Sharma', position: 'Alumni 2025', instagram: '@prikshi.t', imageSrc: "https://i.ibb.co/chc3jjsJ/img27.png" },
+    { message: 'Ankit Kumar Singh', position: 'Alumni 2025', instagram: '@ankit_ya_i_am', imageSrc: "https://i.ibb.co/pvSBcTvy/img28.png" },
+  ],
+
+  'Core Members': [
+    { message: 'Palak Kumari', position: 'Core Member', instagram: '@_.palak_k', imageSrc: "https://i.ibb.co/XxDGZh5x/palak.jpg" },
+    { message: 'Aryan', position: 'Core Member', instagram: '@aryancheers', imageSrc: "https://i.ibb.co/DDK0z5Zk/aryan.jpg" },
+    { message: 'Annu', position: 'Core Member', instagram: '@verifiedoutrage', imageSrc: "https://i.ibb.co/NkyRrsY/annu.jpg" },
+    { message: 'Peyush Yadav', position: 'Core Member', instagram: '@peush_btw', imageSrc: "https://i.ibb.co/ZzYFGNwt/peyush.jpg" },
+    { message: 'Abhishek', position: 'Core Member', instagram: '@ok.abhishek', imageSrc: "https://i.ibb.co/gMDJ6Wzq/abhishek.jpg" },
+    { message: 'Aryan Pratap Singh', position: 'Core Member', instagram: '@aryan_32__1', imageSrc: "https://i.ibb.co/Zpc3d2jv/aryanP.jpg" },
+    { message: 'Raj Singh', position: 'Core Member', instagram: '@rajsinghrajput980', imageSrc: "https://i.ibb.co/PH38pHP/raj.jpg" },
+    { message: 'Pranav Patil', position: 'Core Member', instagram: '@pan._av', imageSrc: "https://i.ibb.co/xqhgnTJP/pranav.jpg" },
+    { message: 'Vivek Sharma', position: 'Core Member', instagram: '@viveksharmaaa_', imageSrc: "https://i.ibb.co/5gbQjmJC/vivek.jpg" },
+    { message: 'Ayush Kumar', position: 'Core Member', instagram: '@ayush._singh.05', imageSrc: "https://i.ibb.co/1tkv9r9t/ayush.jpg" },
+    { message: 'Arsh Tiwari', position: 'Core Member', instagram: '@mr_arshtiwari', imageSrc: "https://i.ibb.co/BH03qRxH/arsh.jpg" },
+    { message: 'Sreyash Singh', position: 'Core Member', instagram: '@sreyashsingh2024', imageSrc: "https://i.ibb.co/bgL8CFQr/Sreyash.jpg" },
+    { message: 'Ashutosh Mishra', position: 'Core Member', instagram: '@ashum_9', imageSrc: "https://i.ibb.co/kgbWv2mw/ashutosh.jpg" },
+    { message: 'Shashwat Trivedi', position: 'Core Member', instagram: '@shashwatrivedi', imageSrc: "https://i.ibb.co/yFSNrsZn/Shashwat.jpg" },
+    { message: 'Nithesh Yadav', position: 'Core Member', instagram: '@nit.ydv', imageSrc: "https://i.ibb.co/1tSbNJQB/nithesh.jpg" },
+  ]
 };
 
 function Team() {
@@ -63,7 +83,6 @@ function Team() {
 
   return (
     <div className='relative flex flex-col justify-center gap-y-14 py-6 rounded-xl w-full max-w-[95vw] bg-primarybg items-center mx-auto px-4'>
-
         {/* Background */}
         <div
           className="absolute inset-0 z-0"

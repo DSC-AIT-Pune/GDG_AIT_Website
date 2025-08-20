@@ -47,14 +47,14 @@ const allTeamMembers = {
     { message: 'Abhishek', position: 'Web dev Facilitator', instagram: '@ok.abhisek', imageSrc: "https://i.ibb.co/FkTN2Ln2/abhishek.webp" },
     { message: 'Aryan Pratap Singh', position: 'Web dev Facilitator', instagram: '@aryan_32__1', imageSrc: "https://i.ibb.co/LdwF1GGx/pratap.webp" },
     { message: 'Raj Singh', position: 'App dev Facilitator', instagram: '@rajsinghrajput980', imageSrc: "https://i.ibb.co/vRsTFhh/raj.webp" },
-    { message: 'Pranav Patil', position: 'AI\ML Facilitator', instagram: '@pan._av', imageSrc: "https://i.ibb.co/S4mrJzMr/praanva.webp" },
+    { message: 'Pranav Patil', position: 'ML Facilitator', instagram: '@pan._av', imageSrc: "https://i.ibb.co/S4mrJzMr/praanva.webp" },
     { message: 'Vivek Sharma', position: 'Outreach Facilitator', instagram: '@viveksharmaaa_', imageSrc: "https://i.ibb.co/sdVH5t6c/vivek.webp" },
-    { message: 'Ayush Kumar', position: 'AI\ML Facilitator', instagram: '@ayush._singh.05', imageSrc: "https://i.ibb.co/jPj9YZrV/ayush.webp" },
+    { message: 'Ayush Kumar', position: 'ML Facilitator', instagram: '@ayush._singh.05', imageSrc: "https://i.ibb.co/jPj9YZrV/ayush.webp" },
     { message: 'Arsh Tiwari', position: 'App dev Facilitator', instagram: '@mr_arshtiwari', imageSrc: "https://i.ibb.co/SwQQL5ZD/asrh.webp" },
     { message: 'Sreyash Singh', position: 'Flutter Facilitator', instagram: '@sreyashsingh2024', imageSrc: "https://i.ibb.co/KzjFL8Hz/sreyash.webp" },
     { message: 'Ashutosh Mishra', position: 'Blockchain Facilitator', instagram: '@ashum_9', imageSrc: "https://i.ibb.co/93yhXL0S/ashu.webp" },
     { message: 'Shashwat Trivedi', position: 'Blockchain Facilitator', instagram: '@shashwatrivedi', imageSrc: "https://i.ibb.co/RkNvdx73/saswat.webp" },
-    { message: 'Nithesh Yadav', position: 'AI\ML Facilitator', instagram: '@nit.ydv', imageSrc: "https://i.ibb.co/F44X3ZG2/nity.webp" },
+    { message: 'Nithesh Yadav', position: 'ML Facilitator', instagram: '@nit.ydv', imageSrc: "https://i.ibb.co/F44X3ZG2/nity.webp" },
   ]
 };
 

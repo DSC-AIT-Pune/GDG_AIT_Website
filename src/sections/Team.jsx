@@ -38,24 +38,39 @@ const allTeamMembers = {
   { message: 'Prikshit Sharma', position: 'Alumni 2025', instagram: '@prikshi.t', imageSrc: "https://i.ibb.co/kVkS9tgT/img27.webp" },
   { message: 'Ankit Kumar Singh', position: 'Alumni 2025', instagram: '@ankit_ya_i_am', imageSrc: "https://i.ibb.co/DDzrC5h8/img28.webp" },
 ],
+'Core Members': [
+  // 🎨 Design Facilitators
+  { message: 'Palak Kumari', position: 'Design Facilitator', instagram: '@_.pala__k', imageSrc: "https://i.ibb.co/4g7zLJCP/palak.webp" },
+  { message: 'Anu Kumari', position: 'Design Facilitator', instagram: '@verifiedoutrage', imageSrc: "https://i.ibb.co/mCtbyzcF/annu.webp" },
 
-  'Core Members': [
-    { message: 'Palak Kumari', position: 'Design Facilitator', instagram: '@_.pala__k', imageSrc: "https://i.ibb.co/4g7zLJCP/palak.webp" },
-    { message: 'Aryan', position: 'Web dev Facilitator', instagram: '@aryancheers', imageSrc: "https://i.ibb.co/rKz53NTd/aryan-singh.webp" },
-    { message: 'Anu Kumari', position: 'Design Facilitator', instagram: '@verifiedoutrage', imageSrc: "https://i.ibb.co/mCtbyzcF/annu.webp" },
-    { message: 'Peush Yadav', position: 'Web dev Facilitator', instagram: '@peush_btw', imageSrc: "https://i.ibb.co/ZzYFGNwt/peyush.jpg" },
-    { message: 'Abhishek', position: 'Web dev Facilitator', instagram: '@ok.abhisek', imageSrc: "https://i.ibb.co/FkTN2Ln2/abhishek.webp" },
-    { message: 'Aryan Pratap Singh', position: 'Web dev Facilitator', instagram: '@aryan_32__1', imageSrc: "https://i.ibb.co/LdwF1GGx/pratap.webp" },
-    { message: 'Raj Singh', position: 'App dev Facilitator', instagram: '@rajsinghrajput980', imageSrc: "https://i.ibb.co/vRsTFhh/raj.webp" },
-    { message: 'Pranav Patil', position: 'ML Facilitator', instagram: '@pan._av', imageSrc: "https://i.ibb.co/S4mrJzMr/praanva.webp" },
-    { message: 'Vivek Sharma', position: 'Outreach Facilitator', instagram: '@viveksharmaaa_', imageSrc: "https://i.ibb.co/sdVH5t6c/vivek.webp" },
-    { message: 'Ayush Kumar', position: 'ML Facilitator', instagram: '@ayush._singh.05', imageSrc: "https://i.ibb.co/jPj9YZrV/ayush.webp" },
-    { message: 'Arsh Tiwari', position: 'App dev Facilitator', instagram: '@mr_arshtiwari', imageSrc: "https://i.ibb.co/SwQQL5ZD/asrh.webp" },
-    { message: 'Sreyash Singh', position: 'Flutter Facilitator', instagram: '@sreyashsingh2024', imageSrc: "https://i.ibb.co/KzjFL8Hz/sreyash.webp" },
-    { message: 'Ashutosh Mishra', position: 'Blockchain Facilitator', instagram: '@ashum_9', imageSrc: "https://i.ibb.co/93yhXL0S/ashu.webp" },
-    { message: 'Shashwat Trivedi', position: 'Blockchain Facilitator', instagram: '@shashwatrivedi', imageSrc: "https://i.ibb.co/RkNvdx73/saswat.webp" },
-    { message: 'Nithesh Yadav', position: 'ML Facilitator', instagram: '@nit.ydv', imageSrc: "https://i.ibb.co/F44X3ZG2/nity.webp" },
-  ]
+  // 💻 Web Dev Facilitators
+  { message: 'Aryan', position: 'Web dev Facilitator', instagram: '@aryancheers', imageSrc: "https://i.ibb.co/rKz53NTd/aryan-singh.webp" },
+  { message: 'Peush Yadav', position: 'Web dev Facilitator', instagram: '@peush_btw', imageSrc: "https://i.ibb.co/ZzYFGNwt/peyush.jpg" },
+  { message: 'Abhishek', position: 'Web dev Facilitator', instagram: '@ok.abhisek', imageSrc: "https://i.ibb.co/FkTN2Ln2/abhishek.webp" },
+  { message: 'Aryan Pratap Singh', position: 'Web dev Facilitator', instagram: '@aryan_32__1', imageSrc: "https://i.ibb.co/LdwF1GGx/pratap.webp" },
+
+  // 📱 App Dev Facilitators
+  { message: 'Raj Singh', position: 'App dev Facilitator', instagram: '@rajsinghrajput980', imageSrc: "https://i.ibb.co/vRsTFhh/raj.webp" },
+  { message: 'Arsh Tiwari', position: 'App dev Facilitator', instagram: '@mr_arshtiwari', imageSrc: "https://i.ibb.co/SwQQL5ZD/asrh.webp" },
+
+  // 🤖 AI/ML Facilitators
+  { message: 'Pranav Patil', position: 'AI/ML Facilitator', instagram: '@pan._av', imageSrc: "https://i.ibb.co/S4mrJzMr/praanva.webp" },
+  { message: 'Ayush Kumar', position: 'AI/ML Facilitator', instagram: '@ayush._singh.05', imageSrc: "https://i.ibb.co/jPj9YZrV/ayush.webp" },
+
+  // 🌐 Flutter Facilitator
+  { message: 'Sreyash Singh', position: 'Flutter Facilitator', instagram: '@sreyashsingh2024', imageSrc: "https://i.ibb.co/KzjFL8Hz/sreyash.webp" },
+
+  // ⛓️ Blockchain Facilitators
+  { message: 'Ashutosh Mishra', position: 'Blockchain Facilitator', instagram: '@ashum_9', imageSrc: "https://i.ibb.co/93yhXL0S/ashu.webp" },
+  { message: 'Shashwat Trivedi', position: 'Blockchain Facilitator', instagram: '@shashwatrivedi', imageSrc: "https://i.ibb.co/RkNvdx73/saswat.webp" },
+
+  // ☁️ Cloud Facilitator
+  { message: 'Nithesh Yadav', position: 'Cloud Facilitator', instagram: '@nit.ydv', imageSrc: "https://i.ibb.co/F44X3ZG2/nity.webp" },
+
+  // 📢 Outreach Facilitator
+  { message: 'Vivek Sharma', position: 'Outreach Facilitator', instagram: '@viveksharmaaa_', imageSrc: "https://i.ibb.co/sdVH5t6c/vivek.webp" },
+]
+
 };
 
 function Team() {

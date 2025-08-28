@@ -12,8 +12,13 @@ const allTeamMembers = {
     { message: 'Gourav Singh ', position: 'BE Mentor', instagram: '@_delusive_world_', imageSrc: "https://i.ibb.co/JFnjnVQS/img5.webp" },
     { message: 'Nikhil Dhariwal ', position: 'BE Mentor', instagram: '@404nikhil_dhariwal', imageSrc: "https://i.ibb.co/PvVkwt8j/img4.webp" },
     { message: 'Aditya Singh ', position: 'BE Mentor', instagram: '@aditya082004', imageSrc: "https://i.ibb.co/PGQfxVsr/img6.webp" },
+
+    { message: 'Vignesh Pandi ', position: 'BE Mentor', instagram: '@vignesh_pandi',imageSrc: "https://i.ibb.co/HpFrH3Zg/img8.webp" },
+    { message: 'Divyanshu Rai ', position: 'BE Mentor', instagram: '@drak_sensei', imageSrc: "https://i.ibb.co/WT3bt9m/img7.webp"},
+
     { message: 'Vignesh Pandi ', position: 'BE Mentor', instagram: '@vignesh_pandi',imageSrc: "https://i.ibb.co/WT3bt9m/img7.webp" },
     { message: 'Divyanshu Rai ', position: 'BE Mentor', instagram: '@drak_sensei', imageSrc: "https://i.ibb.co/HpFrH3Zg/img8.webp"},
+
   ],
 
   'Leads & Domain Heads': [

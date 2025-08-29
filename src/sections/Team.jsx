@@ -5,6 +5,7 @@ import IntroCard from '../components/cards/IntroCard';
 const categories = ['Core Members', 'Mentors', 'Leads & Domain Heads', 'Alumni'];
 
 const allTeamMembers = {
+  // mentors
   'Mentors': [
     { message: 'Arshia Garg', position: 'BE Mentor', instagram: '@arshiaa_garg', imageSrc: "https://i.ibb.co/k26FSqtz/img1.webp" },
     { message: 'Sumit Nath ', position: 'BE Mentor', instagram: '@sumitkumarnath7', imageSrc: "https://i.ibb.co/fV476FKv/img2.webp" },
@@ -15,9 +16,6 @@ const allTeamMembers = {
 
     { message: 'Vignesh Pandi ', position: 'BE Mentor', instagram: '@vignesh_pandi',imageSrc: "https://i.ibb.co/HpFrH3Zg/img8.webp" },
     { message: 'Divyanshu Rai ', position: 'BE Mentor', instagram: '@drak_sensei', imageSrc: "https://i.ibb.co/WT3bt9m/img7.webp"},
-
-    { message: 'Vignesh Pandi ', position: 'BE Mentor', instagram: '@vignesh_pandi',imageSrc: "https://i.ibb.co/WT3bt9m/img7.webp" },
-    { message: 'Divyanshu Rai ', position: 'BE Mentor', instagram: '@drak_sensei', imageSrc: "https://i.ibb.co/HpFrH3Zg/img8.webp"},
 
   ],
 

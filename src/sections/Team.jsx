@@ -5,6 +5,7 @@ import IntroCard from '../components/cards/IntroCard';
 const categories = ['Core Members', 'Mentors', 'Leads & Domain Heads', 'Alumni'];
 
 const allTeamMembers = {
+  // mentors
   'Mentors': [
     { message: 'Arshia Garg', position: 'BE Mentor', instagram: '@arshiaa_garg', imageSrc: "https://i.ibb.co/k26FSqtz/img1.webp" },
     { message: 'Sumit Nath ', position: 'BE Mentor', instagram: '@sumitkumarnath7', imageSrc: "https://i.ibb.co/fV476FKv/img2.webp" },

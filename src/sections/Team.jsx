@@ -17,9 +17,6 @@ const allTeamMembers = {
     { message: 'Vignesh Pandi ', position: 'BE Mentor', instagram: '@vignesh_pandi',imageSrc: "https://i.ibb.co/HpFrH3Zg/img8.webp" },
     { message: 'Divyanshu Rai ', position: 'BE Mentor', instagram: '@drak_sensei', imageSrc: "https://i.ibb.co/WT3bt9m/img7.webp"},
 
-    { message: 'Vignesh Pandi ', position: 'BE Mentor', instagram: '@vignesh_pandi',imageSrc: "https://i.ibb.co/WT3bt9m/img7.webp" },
-    { message: 'Divyanshu Rai ', position: 'BE Mentor', instagram: '@drak_sensei', imageSrc: "https://i.ibb.co/HpFrH3Zg/img8.webp"},
-
   ],
 
   'Leads & Domain Heads': [
